@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f8ff;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #4CAF50;
+  padding: 20px;
   color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  margin: 0;
+  font-size: 3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+main {
+  padding: 20px;
+}
+
+.categories ul,
+.subcategories ul,
+.species ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.categories li a,
+.subcategories li a,
+.species li a {
+  display: block;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.categories li a:hover,
+.subcategories li a:hover,
+.species li a:hover {
+  transform: scale(1.05);
+}
+
+.specimen {
+  text-align: center;
+}
+
+.specimen img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.specimen h2 {
+  font-size: 3em;
+  color: #333;
+}
+
+.specimen p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  max-width: 800px;
+  margin: 20px auto;
 }
