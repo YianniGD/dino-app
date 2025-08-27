@@ -5,81 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f8ff;
+  background-color: #000;
 }
 
-.App-header {
-  background-color: #4CAF50;
-  padding: 20px;
-  color: white;
-  text-align: center;
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.App-header h1 {
-  margin: 0;
-  font-size: 3em;
-}
-
-.App-header a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-main {
-  padding: 20px;
-}
-
-.categories ul,
-.subcategories ul,
-.species ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.categories li a,
-.subcategories li a,
-.species li a {
-  display: block;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 1.5em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.categories li a:hover,
-.subcategories li a:hover,
-.species li a:hover {
-  transform: scale(1.05);
-}
-
-.specimen {
-  text-align: center;
-}
-
-.specimen img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.specimen h2 {
-  font-size: 3em;
-  color: #333;
-}
-
-.specimen p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: #555;
-  max-width: 800px;
-  margin: 20px auto;
+.content-area {
+  flex-grow: 1;
+  height: 100%;
+  position: relative; /* Important for positioning overlays */
 }

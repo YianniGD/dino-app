@@ -1,76 +1,47 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import React, { useState } from 'react';
+import World from './components/Globe/Globe';
+import SideBar from './components/SideBar';
 import data from './fauna.json';
-import Categories from './components/Categories/Categories';
-import Subcategories from './components/Subcategories/Subcategories';
-import Species from './components/Species/Species';
-import Specimen from './components/Specimen/Specimen';
+import './App.css';
 
 function App() {
-  const [path, setPath] = useState(window.location.hash);
+  const [filter, setFilter] = useState(null);
+  const [selectedPoint, setSelectedPoint] = useState(null); // Manages overlay visibility
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      setPath(window.location.hash);
-    };
+  const handlePointClick = (point) => {
+    setSelectedPoint(point);
+    // Logic to show a species detail overlay would go here
+  };
 
-    window.addEventListener('hashchange', handleHashChange);
+  const handleClearFilter = () => {
+    setFilter(null);
+  };
 
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, []);
-
-  const renderContent = () => {
-    const pathParts = path.substring(1).split('/');
-    const [category, subcategory, species] = pathParts;
-
-    if (category && subcategory && species) {
-      const categoryData = data[category];
-      if (categoryData) {
-        const subcategoryData = categoryData.find(
-          (sc) => sc.subcategory_name === subcategory
-        );
-        if (subcategoryData) {
-          const specimenData = subcategoryData.species.find(
-            (s) => s.name === species
-          );
-          if (specimenData) {
-            return <Specimen specimen={specimenData} />;
-          }
-        }
-      }
-    }
-
-    if (category && subcategory) {
-      const categoryData = data[category];
-      if (categoryData) {
-        const subcategoryData = categoryData.find(
-          (sc) => sc.subcategory_name === subcategory
-        );
-        if (subcategoryData) {
-          return <Species species={subcategoryData.species} category={category} subcategory={subcategory} />;
-        }
-      }
-    }
-
-    if (category) {
-      const categoryData = data[category];
-      if (categoryData) {
-        return <Subcategories subcategories={categoryData} category={category} />;
-      }
-    }
-
-    return <Categories data={data} />;
+  // An example of how you might close an overlay
+  const handleOverlayClose = () => {
+    setSelectedPoint(null);
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Dino-App</h1>
-        <a href="#">Home</a>
-      </header>
-      <main>{renderContent()}</main>
+    <div className="app-container">
+      <SideBar
+        data={data}
+        onFilterSelect={setFilter}
+        onClearFilter={handleClearFilter}
+      />
+      <main className="content-area">
+        <World
+          onPointClick={handlePointClick}
+          isOverlayOpen={!!selectedPoint}
+          isRotationEnabled={true} // Assuming rotation is on by default
+          filter={filter}
+        />
+        {/*
+          Your overlay component would go here. Its visibility would
+          be controlled by the `selectedPoint` state. For example:
+          {selectedPoint && <SpeciesOverlay species={selectedPoint} onClose={handleOverlayClose} />}
+        */}
+      </main>
     </div>
   );
 }
