@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import World from './components/Globe/Globe';
 import SideBar from './components/SideBar';
+import Overlay from './components/Overlay/Overlay';
+import GlobeControls from './components/Globe/GlobeControls';
+import Timeline from './components/Timeline/Timeline';
 import data from './fauna.json';
 import './App.css';
+import { timeHierarchy } from './utils/timeHierarchy';
 
 function App() {
   const [filter, setFilter] = useState(null);
   const [selectedPoint, setSelectedPoint] = useState(null); // Manages overlay visibility
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isRotationEnabled, setIsRotationEnabled] = useState(true);
 
   const handlePointClick = (point) => {
     setSelectedPoint(point);
-    // Logic to show a species detail overlay would go here
   };
 
   const handleClearFilter = () => {
@@ -22,25 +27,34 @@ function App() {
     setSelectedPoint(null);
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarCollapsed(!isSidebarCollapsed);
+  };
+
+  const toggleRotation = () => {
+    setIsRotationEnabled(!isRotationEnabled);
+  };
+
   return (
     <div className="app-container">
       <SideBar
         data={data}
+        timeHierarchy={timeHierarchy}
         onFilterSelect={setFilter}
         onClearFilter={handleClearFilter}
+        isCollapsed={isSidebarCollapsed}
+        onToggle={toggleSidebar}
       />
       <main className="content-area">
         <World
           onPointClick={handlePointClick}
           isOverlayOpen={!!selectedPoint}
-          isRotationEnabled={true} // Assuming rotation is on by default
+          isRotationEnabled={isRotationEnabled}
           filter={filter}
         />
-        {/*
-          Your overlay component would go here. Its visibility would
-          be controlled by the `selectedPoint` state. For example:
-          {selectedPoint && <SpeciesOverlay species={selectedPoint} onClose={handleOverlayClose} />}
-        */}
+        <GlobeControls isRotationEnabled={isRotationEnabled} onToggleRotation={toggleRotation} />
+        <Timeline data={selectedPoint} isVisible={!!selectedPoint} />
+        {selectedPoint && <Overlay data={selectedPoint} onClose={handleOverlayClose} />}
       </main>
     </div>
   );

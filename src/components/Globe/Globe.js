@@ -5,13 +5,32 @@ import data from '../../fauna.json';
 import { timeHierarchy } from '../../utils/timeHierarchy';
 import './Globe.css';
 
+// --- Dynamic Globe Textures ---
+// To use dynamic textures, place your image files in the `public/textures/` directory.
+// The keys should match the 'value' from your filter options (e.g., 'Mesozoic Era', 'Cretaceous').
+const eraTextureMap = {
+  'Paleozoic Era': '/textures/paleozoic_era.jpg', // ~250 Ma
+  'Mesozoic Era': '/textures/mesozoic_era.jpg',   // ~150 Ma
+  'Cenozoic Era': '/textures/cenozoic_era.jpg',   // ~50 Ma
+};
+const defaultTexture = '//unpkg.com/three-globe/example/img/earth-day.jpg';
+
 const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
   const globeEl = useRef();
   const [markers, setMarkers] = useState([]);
   const [hoveredPoint, setHoveredPoint] = useState(null);
+  const [selectedPoint, setSelectedPoint] = useState(null);
   const rotationTimeout = useRef();
+  const [globeImageUrl, setGlobeImageUrl] = useState(defaultTexture);
 
-  // Effect to control globe auto-rotation based on user interaction
+  // Effect to clear selected point when overlay is closed, providing better UX
+  useEffect(() => {
+    if (!isOverlayOpen) {
+      setSelectedPoint(null);
+    }
+  }, [isOverlayOpen]);
+
+  // Effect to control globe auto-rotation based on user interaction and overlay state
   useEffect(() => {
     const controls = globeEl.current?.controls();
     if (!controls) return;
@@ -48,6 +67,45 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
   }, []);
 
   useEffect(() => {
+    // --- Texture update logic based on filter ---
+    let newTextureUrl = defaultTexture;
+    if (filter) {
+      let key = filter.value;
+      // For time periods, we want to find the major period (e.g., "Cretaceous")
+      // to match a texture, even if the filter is for a sub-period (e.g., "Late Cretaceous").
+      if (filter.type === 'time_period') {
+        for (const eraName in timeHierarchy) {
+          const era = timeHierarchy[eraName];
+          for (const periodName in era) {
+            if (era[periodName].includes(filter.value)) {
+              key = periodName; // Use the major period name (e.g., "Cretaceous") as the key
+              break;
+            }
+          }
+        }
+      }
+
+      // Check for a matching texture if the filter is time-based
+      if (filter.type === 'era' || filter.type === 'time_period') {
+        newTextureUrl = eraTextureMap[key] || defaultTexture;
+      }
+    }
+
+    if (globeEl.current && newTextureUrl !== globeImageUrl) {
+      // Fast spin to hide the texture swap
+      const controls = globeEl.current.controls();
+      const originalSpeed = controls.autoRotateSpeed;
+      controls.autoRotateSpeed = 10; // A much faster spin
+
+      setTimeout(() => {
+        setGlobeImageUrl(newTextureUrl);
+        if (globeEl.current) {
+          // Restore speed after the texture has been set
+          globeEl.current.controls().autoRotateSpeed = originalSpeed;
+        }
+      }, 500); // Spin for 0.5 seconds before swapping the image
+    }
+
     // --- Process data for markers ---
     // This effect re-runs whenever the filter changes
     const allSpecies = Object.entries(data).flatMap(([categoryName, subcategories]) =>
@@ -109,9 +167,9 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
       });
     }
 
-    const markerData = filteredSpecies
+    let markerData = filteredSpecies
       .map((species) => {
-        const coords = getCoordinates(species.location);
+        const coords = getCoordinates(species);
         if (coords) {
           // Pass the entire species object as the marker data
           return { ...coords, ...species };
@@ -120,9 +178,49 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
       })
       .filter(Boolean);
 
-    console.log(`Generated ${markerData.length} markers for filter:`, filter);
-    setMarkers(markerData);
-  }, [filter]);
+    // --- Jittering logic to prevent overlapping points ---
+    const pointsByLocation = new Map();
+    markerData.forEach(marker => {
+      // Group points by location, using fixed precision for floating point keys
+      const key = `${marker.lat.toFixed(4)},${marker.lng.toFixed(4)}`;
+      if (!pointsByLocation.has(key)) {
+        pointsByLocation.set(key, []);
+      }
+      pointsByLocation.get(key).push(marker);
+    });
+
+    const jitteredMarkers = [];
+    const JITTER_RADIUS_DEGREES = 2.5; // Increased radius for better visual separation
+
+    pointsByLocation.forEach(group => {
+      if (group.length > 1) {
+        const n = group.length;
+        const centerLat = group[0].lat;
+        const centerLng = group[0].lng;
+
+        group.forEach((marker, i) => {
+          const angle = (2 * Math.PI * i) / n;
+          // Adjust longitude radius based on latitude to prevent distortion near poles
+          const lngRadius = JITTER_RADIUS_DEGREES / Math.cos(centerLat * (Math.PI / 180));
+          const newLat = centerLat + JITTER_RADIUS_DEGREES * Math.sin(angle);
+          const newLng = centerLng + lngRadius * Math.cos(angle);
+
+          jitteredMarkers.push({
+            ...marker,
+            lat: newLat,
+            lng: newLng,
+            originalLat: centerLat, // Store original location for centering the view
+            originalLng: centerLng,
+          });
+        });
+      } else {
+        jitteredMarkers.push(group[0]);
+      }
+    });
+
+    console.log(`Generated ${jitteredMarkers.length} markers for filter:`, filter);
+    setMarkers(jitteredMarkers);
+  }, [filter, globeImageUrl]);
 
   const handleGlobeClick = () => {
     // Pause rotation on any click on the globe surface
@@ -133,19 +231,30 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
     }
   };
 
+  const handlePointClick = (point) => {
+    // Center view on the original location, especially for jittered points
+    const { lat, lng } = point.originalLat ? { lat: point.originalLat, lng: point.originalLng } : point;
+    globeEl.current.pointOfView({ lat, lng, altitude: 1.5 }, 1000);
+
+    // Set selected state for visual feedback and propagate to parent
+    setSelectedPoint(point);
+    onPointClick(point);
+  };
+
   return (
     <div className="globe-container">
       <Globe
         ref={globeEl}
-        globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
+        globeImageUrl={globeImageUrl}
+        globeOffset={[-150, 0]} // Shifts the globe left by 150px from the center
         pointsData={markers}
         pointLat="lat"
         pointLng="lng"
         pointLabel="name"
-        pointRadius={p => (p === hoveredPoint ? 0.75 : 0.5)}
-        pointColor={p => (p === hoveredPoint ? 'rgba(173, 216, 230, 1)' : 'rgba(245, 245, 245, 0.75)')}
+        pointRadius={p => (p === selectedPoint ? 0.8 : p === hoveredPoint ? 0.75 : 0.5)}
+        pointColor={p => p === selectedPoint ? 'yellow' : (p === hoveredPoint ? 'rgba(173, 216, 230, 1)' : 'rgba(245, 245, 245, 0.75)')}
         pointAltitude={0}
-        onPointClick={onPointClick}
+        onPointClick={handlePointClick}
         onGlobeClick={handleGlobeClick}
         onPointHover={setHoveredPoint}
       />

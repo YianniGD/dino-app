@@ -1,0 +1,28 @@
+.globe-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.globe-controls button {
+  background-color: rgba(44, 44, 46, 0.8);
+  border: 1px solid #555;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  padding-left: 2px; /* Optical centering for play icon */
+  transition: background-color 0.2s;
+}
+
+.globe-controls button:hover {
+  background-color: rgba(58, 58, 60, 0.9);
+}

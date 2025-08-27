@@ -37,7 +37,16 @@ const locationCoordinates = {
   "USA": { lat: 38.00, lng: -97.00 },
 };
 
-export const getCoordinates = (location) => {
+export const getCoordinates = (species) => {
+    // Prioritize specific coordinates if they exist on the species object.
+    if (species.coordinates && typeof species.coordinates.lat === 'number' && typeof species.coordinates.lng === 'number') {
+        return species.coordinates;
+    }
+
+    // Fallback to legacy location string lookup.
+    const location = species.location;
+    if (!location) return null;
+
     // Handle cases with multiple locations
     if (location.includes(' and ')) {
         const locations = location.split(' and ');
