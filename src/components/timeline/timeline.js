@@ -1,6 +1,6 @@
 import React from 'react';
 import { timeHierarchy } from '../../utils/timeHierarchy';
-import './Timeline.css';
+import './timeline.css';
 
 const Timeline = ({ data, isVisible }) => {
   if (!isVisible || !data) {

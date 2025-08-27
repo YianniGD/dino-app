@@ -1,16 +1,23 @@
 import React from 'react';
 import { groupByLocation } from '../utils/dataProcessor';
-import { eras } from '../utils/timeHierarchy';
+import { timeHierarchy } from '../utils/timeHierarchy';
 
 const FilterBar = ({ type, data, onFilterSelect }) => {
   let options = [];
   let filterKey = '';
 
   switch (type) {
-    case 'time':
-      options = eras;
+    case 'era':
+      options = Object.keys(timeHierarchy);
       filterKey = 'era';
       break;
+    case 'period': {
+      // Get all unique period names from the time hierarchy
+      const allPeriods = Object.values(timeHierarchy).flatMap(era => Object.keys(era));
+      options = [...new Set(allPeriods)];
+      filterKey = 'time_period';
+      break;
+    }
     case 'location':
       options = Object.keys(groupByLocation(data));
       filterKey = 'location';
