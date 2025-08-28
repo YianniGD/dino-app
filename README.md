@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-## Available Scripts
+# Dino React App
 
 In the project directory, you can run:
 
