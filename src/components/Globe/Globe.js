@@ -63,6 +63,8 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
     // This effect runs only once to set up initial globe properties
     if (globeEl.current) {
       globeEl.current.controls().autoRotateSpeed = 0.2;
+      // Set initial camera position to ensure the globe is visible on load
+      globeEl.current.pointOfView({ lat: 20, lng: 0, altitude: 2.5 }, 1000);
     }
   }, []);
 
@@ -171,8 +173,13 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
       .map((species) => {
         const coords = getCoordinates(species);
         if (coords) {
-          // Pass the entire species object as the marker data
-          return { ...coords, ...species };
+          // Add a placeholder icon URL based on the category.
+          // You can create corresponding SVG files in `public/icons/`.
+          const category = species.parentCategory;
+          // Make category name singular for the icon file (e.g., "fishes" -> "fish")
+          const iconName = category.endsWith('s') ? category.slice(0, -1) : category;
+          const iconUrl = `/icons/${iconName}.svg`;
+          return { ...coords, ...species, iconUrl };
         }
         return null;
       })
@@ -246,17 +253,30 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
       <Globe
         ref={globeEl}
         globeImageUrl={globeImageUrl}
-        globeOffset={[-150, 0]} // Shifts the globe left by 150px from the center
-        pointsData={markers}
-        pointLat="lat"
-        pointLng="lng"
-        pointLabel="name"
-        pointRadius={p => (p === selectedPoint ? 0.8 : p === hoveredPoint ? 0.75 : 0.5)}
-        pointColor={p => p === selectedPoint ? 'yellow' : (p === hoveredPoint ? 'rgba(173, 216, 230, 1)' : 'rgba(245, 245, 245, 0.75)')}
-        pointAltitude={0}
-        onPointClick={handlePointClick}
+        globeOffset={[-150, 0]}
+        htmlElementsData={markers}
+        htmlLat="lat"
+        htmlLng="lng"
+        htmlElement={d => {
+          const el = document.createElement('div');
+          el.innerHTML = `<img src="${d.iconUrl}" title="${d.name}" class="globe-marker-icon" />`;
+          el.className = 'globe-marker';
+
+          if (d === selectedPoint) {
+            el.classList.add('selected');
+          }
+          if (d === hoveredPoint) {
+            el.classList.add('hovered');
+          }
+
+          el.style.pointerEvents = 'auto';
+          el.style.cursor = 'pointer';
+          el.onclick = () => handlePointClick(d);
+          el.onmouseenter = () => setHoveredPoint(d);
+          el.onmouseleave = () => setHoveredPoint(null);
+          return el;
+        }}
         onGlobeClick={handleGlobeClick}
-        onPointHover={setHoveredPoint}
       />
     </div>
   );

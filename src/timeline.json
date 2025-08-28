@@ -1,0 +1,427 @@
+{
+  "Paleozoic": {
+    "duration": "541 to 252 ma",
+    "periods": {
+      "Permian": {
+        "duration": "299 to 252 ma",
+        "epochs": {
+          "Lopingian": {
+            "duration": "259.9 to 252 ma",
+            "events": [
+              "Permian-Triassic (P-T) extinction event, known as the \"Great Dying,\" occurs, eliminating about 95% of all life, but with little impact on plants.",
+              "Many taxa die out, including all blastoids, most trilobites, tabulate corals, euripterids, and most articulate crinoids.",
+              "Cynodont therapsids, a group that includes modern mammals, first appear around 260 ma.",
+              "Continental interiors become arid, leading to the loss of tropical flora and stressing tetrapod groups."
+            ]
+          },
+          "Guadalupian": {
+            "duration": "272.3 to 259.9 ma",
+            "events": [
+              "Spermatophyte (seed plants) become the predominant large trees.",
+              "Earliest known tapeworm fossils date to 270 ma.",
+              "Hemipteran insects with sucking mouthparts appear.",
+              "Amniote tetrapods diversify and become the dominant land animals."
+            ]
+          },
+          "Cisuralian": {
+            "duration": "298.9 to 272.3 ma",
+            "events": [
+              "Tropical forests become increasingly dry.",
+              "Great diversity of insects, amphibians, and tetrapods builds, with animals adapting to herbivorous lifestyles.",
+              "Seed plants become increasingly dominant.",
+              "Carboniferous flora are still abundant in the early Permian.",
+              "The supercontinent Pangaea forms around 300 ma, and a global warming phase begins, melting the southern ice cap."
+            ]
+          }
+        }
+      },
+      "Carboniferous": {
+        "duration": "359 to 299 ma",
+        "epochs": {
+          "Pennsylvanian": {
+            "duration": "323.2 to 298.9 ma",
+            "events": [
+              "Pinophyta (conifers), Cycadophyta, and Ginkgophyta appear around 300 ma.",
+              "Insect order Coleoptera (beetles) appears at ~318 ma.",
+              "Insect order Odonata (dragonflies) with wingspans up to 72 cm appear.",
+              "A major radiation of winged insects occurs.",
+              "Reptiles diversify around 328 ma, adapting to drier ecosystems.",
+              "Hexapods are the predominant herbivores and have grown diverse and large.",
+              "The first amniotic egg appears around 312 ma, a key step for reproduction on dry land.",
+              "Earliest reptiles evolve at ~315 ma but are tiny and unimportant.",
+              "Vast coal forests form, and atmospheric oxygen hits an all-time peak."
+            ]
+          },
+          "Mississippian": {
+            "duration": "358.9 to 323.2 ma",
+            "events": [
+              "A dramatic radiation of insects begins, and insect flight evolves.",
+              "High diversity of marine life across brachiopods, bryozoans, echinoderms, fishes, and mollusks.",
+              "Sharks diversify to fill ecological space left by the extinction of placoderms.",
+              "The first pre- or proto-amniotes appear on land around 345 ma."
+            ]
+          }
+        }
+      },
+      "Devonian": {
+        "duration": "419 to 359 ma",
+        "epochs": {
+          "Upper": {
+            "duration": "382.7 to 358.9 ma",
+            "events": [
+              "A protracted extinction event starts at 375 ma, eliminating 19% of all families and 70% of all species in marine environments.",
+              "Earliest tetrapods appear at ~360 ma, having evolved from lobe-finned fish that 'walked ashore'.",
+              "The first seeds appear around 370 ma.",
+              "Archaeopteris, considered the first tree, appears around 383 ma and transforms terrestrial ecosystems.",
+              "Ammonoid cephalopods of Orders Clymeniida and Prolecanitida appear."
+            ]
+          },
+          "Middle": {
+            "duration": "393.3 to 382.7 ma",
+            "events": [
+              "Vascular plants move inland to form extensive marshes and forests.",
+              "Spiny acanthodians and armored placoderms reach peak diversity, with placoderms colonizing fresh water.",
+              "Ammonoid cephalopods from Order Goniatiida appear around 390 ma."
+            ]
+          },
+          "Lower": {
+            "duration": "419.2 to 393.3 ma",
+            "events": [
+              "First undisputed insect, Rhyniognatha hirsti, appears at ~400 ma.",
+              "Brachiopods reach peak diversity along with rugose corals, contributing to the largest reef systems ever.",
+              "The oldest known terrestrial animal is a millipede, Pneumodesmus, from Scotland, at ~428 ma.",
+              "The oldest jawed vertebrates, the Acanthodii fish, appear at ~430 ma.",
+              "The Devonian is noted for the colonization of land by plants and animals.",
+              "It is known as the 'Age of Fishes' due to the massive radiation of jawed vertebrates."
+            ]
+          }
+        }
+      },
+      "Silurian": {
+        "duration": "443 to 419 ma",
+        "epochs": {
+          "Pridoli": {
+            "duration": "423.0 to 419.2 ma",
+            "events": [
+              "First true bony fish (Osteichthyes) appear: Sarcopterygii (lobe-finned fish) at ~418 ma and Actinopterygii (ray-finned fishes) at ~420 ma.",
+              "First arachnid appears at ~420 ma.",
+              "Jawed cartilaginous fish, Class Chondrichthyes, appear at ~422 ma."
+            ]
+          },
+          "Ludlow": {
+            "duration": "427.4 to 423.0 ma",
+            "events": [
+              "Bivalve gills adapt for filter feeding.",
+              "Sea scorpions (Eurypterids) reach peak diversity."
+            ]
+          },
+          "Wenlock": {
+            "duration": "433.4 to 427.4 ma",
+            "events": [
+              "The first bony, armored, and jawless fish, Class Osteostraci, appear at ~428 ma.",
+              "Lycopod vascular plants appear at ~428 ma.",
+              "The largest land invertebrate to ever live, Arthropleura, a myriapod, appears at ~428 ma.",
+              "The oldest vascular plant, Cooksonia, appears at ~433 ma."
+            ]
+          },
+          "Llandovery": {
+            "duration": "443.4 to 433.4 ma",
+            "events": [
+              "A minor extinction event at ~433 ma leads to the loss of half of trilobite species and 80% of conodont species.",
+              "The earliest branch of jawed fishes, Class Placodermi, appears at ~430 ma. They are the oldest vertebrates known to have evolved live birth.",
+              "Plants and air-breathing animals begin to colonize land."
+            ]
+          }
+        }
+      },
+      "Ordovician": {
+        "duration": "485 to 443 ma",
+        "epochs": {
+          "Upper": {
+            "duration": "458.4 to 443.4 ma",
+            "events": [
+              "A mass extinction event, the second most severe in the Paleozoic, kills 27% of families, 57% of genera, and 70% of species.",
+              "Trilobite Order Ptychopariida disappears.",
+              "Jawless fish, Class Anaspida, first appear at about 444 ma.",
+              "Echinoderm Class Echinoidea appear at ~450 ma."
+            ]
+          },
+          "Middle": {
+            "duration": "470.0 to 458.4 ma",
+            "events": [
+              "Eurypterids diversify.",
+              "Putative first non-vascular land plant spores appear at ~460 ma.",
+              "Complex shallow water reef systems proliferate.",
+              "Earliest echinoderms of Class Blastoidea appear."
+            ]
+          },
+          "Lower": {
+            "duration": "485.4 to 470.0 ma",
+            "events": [
+              "Trilobite domination of reefs gives way to more diverse fauna.",
+              "Oldest Eurypterid fossils are known from the Lower Ordovician of New York.",
+              "The Great Ordovician Radiation, also called the 'Ordovician Explosion', adds more than three times the biodiversity of the preceding Cambrian Explosion.",
+              "The period begins with rising sea levels, creating new shallow environments.",
+              "The last trilobite order to appear, Phacopida, occurs in the fossil record at the base of the Ordovician."
+            ]
+          }
+        }
+      },
+      "Cambrian": {
+        "duration": "541 to 485 ma",
+        "epochs": {
+          "Furongian": {
+            "duration": "497.0 to 485.4 ma",
+            "events": [
+              "The CambrianU+2013Ordovician extinction event begins at 488 ma, severely reducing trilobite species.",
+              "Trilobites reach their maximum diversity in terms of number of families.",
+              "The earliest jawless fish (Agnathan), within subclass Heterostraci, appears at ~488 ma, and are candidates for the ancestors to jawed vertebrates.",
+              "Echinoderm Subclass Asterozoa (starfish) and Ophiuroidea (brittle stars) appear at ~488 ma.",
+              "First Nautiloids cephalopods appear at ~495 mya.",
+              "First eel-like, soft-bodied Conodont vertebrates appear at ~495 ma."
+            ]
+          },
+          "Series 3": {
+            "duration": "509.0 to 497.0 ma",
+            "events": [
+              "Land plants potentially evolve from green algae at ~510 ma.",
+              "Trilobite Orders Proetida and Harpetida appear.",
+              "Calcareous sponges appear.",
+              "Redlichiid trilobites of Suborder Redlichiina disappear."
+            ]
+          },
+          "Series 2": {
+            "duration": "521.0 to 509.0 ma",
+            "events": [
+              "Primitive plant forms evolve from green algae at ~510 ma.",
+              "Trilobite Orders Asaphida, Lichida, and Odontopleurida appear.",
+              "End-Botomian mass extinction at 517 ma impacts life broadly."
+            ]
+          },
+          "Terreneuvian": {
+            "duration": "541.0 to 521.0 ma",
+            "events": [
+              "Echinoderm subclass Homalozoa appears at ~515 ma.",
+              "The earliest mollusc bivalves appear at ~525 ma.",
+              "Phylum Arthropoda appears at ~540 ma in great diversity.",
+              "Trilobites appear in the Cambrian with a highly developed visual system.",
+              "The earliest trilobites to appear are Orders Redlichiida and Ptychopariida.",
+              "Putative early chordates Pikaia, Haikouichthys and Myllokunmingia from Chengjiang Biota at ~530 ma may be the primitive ancestors of all fishes and land vertebrates.",
+              "The Cambrian Explosion begins, spanning about 20 million years, after which most animal phyla have appeared.",
+              "The sudden appearance of macroscopic fossils at the base of the Cambrian is known as 'Darwin's Dilemma', but it is understood now that animals appeared with hard parts they did not previously possess, and the 'explosion' was a burst of adaptation."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Mesozoic": {
+    "duration": "245 to 65 ma",
+    "periods": {
+      "Cretaceous": {
+        "duration": "146 to 65 ma",
+        "epochs": {
+          "Upper": {
+            "duration": "100.5 to 65 ma",
+            "events": [
+              "End Cretaceous extinction event: annihilates all non-avian dinosaurs and ammonites; ~75% of all species, 50% of genera and 17% of families meet extinction. The majority of plant species become extinct, as do all ammanoids, most belemnite cephalopods, rudist clams, and many microorganisms.",
+              "Social Hymenopterans (bees) appear.",
+              "New dinosaurs appear: Triceratops at ~68 ma, Tyrannosaurs at ~67 ma, Mosasaurs late in the period.",
+              "Hadrosaurids (duck-billed dinosaurs) appear beginning at ~83 ma, including Edmontosaurus at ~73 ma.",
+              "Pterosaurs start to decline toward extinction.",
+              "Order Crocodilia appears at ~83 ma.",
+              "Pachycephalosauria appears at ~90 ma.",
+              "Ammonites radiate, reaching sizes up to ~2 meters.",
+              "Molluscs, sponges, and bivalves are abundant, and new echinoid groups appear.",
+              "Ichthyosaurs decline and die out at ~90 ma, possibly due to competition from Plesiosaurs.",
+              "Modern teleost fishes proliferate and modern sharks appear."
+            ]
+          },
+          "Lower": {
+            "duration": "145.0 to 100.5 ma",
+            "events": [
+              "Earliest snakes appear at 112 ma or before.",
+              "Eusocial hymenopteran insects appear.",
+              "Spinosaurus, the largest known theropod, appears at ~112 ma and survives until ~97 ma.",
+              "The putative oldest marsupial ancestor is known from China at 125 ma.",
+              "First flowing plants (angiosperms) appear at ~130 ma or earlier, diversifying rapidly.",
+              "Numerous new dinosaurs appear, and birds diversify, sharing skies with pterosaurs.",
+              "A massive diversification of plankton forms occurs.",
+              "Dramatic global greenhouse conditions prevail, with near tropical conditions extending to poles.",
+              "Supercontinent Pangea breaks into two smaller continents: Northern Laurasia and Southern Gondwana."
+            ]
+          }
+        }
+      },
+      "Jurassic": {
+        "duration": "208 to 146 ma",
+        "epochs": {
+          "Upper": {
+            "duration": "163.5 to 145.0 ma",
+            "events": [
+              "Archaeopteryx transitional bird fossil is known from Solnhofen at 150 ma.",
+              "Evolution of eusocial behavior in isopteran insects (termites) and Hymenopteran (ants) forms.",
+              "One of the largest known dinosaurs, the sauropod Brachiosaurus, is known from ~154 ma.",
+              "Ceratopsian dinosaurs appear at ~158 ma.",
+              "The earliest eutherian placental mammal occurs at ~160 ma.",
+              "Decapod crustaceans (shrimp, crabs, lobsters) appear.",
+              "Putative earliest feathers (genus Aurornis) appear at ~160 ma.",
+              "First birds evolved from theropod dinosaurs appear at ~160 ma, initially retaining teeth and bony tails.",
+              "Minority claims of first angiosperms (flowering plants) at ~160 ma."
+            ]
+          },
+          "Middle": {
+            "duration": "174.1 to 163.5 ma",
+            "events": [
+              "Salamanders appear at ~164 ma.",
+              "Herbivorous Ankylosauria dinosaurs appear at ~167 ma.",
+              "Ornithopods, small, fast bipedal herbivorous dinosaurs, appear at ~169 ma.",
+              "Herbivorous Stegosauria dinosaurs appear at ~170 ma.",
+              "The massive Carnosauria theropod appears at 176 ma.",
+              "The pinophyta (Conifers) dominate the land.",
+              "Plesiosaurs radiate in marine environments."
+            ]
+          },
+          "Lower": {
+            "duration": "201.3 to 174.1 ma",
+            "events": [
+              "First lepidopteran insects (moths and butterflies) at ~190 ma.",
+              "First Ginkophyta at ~200 ma.",
+              "First pliosaur marine reptiles at ~200 ma.",
+              "Ammonoid cephalopods of Orders Ammonitida and Lytoceratina appear.",
+              "Archosaurian reptiles dominate terrestrial environments, with dinosaurs becoming increasingly dominant.",
+              "Sea levels rise, flooding continent interiors and creating warm ecosystems.",
+              "Breakup of supercontinent Pangaea begins, leading to the Atlantic Ocean."
+            ]
+          }
+        }
+      },
+      "Triassic": {
+        "duration": "252 to 201 ma",
+        "epochs": {
+          "Upper": {
+            "duration": "235.0 to 201.3 ma",
+            "events": [
+              "Extinction event at ~200 ma: all conodonts, half of marine genera, and three-quarters of all species went extinct, leaving dinosaurs with meager competition on land.",
+              "Archosaurs replaced synapsids as the dominant tetrapod group.",
+              "Plesiosaurs appear at ~204 ma.",
+              "Tiny early mammals evolved from synapsids, though one carnivorous mammal, Repenomamus robustus, fed on small dinosaurs.",
+              "First egg-laying mammals (monotremes) appear at ~210 ma.",
+              "Earliest lizards at ~220 ma.",
+              "Pterosaur flying reptiles appear at ~228 ma, becoming the first vertebrates to evolve powered flight.",
+              "The first huge, long-necked Sauropod dinosaurs appear at ~230 ma.",
+              "Dermaptera insects appear at ~208 ma.",
+              "The mostly carnivorous theropods appear at ~231 ma."
+            ]
+          },
+          "Middle": {
+            "duration": "247.2 to 235.0 ma",
+            "events": [
+              "Earth becomes lush with ferns, cycads, and conifers, setting the stage for huge sauropods.",
+              "Earliest small dinosaurs appear.",
+              "Diapsid reptiles like ichthyosaurs and placodonts flourish.",
+              "Ichthyosaur marine reptiles appear at ~245 ma.",
+              "First dipteran insects (true flies) appear at ~245 ma.",
+              "Controversial fossil angiosperm-like pollen appears at 247.2–242.0 ma.",
+              "First marine reptiles appear at ~245 ma, evolving from terrestrial ancestors.",
+              "Most modern groups of invertebrates reappear in evolved forms."
+            ]
+          },
+          "Lower": {
+            "duration": "252.2 to 247.2 ma",
+            "events": [
+              "Some crinoids evolve flexible arms for motility due to predation pressure.",
+              "First proto-frogs at ~250 ma.",
+              "Early Triassic is characterized by a slow recovery from the P-T extinction.",
+              "Ammonoid cephalopods of Order Ceratitida appear.",
+              "Supercontinent Pangea is warm and dry, with flora dominated by conifers and gymnosperms."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Cenozoic": {
+    "duration": "65 ma to today",
+    "periods": {
+      "Quaternary": {
+        "duration": "2.58 ma to present",
+        "epochs": {
+          "Holocene": {
+            "duration": "11 ka to today",
+            "events": [
+              "Earth is in a human-induced mass extinction event.",
+              "Humans domesticate plants and animals at ~13 ka.",
+              "Modern humans radiate, and science appears.",
+              "Ray-finned fishes are the dominant vertebrate group, containing half of all known species."
+            ]
+          },
+          "Pleistocene": {
+            "duration": "2.6 ma to 11.7 ka",
+            "events": [
+              "The last ice age occurs from 110 ka to 12 ka.",
+              "Homo sapien speech appears at ~75 ka.",
+              "Megafauna on different continents disappear between 10 and 40 ka.",
+              "Homo sapiens appear at ~195 ka."
+            ]
+          }
+        }
+      },
+      "Neogene": {
+        "duration": "23 to 2.58 ma",
+        "epochs": {
+          "Pliocene": {
+            "duration": "5.3 to 2.58 ma",
+            "events": [
+              "Close hominid human ancestors, including bipedal Australopithecines, appear at ~4.2 ma.",
+              "Megafauna like mastodons and mammoths appear.",
+              "Climate continues to cool, with grasslands replacing tropical flora."
+            ]
+          },
+          "Miocene": {
+            "duration": "23 to 5.3 ma",
+            "events": [
+              "Evolved forms are now quite modern.",
+              "Human-chimp divergence occurs between 4.9 and 7.0 ma.",
+              "Expanding grasslands drive the evolution of herbivorous grazers and their predators.",
+              "Burgeoning algae and kelp drive the diversification of marine vertebrates and predators like the megashark Carcharodon megalodon.",
+              "Modern forms of marine invertebrates are prolific."
+            ]
+          }
+        }
+      },
+      "Paleogene": {
+        "duration": "65 to 23 ma",
+        "epochs": {
+          "Oligocene": {
+            "duration": "34 to 23 ma",
+            "events": [
+              "A wide radiation toward more modern animals occurs, with most modern bird forms and mammals appearing.",
+              "Coral and carbonate reef systems grow more complex.",
+              "Herbivore prey and their predators evolve."
+            ]
+          },
+          "Eocene": {
+            "duration": "56 to 34 ma",
+            "events": [
+              "The Endocene extinction event mainly affects archaic marine and aquatic forms.",
+              "Heavily forested Earth gives way to deciduous forests.",
+              "Sponges adapt to fresh water around 44 ma.",
+              "Appearance and proliferation of grasses drives herbivore radiation.",
+              "Many modern mammals appear."
+            ]
+          },
+          "Paleocene": {
+            "duration": "66 to 56 ma",
+            "events": [
+              "Rodents and earliest primates evolve.",
+              "Ray-finned fishes particularly thrive.",
+              "Flowering plants and conifers radiate, filling ecosystems of recent plant extinctions.",
+              "Terrestrial mammals radiate and undergo exponential body size increases to fill ecological niches left by dinosaurs and large reptiles."
+            ]
+          }
+        }
+      }
+    }
+  }
+}

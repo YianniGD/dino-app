@@ -1,28 +1,29 @@
-.globe-controls {
-  position: fixed;
-  bottom: 20px;
+.globe-controls-container {
+  position: absolute;
+  top: 20px;
   right: 20px;
-  z-index: 1000;
-}
-
-.globe-controls button {
-  background-color: rgba(44, 44, 46, 0.8);
-  border: 1px solid #555;
-  color: white;
-  width: 40px;
-  height: 40px;
+  z-index: 10; /* Make sure it's above the globe but below overlays */
+  background-color: rgba(14, 20, 17, 0.75);
   border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
+  border: 1px solid #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
-  padding: 0;
-  padding-left: 2px; /* Optical centering for play icon */
-  transition: background-color 0.2s;
+  backdrop-filter: blur(5px);
 }
 
-.globe-controls button:hover {
-  background-color: rgba(58, 58, 60, 0.9);
+.globe-controls-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.globe-controls-container svg {
+    width: 24px;
+    height: 24px;
 }
