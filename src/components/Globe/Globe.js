@@ -1,27 +1,35 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Globe from 'react-globe.gl';
 import { getCoordinates } from '../../utils/geocoder';
 import data from '../../fauna.json';
 import { timeHierarchy } from '../../utils/timeHierarchy';
 import './Globe.css';
 
-// --- Dynamic Globe Textures ---
-// To use dynamic textures, place your image files in the `public/textures/` directory.
-// The keys should match the 'value' from your filter options (e.g., 'Mesozoic Era', 'Cretaceous').
-const eraTextureMap = {
-  'Paleozoic Era': '/textures/paleozoic_era.jpg', // ~250 Ma
-  'Mesozoic Era': '/textures/mesozoic_era.jpg',   // ~150 Ma
-  'Cenozoic Era': '/textures/cenozoic_era.jpg',   // ~50 Ma
-};
-const defaultTexture = '//unpkg.com/three-globe/example/img/earth-day.jpg';
+const fallbackTexture = '//unpkg.com/three-globe/example/img/earth-day.jpg';
+const desiredTexture = '/earth-night.png';
+const bumpMapTexture = '//unpkg.com/three-globe/example/img/earth-topology.png';
 
 const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
   const globeEl = useRef();
   const [markers, setMarkers] = useState([]);
-  const [hoveredPoint, setHoveredPoint] = useState(null);
   const [selectedPoint, setSelectedPoint] = useState(null);
   const rotationTimeout = useRef();
-  const [globeImageUrl, setGlobeImageUrl] = useState(defaultTexture);
+  const markerElements = useRef(new Map());
+  const [globeTexture, setGlobeTexture] = useState(fallbackTexture);
+
+  // Effect to load the desired texture, with a fallback if it fails.
+  useEffect(() => {
+    const img = new Image();
+    img.src = desiredTexture;
+    img.onload = () => {
+      // The image loaded successfully, so we can use it.
+      setGlobeTexture(desiredTexture);
+    };
+    img.onerror = () => {
+      // The image failed to load, stick with the fallback and warn the user.
+      console.warn(`Could not load local globe texture at "${desiredTexture}". Please ensure the file exists in the 'public' directory. The fallback texture will be used.`);
+    };
+  }, []); // Run only once on mount
 
   // Effect to clear selected point when overlay is closed, providing better UX
   useEffect(() => {
@@ -60,54 +68,13 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
   }, [isOverlayOpen, isRotationEnabled]);
 
   useEffect(() => {
-    // This effect runs only once to set up initial globe properties
     if (globeEl.current) {
       globeEl.current.controls().autoRotateSpeed = 0.2;
-      // Set initial camera position to ensure the globe is visible on load
       globeEl.current.pointOfView({ lat: 20, lng: 0, altitude: 2.5 }, 1000);
     }
   }, []);
 
   useEffect(() => {
-    // --- Texture update logic based on filter ---
-    let newTextureUrl = defaultTexture;
-    if (filter) {
-      let key = filter.value;
-      // For time periods, we want to find the major period (e.g., "Cretaceous")
-      // to match a texture, even if the filter is for a sub-period (e.g., "Late Cretaceous").
-      if (filter.type === 'time_period') {
-        for (const eraName in timeHierarchy) {
-          const era = timeHierarchy[eraName];
-          for (const periodName in era) {
-            if (era[periodName].includes(filter.value)) {
-              key = periodName; // Use the major period name (e.g., "Cretaceous") as the key
-              break;
-            }
-          }
-        }
-      }
-
-      // Check for a matching texture if the filter is time-based
-      if (filter.type === 'era' || filter.type === 'time_period') {
-        newTextureUrl = eraTextureMap[key] || defaultTexture;
-      }
-    }
-
-    if (globeEl.current && newTextureUrl !== globeImageUrl) {
-      // Fast spin to hide the texture swap
-      const controls = globeEl.current.controls();
-      const originalSpeed = controls.autoRotateSpeed;
-      controls.autoRotateSpeed = 10; // A much faster spin
-
-      setTimeout(() => {
-        setGlobeImageUrl(newTextureUrl);
-        if (globeEl.current) {
-          // Restore speed after the texture has been set
-          globeEl.current.controls().autoRotateSpeed = originalSpeed;
-        }
-      }, 500); // Spin for 0.5 seconds before swapping the image
-    }
-
     // --- Process data for markers ---
     // This effect re-runs whenever the filter changes
     const allSpecies = Object.entries(data).flatMap(([categoryName, subcategories]) =>
@@ -173,12 +140,9 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
       .map((species) => {
         const coords = getCoordinates(species);
         if (coords) {
-          // Add a placeholder icon URL based on the category.
-          // You can create corresponding SVG files in `public/icons/`.
-          const category = species.parentCategory;
-          // Make category name singular for the icon file (e.g., "fishes" -> "fish")
-          const iconName = category.endsWith('s') ? category.slice(0, -1) : category;
-          const iconUrl = `/icons/${iconName}.svg`;
+          // Assign a random icon to each species since there is no specific mapping.
+          const randomNumber = Math.floor(Math.random() * 161) + 1;
+          const iconUrl = `/dinosvg/Asset%20${randomNumber}.svg`;
           return { ...coords, ...species, iconUrl };
         }
         return null;
@@ -225,9 +189,25 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
       }
     });
 
-    console.log(`Generated ${jitteredMarkers.length} markers for filter:`, filter);
     setMarkers(jitteredMarkers);
-  }, [filter, globeImageUrl]);
+  }, [filter]);
+
+  // When the filter changes and new markers are generated, clear our element map
+  useEffect(() => {
+    markerElements.current.clear();
+  }, [markers]);
+
+  // Imperatively update the 'selected' class on markers when selectedPoint changes
+  useEffect(() => {
+    // Clear class from all markers
+    markerElements.current.forEach(el => el.classList.remove('selected'));
+
+    // Add class to the currently selected one
+    if (selectedPoint && markerElements.current.has(selectedPoint)) {
+      const el = markerElements.current.get(selectedPoint);
+      el.classList.add('selected');
+    }
+  }, [selectedPoint]);
 
   const handleGlobeClick = () => {
     // Pause rotation on any click on the globe surface
@@ -238,44 +218,40 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
     }
   };
 
-  const handlePointClick = (point) => {
+  const handlePointClick = useCallback((point) => {
+    console.log('Point clicked in Globe.js:', point);
     // Center view on the original location, especially for jittered points
     const { lat, lng } = point.originalLat ? { lat: point.originalLat, lng: point.originalLng } : point;
-    globeEl.current.pointOfView({ lat, lng, altitude: 1.5 }, 1000);
+    globeEl.current.pointOfView({ lat, lng, altitude: 2.5 }, 1000); // Faster 500ms animation
 
     // Set selected state for visual feedback and propagate to parent
     setSelectedPoint(point);
     onPointClick(point);
-  };
+  }, [onPointClick]);
+
+  const htmlElement = useCallback(d => {
+    const el = document.createElement('div');
+    el.style.width = '10px';
+    el.style.height = '10px';
+    el.style.borderRadius = '50%';
+    el.style.backgroundColor = 'blue';
+    el.style.cursor = 'pointer';
+    el.onclick = () => handlePointClick(d);
+    return el;
+  }, [handlePointClick]);
 
   return (
     <div className="globe-container">
       <Globe
         ref={globeEl}
-        globeImageUrl={globeImageUrl}
-        globeOffset={[-150, 0]}
+        globeImageUrl={globeTexture}
+        bumpImageUrl={bumpMapTexture}
+        htmlTransitionDuration={0}
+        globeOffset={[0, 0]}
         htmlElementsData={markers}
         htmlLat="lat"
         htmlLng="lng"
-        htmlElement={d => {
-          const el = document.createElement('div');
-          el.innerHTML = `<img src="${d.iconUrl}" title="${d.name}" class="globe-marker-icon" />`;
-          el.className = 'globe-marker';
-
-          if (d === selectedPoint) {
-            el.classList.add('selected');
-          }
-          if (d === hoveredPoint) {
-            el.classList.add('hovered');
-          }
-
-          el.style.pointerEvents = 'auto';
-          el.style.cursor = 'pointer';
-          el.onclick = () => handlePointClick(d);
-          el.onmouseenter = () => setHoveredPoint(d);
-          el.onmouseleave = () => setHoveredPoint(null);
-          return el;
-        }}
+        htmlElement={htmlElement}
         onGlobeClick={handleGlobeClick}
       />
     </div>

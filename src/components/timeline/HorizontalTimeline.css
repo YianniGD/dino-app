@@ -10,17 +10,24 @@
   color: #e0e0e0;
   border-top: 2px solid #333;
   z-index: 100;
-  transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.4s ease-in-out;
 }
 
-.horizontal-timeline-container.collapsed {
-  height: 40px;
+.horizontal-timeline-container.state-collapsed {
+  height: 100px;
   cursor: default;
+}
+
+.horizontal-timeline-container.state-expanded {
+  height: 60vh;
+  bottom: 20vh; /* Detaches the timeline from the bottom of the viewport */
+  border-radius: 12px 12px 0 0; /* Rounds only the top corners */
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.3);
 }
 
 .horizontal-timeline-wrapper {
   position: absolute;
-  top: 40px; /* Give space for buttons at the top */
+  top: 50px; /* Give space for buttons at the top */
   left: 0;
   z-index: 1; /* Ensure wrapper is behind UI controls */
   height: calc(100% - 40px);
@@ -30,14 +37,16 @@
   box-sizing: border-box;
   padding-top: 0;
   cursor: grab;
+  transform: translateY(0);
 }
 
 .horizontal-timeline-wrapper:active {
   cursor: grabbing;
 }
 
-.horizontal-timeline-container.collapsed .horizontal-timeline-wrapper {
-  visibility: hidden;
+.horizontal-timeline-container.state-collapsed .horizontal-timeline-wrapper {
+  transform: translateY(50px); /* Move it down to hide it */
+  pointer-events: none;
 }
 
 .time-ruler {
@@ -190,15 +199,15 @@
 
 .timeline-toggle-button {
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 20px;
   z-index: 101; /* Above other timeline content */
   background-color: rgba(51, 51, 51, 0.5);
   color: #fff;
   border: 1px solid #555;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,24 +215,80 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.horizontal-timeline-container.collapsed .timeline-toggle-button {
-    transform: rotate(180deg);
+.timeline-toggle-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+.timeline-resize-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  cursor: ns-resize;
+  z-index: 102;
+}
+
+.horizontal-timeline-container.state-collapsed .timeline-toggle-button {
+  transform: rotate(180deg);
+}
+
+.timeline-expand-button {
+  position: absolute;
+  top: 10px;
+  right: 94px; /* 20px (from right) + 64px (toggle button) + 10px (gap) */
+  z-index: 101;
+  background-color: rgba(51, 51, 51, 0.5);
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.4s ease-out, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s;
+  transform-origin: 150% 50%; /* Animate from a point to the right of the button */
+  transform: scale(1);
+}
+
+.timeline-expand-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+.horizontal-timeline-container.state-collapsed .timeline-expand-button {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(74px) scale(0.6);
 }
 
 .timeline-clear-filter-button {
   position: absolute;
-  top: 5px;
-  right: 60px;
+  top: 21px; /* Vertically align with other buttons */
+  right: 168px; /* 94px (from right) + 64px (expand button) + 10px (gap) */
   z-index: 101;
   background-color: #ffae42;
   color: #1a1a1a;
   border: none;
-  border-radius: 4px;
-  padding: 6px 12px;
-  font-size: 12px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: opacity 0.4s ease-out, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s;
+  transform-origin: right center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(50px) scale(0.6);
+}
+
+.horizontal-timeline-container:not(.state-collapsed).filter-active .timeline-clear-filter-button {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0) scale(1);
 }
 
 .timeline-clear-filter-button:hover {

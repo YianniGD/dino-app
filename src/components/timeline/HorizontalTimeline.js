@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
 import './HorizontalTimeline.css';
@@ -22,10 +22,27 @@ const parseDuration = (durationStr) => {
 };
 
 
-const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, isCollapsed, onToggle, filter, onFilterSelect, onClearFilter }) => {
+const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, timelineState, onStateChange, filter, onFilterSelect, onClearFilter }) => {
     const timelineContainerRef = useRef(null);
     const timelineWrapperRef = useRef(null);
     const draggableInstance = useRef(null);
+    const resizeHandleRef = useRef(null);
+
+    // --- Internal State Management for Controlled/Uncontrolled Component ---
+    // This allows the timeline to manage its own state if props aren't provided,
+    // making it more robust and easier to use.
+    const [internalState, setInternalState] = useState('collapsed');
+    
+    // A component is "controlled" when its state is managed by the parent via props.
+    const isControlled = timelineState !== undefined;
+
+    // Use the parent's state if controlled, otherwise use internal state.
+    const currentState = isControlled ? timelineState : internalState;
+
+    // This handler updates the state, whether it's internal or controlled by the parent.
+    const handleStateChange = useCallback((newState) => {
+        isControlled ? onStateChange?.(newState) : setInternalState(newState);
+    }, [isControlled, onStateChange]);
 
     const scale = 10; // pixels per million years
     const maxTime = 541; // Paleozoic start, our zero point on the timeline
@@ -49,12 +66,11 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, isCollapsed
         if (timelineWrapperRef.current && timelineContainerRef.current && !draggableInstance.current) {
             draggableInstance.current = Draggable.create(timelineWrapperRef.current, {
                 type: 'x',
-                edgeResistance: 0.65,
+                edgeResistance: 1,
                 bounds: timelineContainerRef.current,
-                inertia: {
-                    resistance: 300
-                },
+                inertia: false,
                 allowNativeTouchScrolling: false,
+                trigger: timelineWrapperRef.current,
             });
         }
         return () => {
@@ -67,29 +83,107 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, isCollapsed
 
     useEffect(() => {
         if (draggableInstance.current && draggableInstance.current[0]) {
-            draggableInstance.current[0].enabled(!isCollapsed);
+            // Draggable should be enabled unless fully collapsed
+            draggableInstance.current[0].enabled(currentState !== 'collapsed');
         }
-    }, [isCollapsed]);
+    }, [currentState]);
+
+    // Effect for the vertical resize handle
+    useEffect(() => {
+        const handle = resizeHandleRef.current;
+        const container = timelineContainerRef.current;
+        // Guard against missing elements
+        if (!handle || !container) return;
+
+        // If the component is controlled but a handler isn't provided, disable the handle.
+        if (isControlled && typeof onStateChange !== 'function') {
+            console.error("HorizontalTimeline: 'onStateChange' prop is missing or not a function for a controlled component. Drag-to-resize is disabled.");
+            handle.style.cursor = 'not-allowed';
+            return;
+        }
+
+        // Ensure handle is enabled
+        handle.style.cursor = 'ns-resize';
+        
+        const handleMouseDown = (e) => {
+            e.preventDefault();
+            const startY = e.pageY;
+            const startHeight = container.offsetHeight;
+
+            // Disable transitions during drag for instant feedback
+            container.style.transition = 'none';
+
+            const handleMouseMove = (moveEvent) => {
+                const newHeight = startHeight - (moveEvent.pageY - startY);
+                container.style.height = `${newHeight}px`;
+            };
+
+            const handleMouseUp = () => {
+                window.removeEventListener('mousemove', handleMouseMove);
+                window.removeEventListener('mouseup', handleMouseUp);
+
+                // Re-enable transitions for the snap animation
+                container.style.transition = '';
+
+                const finalHeight = container.offsetHeight;
+
+                // Define state heights for snapping logic
+                const expandedHeight = window.innerHeight * 0.6;
+                const defaultHeight = 250;
+                const collapsedHeight = 100;
+
+                // Define snap thresholds as midpoints between the state heights
+                const snapToExpandedThreshold = (expandedHeight + defaultHeight) / 2;
+                const snapToCollapsedThreshold = (defaultHeight + collapsedHeight) / 2;
+
+                // Remove inline height so CSS classes can take over for the animation
+                container.style.height = '';
+
+                if (finalHeight > snapToExpandedThreshold) {
+                    handleStateChange('expanded');
+                } else if (finalHeight < snapToCollapsedThreshold) {
+                    handleStateChange('collapsed');
+                } else {
+                    handleStateChange('default');
+                }
+            };
+
+            window.addEventListener('mousemove', handleMouseMove);
+            window.addEventListener('mouseup', handleMouseUp);
+        };
+
+        handle.addEventListener('mousedown', handleMouseDown);
+
+        // Cleanup function
+        return () => {
+            // Check if handle still exists before trying to remove listener
+            if (handle) {
+                handle.removeEventListener('mousedown', handleMouseDown);
+            }
+        };
+    }, [isControlled, onStateChange, handleStateChange]); // Rerun this effect if handlers change
 
     useEffect(() => {
         const container = timelineContainerRef.current;
-        if (!container || isCollapsed) {
+        const wrapper = timelineWrapperRef.current;
+        const draggable = draggableInstance.current && draggableInstance.current[0];
+
+        if (!container || !wrapper || !draggable || currentState === 'collapsed') {
             return;
         }
 
         const onWheel = (e) => {
-            const draggable = draggableInstance.current && draggableInstance.current[0];
-            if (!draggable) return;
-
             e.preventDefault();
+            // Use deltaX for horizontal trackpad scroll, fallback to deltaY for mouse wheel
+            const delta = e.deltaX || e.deltaY;
+            // Calculate the new position, clamping it within the bounds defined by Draggable
+            const newX = gsap.utils.clamp(draggable.minX, draggable.maxX, draggable.x - delta * 1.2);
 
-            // Animate the draggable's x position for a smooth scroll effect.
-            // Draggable will automatically respect the bounds.
-            gsap.to(draggable, {
-                x: draggable.x - e.deltaY * 1.2, // Adjust multiplier for sensitivity
-                duration: 0.4,
-                ease: "power2.out"
-            });
+            // Instantly set the new position using gsap.set for a 1:1 feel
+            gsap.set(wrapper, { x: newX });
+
+            // Force Draggable to update its internal values to match the element's new position
+            draggable.update(true);
         };
 
         container.addEventListener('wheel', onWheel, { passive: false });
@@ -97,7 +191,7 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, isCollapsed
         return () => {
             container.removeEventListener('wheel', onWheel);
         };
-    }, [isCollapsed]);
+    }, [currentState]);
 
     const renderTimeMarkers = () => {
         const markers = [];
@@ -112,18 +206,55 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, isCollapsed
         return markers;
     };
 
+    const handleEraClick = useCallback((eraName) => {
+        const newFilter = { type: 'era', value: `${eraName} Era` };
+        // Check if the clicked era is already the active filter
+        if (filter && filter.type === newFilter.type && filter.value === newFilter.value) {
+            onClearFilter?.(); // Use optional chaining for safety
+        } else {
+            onFilterSelect?.(newFilter); // Use optional chaining for safety
+        }
+    }, [filter, onClearFilter, onFilterSelect]);
+
+    const handleToggle = useCallback(() => {
+        // If it's open (default or expanded), collapse it. Otherwise, open to default.
+        if (currentState !== 'collapsed') {
+            handleStateChange('collapsed');
+        } else {
+            handleStateChange('default');
+        }
+    }, [currentState, handleStateChange]);
+
+    const handleExpandToggle = useCallback(() => {
+        // This button toggles between the default and expanded states.
+        if (currentState === 'default') {
+            handleStateChange('expanded');
+        } else if (currentState === 'expanded') {
+            handleStateChange('default');
+        }
+    }, [currentState, handleStateChange]);
+
+    const getToggleTitle = useCallback(() => {
+        if (currentState === 'collapsed') return 'Show timeline';
+        return 'Hide timeline';
+    }, [currentState]);
+
     return (
-        <div className={`horizontal-timeline-container ${isCollapsed ? 'collapsed' : ''}`} ref={timelineContainerRef}>
-            <button onClick={onToggle} className="timeline-toggle-button" title={isCollapsed ? 'Show timeline' : 'Hide timeline'}>
+        <div className={`horizontal-timeline-container state-${currentState} ${filter ? 'filter-active' : ''}`} ref={timelineContainerRef}>
+            <div ref={resizeHandleRef} className="timeline-resize-handle"></div>
+            <button onClick={handleToggle} className="timeline-toggle-button" title={getToggleTitle()}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 15L12 9L6 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             </button>
-            {!isCollapsed && filter && (
-              <button onClick={onClearFilter} className="timeline-clear-filter-button">
+            <button onClick={handleExpandToggle} className="timeline-expand-button" title="Toggle full view">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+            </button>
+            <button onClick={onClearFilter} className="timeline-clear-filter-button">
                 Clear Filter &times;
-              </button>
-            )}
+            </button>
             <div className="horizontal-timeline-wrapper" ref={timelineWrapperRef} style={{ width: `${totalWidth + 200}px` }}>
                 <div className="time-ruler">{renderTimeMarkers()}</div>
                 {Object.entries(timelineData).reverse().map(([eraName, eraData]) => {
@@ -136,7 +267,7 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, isCollapsed
                         <div key={eraName} className={`era-block ${eraName.toLowerCase()}`} style={{ left: `${eraPosition}px`, width: `${eraWidth}px` }}>
                             <h3
                               className={`era-title ${isEraActive ? 'active' : ''}`}
-                              onClick={() => onFilterSelect({ type: 'era', value: `${eraName} Era` })}
+                              onClick={() => handleEraClick(eraName)}
                             >
                               {eraName}
                             </h3>

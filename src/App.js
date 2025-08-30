@@ -14,6 +14,7 @@ function App() {
   const [isTimelineCollapsed, setIsTimelineCollapsed] = useState(false);
 
   const handlePointClick = (point) => {
+    console.log('Point clicked in App.js:', point);
     setSelectedPoint(point);
   };
 
