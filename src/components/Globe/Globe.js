@@ -3,10 +3,10 @@ import Globe from 'react-globe.gl';
 import { getCoordinates } from '../../utils/geocoder';
 import data from '../../fauna.json';
 import { timeHierarchy } from '../../utils/timeHierarchy';
+import { haversineDistance } from '../../utils/haversine';
 import './Globe.css';
 
-const fallbackTexture = process.env.PUBLIC_URL + '/earth-day.jpg';
-const desiredTexture = process.env.PUBLIC_URL + '/earth-night.jpg';
+const desiredTexture = process.env.PUBLIC_URL + '/earth-day.jpg';
 const bumpMapTexture = process.env.PUBLIC_URL + '/earth-topology.jpg';
 
 const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
@@ -15,21 +15,8 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
   const [selectedPoint, setSelectedPoint] = useState(null);
   const rotationTimeout = useRef();
   const markerElements = useRef(new Map());
-  const [globeTexture, setGlobeTexture] = useState(fallbackTexture);
-
-  // Effect to load the desired texture, with a fallback if it fails.
-  useEffect(() => {
-    const img = new Image();
-    img.src = desiredTexture;
-    img.onload = () => {
-      // The image loaded successfully, so we can use it.
-      setGlobeTexture(desiredTexture);
-    };
-    img.onerror = () => {
-      // The image failed to load, stick with the fallback and warn the user.
-      console.warn(`Could not load local globe texture at "${desiredTexture}". Please ensure the file exists in the 'public' directory. The fallback texture will be used.`);
-    };
-  }, []); // Run only once on mount
+  const [globeTexture, setGlobeTexture] = useState(desiredTexture);
+  const [altitude, setAltitude] = useState(2.5); // Initial altitude
 
   // Effect to clear selected point when overlay is closed, providing better UX
   useEffect(() => {
@@ -209,14 +196,73 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
     }
   }, [selectedPoint]);
 
-  const handleGlobeClick = () => {
+  const handleGlobeClick = useCallback(({ lat, lng }) => {
     // Pause rotation on any click on the globe surface
     const controls = globeEl.current?.controls();
     if (controls) {
       controls.autoRotate = false;
       clearTimeout(rotationTimeout.current);
     }
-  };
+
+    // Find the closest marker to the clicked point
+    let closestMarker = null;
+    let minDistance = Infinity;
+    const clickThreshold = 50; // kilometers, adjust as needed
+
+    markers.forEach(marker => {
+      const distance = haversineDistance(lat, lng, marker.lat, marker.lng);
+      if (distance < minDistance && distance < clickThreshold) {
+        minDistance = distance;
+        closestMarker = marker;
+      }
+    });
+
+    if (closestMarker) {
+      console.log('Closest marker clicked:', closestMarker.species_name);
+      // Center view on the original location, especially for jittered points
+      const { lat, lng } = closestMarker.originalLat ? { lat: closestMarker.originalLat, lng: closestMarker.originalLng } : closestMarker;
+      globeEl.current.pointOfView({ lat, lng, altitude: 2.5 }, 1000); // Faster 500ms animation
+
+      // Set selected state for visual feedback and propagate to parent
+      setSelectedPoint(closestMarker);
+      onPointClick(closestMarker);
+    } else {
+      // If no marker was clicked, clear selected point
+      setSelectedPoint(null);
+    }
+  }, [markers, onPointClick]); // Add markers to dependencies
+
+  const handleGlobeHover = useCallback(({ lat, lng }) => {
+    // Find the closest marker to the hovered point
+    let hoveredMarker = null;
+    let minDistance = Infinity;
+    const hoverThreshold = 50; // kilometers, adjust as needed
+
+    markers.forEach(marker => {
+      const distance = haversineDistance(lat, lng, marker.lat, marker.lng);
+      if (distance < minDistance && distance < hoverThreshold) {
+        minDistance = distance;
+        hoveredMarker = marker;
+      }
+    });
+
+    // Pause rotation on hover over any marker
+    const controls = globeEl.current?.controls();
+    if (controls) {
+      if (hoveredMarker) {
+        controls.autoRotate = false;
+      } else if (isRotationEnabled && !isOverlayOpen) {
+        // Resume rotation only if no marker is hovered and rotation is enabled and overlay is closed
+        controls.autoRotate = true;
+      }
+    }
+
+    // You can add visual feedback for hover here if needed, e.g., set a hoveredPoint state
+    // For now, just logging
+    if (hoveredMarker) {
+      // console.log('Hovered over marker:', hoveredMarker.species_name);
+    }
+  }, [markers, isRotationEnabled, isOverlayOpen]); // Add markers, isRotationEnabled, isOverlayOpen to dependencies
 
   const handlePointClick = useCallback((point) => {
     console.log('Point clicked in Globe.js:', point);
@@ -231,14 +277,23 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
 
   const htmlElement = useCallback(d => {
     const el = document.createElement('div');
-    el.style.width = '10px';
-    el.style.height = '10px';
-    el.style.borderRadius = '50%';
-    el.style.backgroundColor = 'blue';
-    el.style.cursor = 'pointer';
-    el.onclick = () => handlePointClick(d);
+    el.className = 'marker-container'; // Add a class for styling
+
+    // Icon
+    const icon = document.createElement('img');
+    icon.src = process.env.PUBLIC_URL + d.iconUrl; // Use PUBLIC_URL for icon path
+    icon.className = 'marker-icon';
+    // Removed direct onclick from icon, will handle via onGlobeClick
+    el.appendChild(icon);
+
+    // Species Name
+    const name = document.createElement('div');
+    name.className = 'marker-name';
+    name.textContent = d.species_name;
+    el.appendChild(name);
+
     return el;
-  }, [handlePointClick]);
+  }, [handlePointClick]); // Removed isRotationEnabled, isOverlayOpen from dependencies
 
   return (
     <div className="globe-container">
@@ -252,7 +307,8 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
         htmlLat="lat"
         htmlLng="lng"
         htmlElement={htmlElement}
-        onGlobeClick={handleGlobeClick}
+        onGlobeClick={handleGlobeClick} // Reintroduce
+        onGlobeHover={handleGlobeHover} // Add new
         backgroundImageUrl={process.env.PUBLIC_URL + '/starfield.jpg'}
       />
     </div>

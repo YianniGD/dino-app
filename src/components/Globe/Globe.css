@@ -1,24 +1,38 @@
-.globe-container {
-  width: 100%;
-  height: 100%;
+.marker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the icon vertically */
+  cursor: pointer;
+  position: relative;
+  width: 40px; /* Increased clickable area */
+  height: 40px; /* Increased clickable area */
+  z-index: 9999; /* Try a very high z-index */
 }
 
-.globe-marker {
-  transform-origin: bottom center;
+.marker-icon {
+  /* Adjust these values for desired scaling behavior */
+  width: calc(500px / var(--globe-altitude)); /* Increased constant for larger size */
+  height: calc(500px / var(--globe-altitude));
+  min-width: 10px; /* Minimum size to prevent disappearance */
+  min-height: 10px;
 }
 
-.globe-marker-icon {
-  width: 32px;
-  height: 32px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-  transition: all 0.2s ease-in-out;
+.marker-name {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 100%; /* Position above the icon */
+  margin-bottom: 5px; /* Space between icon and name */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none; /* Allow clicks to pass through to the icon */
 }
 
-.globe-marker.hovered .globe-marker-icon,
-.globe-marker.selected .globe-marker-icon {
-  transform: scale(1.5);
-}
-
-.globe-marker.selected .globe-marker-icon {
-  filter: drop-shadow(0 4px 8px rgba(255, 255, 0, 0.7));
+.marker-container:hover .marker-name {
+  opacity: 1; /* Show on hover */
 }
