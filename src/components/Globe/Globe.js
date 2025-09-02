@@ -5,9 +5,9 @@ import data from '../../fauna.json';
 import { timeHierarchy } from '../../utils/timeHierarchy';
 import './Globe.css';
 
-const fallbackTexture = '//unpkg.com/three-globe/example/img/earth-day.jpg';
-const desiredTexture = '/earth-night.png';
-const bumpMapTexture = '//unpkg.com/three-globe/example/img/earth-topology.png';
+const fallbackTexture = process.env.PUBLIC_URL + '/earth-day.jpg';
+const desiredTexture = process.env.PUBLIC_URL + '/earth-night.jpg';
+const bumpMapTexture = process.env.PUBLIC_URL + '/earth-topology.jpg';
 
 const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
   const globeEl = useRef();
@@ -253,6 +253,7 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
         htmlLng="lng"
         htmlElement={htmlElement}
         onGlobeClick={handleGlobeClick}
+        backgroundImageUrl={process.env.PUBLIC_URL + '/starfield.jpg'}
       />
     </div>
   );

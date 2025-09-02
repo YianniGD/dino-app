@@ -5,6 +5,7 @@
       "species": [
         {
           "name": "Doryaspis",
+          "image": "images/fishes/doryaspis.svg",
           "time_period": "Early Devonian",
           "location": "Spitzbergen",
           "description": "An Early Devonian pteraspid from Spitzbergen. It had a broad triangular head shield with a forward-projecting rostrum, a prominent dorsal spine, and a spiky upper surface for predator defense. Its ventral mouth suggests it fed on bottom organisms, and its hydrofoil shape allowed for rapid, controlled movement.",
@@ -12,6 +13,7 @@
         },
         {
           "name": "Boreaspis",
+          "image": "images/fishes/boreaspis.svg",
           "time_period": "Early Devonian",
           "location": "Spitzbergen",
           "description": "An Early Devonian pteraspid from Spitzbergen, characterized by a narrow head shield with a snout that curved down to sweep muddy bottoms, suggesting a feeding strategy on the muddy floor.",
@@ -19,6 +21,7 @@
         },
         {
           "name": "Arandaspis",
+          "image": "images/fishes/arandaspis.svg",
           "time_period": "Early Ordovician",
           "location": "Australia",
           "description": "An Early Ordovician agnathan from Australia. This primitive jawless fish had a head shield covered by small bony plates, a sensory line system, and two eye openings with a single nostril on its upper surface.",
@@ -26,6 +29,7 @@
         },
         {
           "name": "Jamoytius",
+          "image": "images/fishes/jamoytius.svg",
           "time_period": "Silurian",
           "location": "Scotland",
           "description": "A Silurian agnathan from Scotland, it was a small, eel-like creature without a backbone. It possessed a narrow tubular snout, a dorsal fin extending along its back, and a caudal fin for propulsion.",
@@ -33,6 +37,7 @@
         },
         {
           "name": "Drepanaspis",
+          "image": "images/fishes/drepanaspis.svg",
           "time_period": "Early Devonian",
           "location": "Germany",
           "description": "An Early Devonian pteraspid from Germany. It had a broad, flat, horseshoe-shaped head shield covering its eyes, a body covered by a mosaic of small plates, and a caudal fin for thrust.",
@@ -40,6 +45,7 @@
         },
         {
           "name": "Dartmuthia",
+          "image": "images/fishes/dartmuthia.svg",
           "time_period": "Early Devonian",
           "location": "Europe",
           "description": "An Early Devonian ostracoderm from Europe. It was a small, torpedo-shaped fish with a head shield covered in small bony plates, a flattened head shield, a prominent dorsal spine, two large lateral spines, and openings for eyes and a single nostril.",
@@ -47,6 +53,7 @@
         },
         {
           "name": "Pteraspis",
+          "image": "images/fishes/pteraspis.svg",
           "time_period": "Early Devonian",
           "location": "Europe",
           "description": "An Early Devonian pteraspid from Europe, featuring a typical heterostracan head shield covered with small dermal plates and two spines, one on its back and one on the lower side.",
@@ -54,6 +61,7 @@
         },
         {
           "name": "Hemicyclaspis",
+          "image": "images/fishes/hemicyclaspis.svg",
           "time_period": "Early Devonian",
           "location": "Europe",
           "description": "An Early Devonian cephalaspid from Europe with a broad, horseshoe-shaped head shield that covered its eyes, gills, and brain, along with a small, torpedo-shaped body.",
@@ -61,6 +69,7 @@
         },
         {
           "name": "Pharyngolepis",
+          "image": "images/fishes/pharyngolepis.svg",
           "time_period": "Early Silurian",
           "location": "Norway",
           "description": "An Early Silurian thelodont from Norway. This small, jawless fish had a well-developed dorsal fin and a caudal fin that would have aided in swimming.",
@@ -68,6 +77,7 @@
         },
         {
           "name": "Thelodus",
+          "image": "images/fishes/thelodus.svg",
           "time_period": "Early Silurian",
           "location": "Worldwide",
           "description": "An Early Silurian thelodont found worldwide. It was a small, jawless fish with a body covered by small bony scales, an extended caudal fin, and a small dorsal fin.",
@@ -75,6 +85,7 @@
         },
         {
           "name": "Tremataspis",
+          "image": "images/fishes/tremataspis.svg",
           "time_period": "Late Silurian",
           "location": "Europe",
           "description": "A Late Silurian osteostracan from Europe. This small, jawless fish had a large, flat, shovel-shaped head shield that covered most of its body.",
@@ -87,6 +98,7 @@
       "species": [
         {
           "name": "Ischyodus",
+          "image": "images/fishes/ischyodus.svg",
           "time_period": "Middle Jurassic to Early Paleocene",
           "location": "Europe",
           "description": "A Middle Jurassic to Early Paleocene chimera or rat fish from Europe. It was a small, long-bodied fish with a long, pointed snout and a large dorsal fin.",
@@ -94,6 +106,7 @@
         },
         {
           "name": "Deltoptychius",
+          "image": "images/fishes/deltoptychius.svg",
           "time_period": "Early Carboniferous",
           "location": "Europe",
           "description": "An Early Carboniferous chimera from Europe. It possessed a deep, shovel-like head with a short pointed snout and large pectoral fins.",
@@ -101,6 +114,7 @@
         },
         {
           "name": "Hybodus",
+          "image": "images/fishes/hybodus.svg",
           "time_period": "Middle Triassic to Late Cretaceous",
           "location": "Worldwide",
           "description": "A Middle Triassic to Late Cretaceous shark found worldwide. It had two dorsal fins, a large caudal fin, and small spines.",
@@ -108,6 +122,7 @@
         },
         {
           "name": "Xenacanthus",
+          "image": "images/fishes/xenacanthus.svg",
           "time_period": "Permian",
           "location": "Worldwide",
           "description": "A Permian freshwater shark found worldwide. It was an eel-like shark with a long dorsal fin, a long caudal fin, and a spine on its head.",
@@ -115,6 +130,7 @@
         },
         {
           "name": "Cobelodus",
+          "image": "images/fishes/cobelodus.svg",
           "time_period": "Early Carboniferous",
           "location": "North America",
           "description": "An Early Carboniferous shark from North America. It was a small, deep-bodied shark with a short snout and a large dorsal fin.",
@@ -122,6 +138,7 @@
         },
         {
           "name": "Tristychius",
+          "image": "images/fishes/tristychius.svg",
           "time_period": "Early Carboniferous",
           "location": "Scotland",
           "description": "An Early Carboniferous shark from Scotland. It was a small, slender shark with a long caudal fin and two dorsal fins.",
@@ -129,6 +146,7 @@
         },
         {
           "name": "Scapanorhynchus",
+          "image": "images/fishes/scapanorhynchus.svg",
           "time_period": "Late Cretaceous",
           "location": "Worldwide",
           "description": "A Late Cretaceous shark found worldwide, distinguished by a long, pointed snout, two dorsal fins, and a large caudal fin.",
@@ -136,6 +154,7 @@
         },
         {
           "name": "Stethacanthus",
+          "image": "images/fishes/stethacanthus.svg",
           "time_period": "Early Carboniferous",
           "location": "North America",
           "description": "An Early Carboniferous shark from North America, known for its flat, shovel-like dorsal fin and a broad, flat pectoral fin.",
@@ -143,6 +162,7 @@
         },
         {
           "name": "Cladoselache",
+          "image": "images/fishes/cladoselache.svg",
           "time_period": "Early Late Devonian",
           "location": "North America",
           "description": "An Early Late Devonian shark from North America. This small, streamlined shark had a long, symmetrical caudal fin, two dorsal fins, and seven gill slits.",
@@ -150,6 +170,7 @@
         },
         {
           "name": "Spathobathis",
+          "image": "images/fishes/spathobathis.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic ray from Europe. It had a broad, flat body with a long tail, large pectoral fins, a pointed snout, and small spines.",
@@ -162,6 +183,7 @@
       "species": [
         {
           "name": "Dunkleosteus",
+          "image": "images/fishes/dunkleosteus.svg",
           "time_period": "Late Devonian",
           "location": "Worldwide",
           "description": "A very large, armored fish with a massive head shield and powerful jaws. It was a Late Devonian placoderm found worldwide.",
@@ -169,6 +191,7 @@
         },
         {
           "name": "Climatius",
+          "image": "images/fishes/climatius.svg",
           "time_period": "Early Carboniferous",
           "location": "Europe",
           "description": "An Early Carboniferous spiny shark from Europe. This small, slender fish featured rows of spines along its sides and a large dorsal fin.",
@@ -176,6 +199,7 @@
         },
         {
           "name": "Acanthodes",
+          "image": "images/fishes/acanthodes.svg",
           "time_period": "Early Carboniferous",
           "location": "Europe and North America",
           "description": "An Early Carboniferous spiny shark from Europe and North America. It was a small, slender fish with a long dorsal fin and a long caudal fin.",
@@ -183,6 +207,7 @@
         },
         {
           "name": "Bothriolepis",
+          "image": "images/fishes/bothriolepis.svg",
           "time_period": "Middle to Late Devonian",
           "location": "Worldwide",
           "description": "A Middle to Late Devonian placoderm found worldwide. This small, armored fish had a flat, shovel-like head shield and large pectoral fins.",
@@ -190,6 +215,7 @@
         },
         {
           "name": "Palaeospondylus",
+          "image": "images/fishes/palaeospondylus.svg",
           "time_period": "Middle Devonian",
           "location": "Europe",
           "description": "A Middle Devonian fish from Europe. It was a small, eel-like fish with a long, slender body, a long caudal fin, and notably lacked jaws and fins.",
@@ -197,6 +223,7 @@
         },
         {
           "name": "Coccosteus",
+          "image": "images/fishes/coccosteus.svg",
           "time_period": "Middle Devonian",
           "location": "Worldwide",
           "description": "A Middle Devonian placoderm found worldwide. It was a small, armored fish with a broad, flat head shield and large pectoral fins.",
@@ -204,6 +231,7 @@
         },
         {
           "name": "Groenlandaspis",
+          "image": "images/fishes/groenlandaspis.svg",
           "time_period": "Late Devonian",
           "location": "Australia and Europe",
           "description": "A Late Devonian placoderm from Australia and Europe. This small, armored fish had a flat, shovel-like head shield and large pectoral fins.",
@@ -211,6 +239,7 @@
         },
         {
           "name": "Gemuendina",
+          "image": "images/fishes/gemuendina.svg",
           "time_period": "Late Devonian",
           "location": "Europe",
           "description": "A Late Devonian placoderm from Europe. It was a small, armored fish with a flat, shovel-like head shield and large pectoral fins.",
@@ -218,6 +247,7 @@
         },
         {
           "name": "Ctenurella",
+          "image": "images/fishes/ctenurella.svg",
           "time_period": "Late Devonian",
           "location": "Australia and Europe",
           "description": "A Late Devonian placoderm from Australia and Europe. It was a small, armored fish with a broad, flat head shield and large pectoral fins.",
@@ -230,6 +260,7 @@
       "species": [
         {
           "name": "Moythomasia",
+          "image": "images/fishes/moythomasia.svg",
           "time_period": "Middle to Late Devonian",
           "location": "Australia and Europe",
           "description": "A Middle to Late Devonian actinopterygian from Australia and Europe. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -237,6 +268,7 @@
         },
         {
           "name": "Cheirolepis",
+          "image": "images/fishes/cheirolepis.svg",
           "time_period": "Middle to Late Devonian",
           "location": "North America and Europe",
           "description": "A Middle to Late Devonian actinopterygian from North America and Europe. This small fish had a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -244,6 +276,7 @@
         },
         {
           "name": "Canobius",
+          "image": "images/fishes/canobius.svg",
           "time_period": "Early Carboniferous",
           "location": "Europe",
           "description": "An Early Carboniferous actinopterygian from Europe. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -251,6 +284,7 @@
         },
         {
           "name": "Platysomus",
+          "image": "images/fishes/platysomus.svg",
           "time_period": "Early Permian",
           "location": "Europe",
           "description": "An Early Permian actinopterygian from Europe. It was a small fish with a deep, flat body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -258,6 +292,7 @@
         },
         {
           "name": "Palaeoniscum",
+          "image": "images/fishes/palaeoniscum.svg",
           "time_period": "Early Permian",
           "location": "Europe",
           "description": "An Early Permian actinopterygian from Europe. This small fish had a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -265,6 +300,7 @@
         },
         {
           "name": "Saurichthys",
+          "image": "images/fishes/saurichthys.svg",
           "time_period": "Late Triassic",
           "location": "Worldwide",
           "description": "A Late Triassic actinopterygian found worldwide. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -272,6 +308,7 @@
         },
         {
           "name": "Pycnodus",
+          "image": "images/fishes/pycnodus.svg",
           "time_period": "Late Jurassic",
           "location": "Worldwide",
           "description": "A Late Jurassic actinopterygian found worldwide. It was a small fish with a deep, flat body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -279,6 +316,7 @@
         },
         {
           "name": "Dapedium",
+          "image": "images/fishes/dapedium.svg",
           "time_period": "Middle Triassic to Early Jurassic",
           "location": "Europe and Asia",
           "description": "A Middle Triassic to Early Jurassic actinopterygian from Europe and Asia. It was a small fish with a deep, flat body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -286,6 +324,7 @@
         },
         {
           "name": "Aspidorhynchus",
+          "image": "images/fishes/aspidorhynchus.svg",
           "time_period": "Late Jurassic",
           "location": "Worldwide",
           "description": "A Late Jurassic actinopterygian found worldwide. This small fish had a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -293,6 +332,7 @@
         },
         {
           "name": "Perleidus",
+          "image": "images/fishes/perleidus.svg",
           "time_period": "Late Triassic",
           "location": "Worldwide",
           "description": "A Late Triassic actinopterygian found worldwide. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -300,6 +340,7 @@
         },
         {
           "name": "Lepidotes",
+          "image": "images/fishes/lepidotes.svg",
           "time_period": "Late Triassic to Early Cretaceous",
           "location": "Worldwide",
           "description": "A Late Triassic to Early Cretaceous actinopterygian found worldwide. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -312,6 +353,7 @@
       "species": [
         {
           "name": "Gyroptychius",
+          "image": "images/fishes/gyroptychius.svg",
           "time_period": "Middle Devonian",
           "location": "Europe",
           "description": "A Middle Devonian lungfish from Europe. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -319,6 +361,7 @@
         },
         {
           "name": "Holoptychius",
+          "image": "images/fishes/holoptychius.svg",
           "time_period": "Middle Devonian",
           "location": "Europe",
           "description": "A Middle Devonian lungfish from Europe. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -326,6 +369,7 @@
         },
         {
           "name": "Eusthenopteron",
+          "image": "images/fishes/eusthenopteron.svg",
           "time_period": "Middle Devonian",
           "location": "North America and Europe",
           "description": "A Middle Devonian crossopterygian from North America and Europe. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -333,6 +377,7 @@
         },
         {
           "name": "Osteolepis",
+          "image": "images/fishes/osteolepis.svg",
           "time_period": "Middle Devonian",
           "location": "Europe",
           "description": "A Middle Devonian crossopterygian from Europe. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -340,6 +385,7 @@
         },
         {
           "name": "Dipterus",
+          "image": "images/fishes/dipterus.svg",
           "time_period": "Middle Devonian",
           "location": "Worldwide",
           "description": "A Middle Devonian lungfish found worldwide. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -347,6 +393,7 @@
         },
         {
           "name": "Griphognathus",
+          "image": "images/fishes/griphognathus.svg",
           "time_period": "Late Devonian",
           "location": "Australia",
           "description": "A Late Devonian lungfish from Australia. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -354,6 +401,7 @@
         },
         {
           "name": "Dipnorhynchus",
+          "image": "images/fishes/dipnorhynchus.svg",
           "time_period": "Early Devonian",
           "location": "Australia",
           "description": "An Early Devonian lungfish from Australia. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -361,6 +409,7 @@
         },
         {
           "name": "Macropoma",
+          "image": "images/fishes/macropoma.svg",
           "time_period": "Late Cretaceous",
           "location": "Europe and North America",
           "description": "A Late Cretaceous coelacanth from Europe and North America. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -368,6 +417,7 @@
         },
         {
           "name": "Strunius",
+          "image": "images/fishes/strunius.svg",
           "time_period": "Late Devonian",
           "location": "Europe",
           "description": "A Late Devonian coelacanth from Europe. It was a small fish with a long, slender body, a large dorsal fin, a long pointed snout, and small spines.",
@@ -382,6 +432,7 @@
       "species": [
         {
           "name": "Greererpeton",
+          "image": "images/amphibians/greererpeton.svg",
           "time_period": "Early Carboniferous",
           "location": "North America",
           "description": "An Early Carboniferous ichthyostegid from North America. It was a large, long-bodied amphibian with a flat, shovel-like head.",
@@ -389,6 +440,7 @@
         },
         {
           "name": "Eryops",
+          "image": "images/amphibians/eryops.svg",
           "time_period": "Early Carboniferous to Early Permian",
           "location": "North America",
           "description": "An Early Carboniferous to Early Permian eryopid from North America. This large, robust amphibian had a broad, flat head and powerful limbs.",
@@ -396,6 +448,7 @@
         },
         {
           "name": "Ichthyostega",
+          "image": "images/amphibians/ichthyostega.svg",
           "time_period": "Late Devonian",
           "location": "Greenland",
           "description": "A Late Devonian ichthyostegid from Greenland. It was a large, long-bodied amphibian with a flat, shovel-like head.",
@@ -403,6 +456,7 @@
         },
         {
           "name": "Crassigyrinus",
+          "image": "images/amphibians/crassigyrinus.svg",
           "time_period": "Early Carboniferous",
           "location": "Europe",
           "description": "An Early Carboniferous ichthyostegid from Europe. It was a large, long-bodied amphibian with a flat, shovel-like head.",
@@ -410,6 +464,7 @@
         },
         {
           "name": "Platyhystrix",
+          "image": "images/amphibians/platyhystrix.svg",
           "time_period": "Early Permian",
           "location": "North America",
           "description": "An Early Permian eryopid from North America. This large, robust amphibian featured a broad, flat head and powerful limbs.",
@@ -417,6 +472,7 @@
         },
         {
           "name": "Cacops",
+          "image": "images/amphibians/cacops.svg",
           "time_period": "Early Permian",
           "location": "North America",
           "description": "An Early Permian eryopid from North America. It was a small, robust amphibian with a broad, flat head and powerful limbs.",
@@ -424,6 +480,7 @@
         },
         {
           "name": "Paracyclotosaurus",
+          "image": "images/amphibians/paracyclotosaurus.svg",
           "time_period": "Middle Triassic",
           "location": "Australia",
           "description": "A Middle Triassic capitosaur from Australia. It was a large, long-bodied amphibian with a flat, shovel-like head.",
@@ -431,6 +488,7 @@
         },
         {
           "name": "Peltobatrachus",
+          "image": "images/amphibians/peltobatrachus.svg",
           "time_period": "Middle Triassic",
           "location": "Africa",
           "description": "A Middle Triassic capitosaur from Africa. It was a small, robust amphibian with a broad, flat head and powerful limbs.",
@@ -438,6 +496,7 @@
         },
         {
           "name": "Seymouria",
+          "image": "images/amphibians/seymouria.svg",
           "time_period": "Early Permian",
           "location": "North America",
           "description": "An Early Permian seymouriamorph from North America. It was a small, robust amphibian with a broad, flat head and powerful limbs.",
@@ -445,6 +504,7 @@
         },
         {
           "name": "Gerrothorax",
+          "image": "images/amphibians/gerrothorax.svg",
           "time_period": "Middle Triassic",
           "location": "Europe",
           "description": "A Middle Triassic plagiosaur from Europe. It was a large, robust amphibian with a broad, flat head and powerful limbs.",
@@ -452,6 +512,7 @@
         },
         {
           "name": "Eogyrinus",
+          "image": "images/amphibians/eogyrinus.svg",
           "time_period": "Early Carboniferous",
           "location": "Europe",
           "description": "An Early Carboniferous eryopid from Europe. It was a large, robust amphibian with a broad, flat head and powerful limbs.",
@@ -464,6 +525,7 @@
       "species": [
         {
           "name": "Keraterpeton",
+          "image": "images/amphibians/keraterpeton.svg",
           "time_period": "Early Carboniferous to Early Permian",
           "location": "Europe",
           "description": "An Early Carboniferous to Early Permian lepospondyl from Europe. It was a small, slender amphibian with a long tail and small limbs.",
@@ -471,6 +533,7 @@
         },
         {
           "name": "Pantylus",
+          "image": "images/amphibians/pantylus.svg",
           "time_period": "Early Permian",
           "location": "North America",
           "description": "An Early Permian lepospondyl from North America. It was a small, robust amphibian with a short tail and short limbs.",
@@ -478,6 +541,7 @@
         },
         {
           "name": "Microbrachis",
+          "image": "images/amphibians/microbrachis.svg",
           "time_period": "Early Carboniferous",
           "location": "Europe",
           "description": "An Early Carboniferous lepospondyl from Europe. It was a small, slender amphibian with a long tail and small limbs.",
@@ -485,6 +549,7 @@
         },
         {
           "name": "Ophiderpeton",
+          "image": "images/amphibians/ophiderpeton.svg",
           "time_period": "Early Carboniferous to Early Permian",
           "location": "Europe",
           "description": "An Early Carboniferous to Early Permian lepospondyl from Europe. It was a small, slender amphibian with a long tail and no limbs.",
@@ -492,6 +557,7 @@
         },
         {
           "name": "Phlegethontia",
+          "image": "images/amphibians/phlegethontia.svg",
           "time_period": "Early Carboniferous to Early Permian",
           "location": "Europe",
           "description": "An Early Carboniferous to Early Permian lepospondyl from Europe. It was a small, slender amphibian with a long tail and no limbs.",
@@ -499,6 +565,7 @@
         },
         {
           "name": "Vieraella",
+          "image": "images/amphibians/vieraella.svg",
           "time_period": "Early Jurassic",
           "location": "Argentina",
           "description": "An Early Jurassic anuran from Argentina. It was a small, frog-like amphibian with a short tail and long limbs.",
@@ -506,6 +573,7 @@
         },
         {
           "name": "Karaurus",
+          "image": "images/amphibians/karaurus.svg",
           "time_period": "Late Jurassic",
           "location": "Asia",
           "description": "A Late Jurassic anuran from Asia. It was a small, salamander-like amphibian with a long tail and short limbs.",
@@ -513,6 +581,7 @@
         },
         {
           "name": "Palaeobatrachus",
+          "image": "images/amphibians/palaeobatrachus.svg",
           "time_period": "Late Jurassic to Early Cenozoic",
           "location": "Europe",
           "description": "A Late Jurassic to Early Cenozoic anuran from Europe. It was a small, frog-like amphibian with a short tail and long limbs.",
@@ -520,6 +589,7 @@
         },
         {
           "name": "Triadobatrachus",
+          "image": "images/amphibians/triadobatrachus.svg",
           "time_period": "Early Triassic",
           "location": "Madagascar",
           "description": "An Early Triassic anuran from Madagascar. It was a small, frog-like amphibian with a short tail and long limbs.",
@@ -527,6 +597,7 @@
         },
         {
           "name": "Diplocaulus",
+          "image": "images/amphibians/diplocaulus.svg",
           "time_period": "Early Permian",
           "location": "North America",
           "description": "An Early Permian lepospondyl from North America. It was a small, salamander-like amphibian with a broad, flat head and short limbs.",
@@ -541,6 +612,7 @@
       "species": [
         {
           "name": "Hylonomus",
+          "image": "images/reptiles/hylonomus.svg",
           "time_period": "Late Carboniferous",
           "location": "North America",
           "description": "A Late Carboniferous anapsid from North America. It was a small, lizard-like reptile with a long tail and short limbs.",
@@ -548,6 +620,7 @@
         },
         {
           "name": "Labidosaurus",
+          "image": "images/reptiles/labidosaurus.svg",
           "time_period": "Early Permian",
           "location": "North America",
           "description": "An Early Permian anapsid from North America. It was a small, lizard-like reptile with a long tail and short limbs.",
@@ -555,6 +628,7 @@
         },
         {
           "name": "Milleretta",
+          "image": "images/reptiles/milleretta.svg",
           "time_period": "Middle Permian",
           "location": "Africa",
           "description": "A Middle Permian anapsid from Africa. It was a small, lizard-like reptile with a long tail and short limbs.",
@@ -562,6 +636,7 @@
         },
         {
           "name": "Mesosaurus",
+          "image": "images/reptiles/mesosaurus.svg",
           "time_period": "Early Permian",
           "location": "South America and Africa",
           "description": "An Early Permian anapsid from South America and Africa. It was a small, aquatic reptile with a long tail and short limbs.",
@@ -569,6 +644,7 @@
         },
         {
           "name": "Hypsognathus",
+          "image": "images/reptiles/hypsognathus.svg",
           "time_period": "Late Triassic",
           "location": "North America",
           "description": "A Late Triassic anapsid from North America. It was a small, lizard-like reptile with a long tail and short limbs.",
@@ -576,6 +652,7 @@
         },
         {
           "name": "Pareiasaurus",
+          "image": "images/reptiles/pareiasaurus.svg",
           "time_period": "Late Permian",
           "location": "South Africa and eastern Europe",
           "description": "A Late Permian anapsid from South Africa and eastern Europe. It was a large, robust reptile with a short tail and stout limbs.",
@@ -583,6 +660,7 @@
         },
         {
           "name": "Elginia",
+          "image": "images/reptiles/elginia.svg",
           "time_period": "Late Permian",
           "location": "Scotland",
           "description": "A Late Permian anapsid from Scotland. It was a small, robust reptile with a short tail and stout limbs.",
@@ -590,6 +668,7 @@
         },
         {
           "name": "Scutosaurus",
+          "image": "images/reptiles/scutosaurus.svg",
           "time_period": "Late Permian",
           "location": "Russia",
           "description": "A Late Permian anapsid from Russia. It was a large, robust reptile with a short tail and stout limbs.",
@@ -602,6 +681,7 @@
       "species": [
         {
           "name": "Proganochelys",
+          "image": "images/reptiles/proganochelys.svg",
           "time_period": "Late Triassic",
           "location": "Europe",
           "description": "A Late Triassic turtle from Europe. It was a medium-sized turtle with a broad shell and a long tail.",
@@ -609,6 +689,7 @@
         },
         {
           "name": "Stupendemys",
+          "image": "images/reptiles/stupendemys.svg",
           "time_period": "Miocene",
           "location": "South America",
           "description": "A Miocene turtle from South America. It was a very large turtle with a broad shell and a long tail.",
@@ -616,6 +697,7 @@
         },
         {
           "name": "Testudo",
+          "image": "images/reptiles/testudo.svg",
           "time_period": "Pleistocene to Recent",
           "location": "India",
           "description": "A Pleistocene to Recent tortoise from India. It was a medium-sized tortoise with a broad shell and a short tail.",
@@ -623,6 +705,7 @@
         },
         {
           "name": "Meiolania",
+          "image": "images/reptiles/meiolania.svg",
           "time_period": "Pleistocene to Recent",
           "location": "Australia and Lord Howe Island",
           "description": "A Pleistocene to Recent turtle from Australia and Lord Howe Island. It was a medium-sized turtle with a broad shell and a long tail.",
@@ -630,6 +713,7 @@
         },
         {
           "name": "Archelon",
+          "image": "images/reptiles/archelon.svg",
           "time_period": "Late Cretaceous",
           "location": "North America",
           "description": "A Late Cretaceous turtle from North America. It was a very large turtle with a broad shell and a long tail.",
@@ -637,6 +721,7 @@
         },
         {
           "name": "Palaeotrionyx",
+          "image": "images/reptiles/palaeotrionyx.svg",
           "time_period": "Paleocene",
           "location": "North America",
           "description": "A Paleocene turtle from North America. It was a small turtle with a broad shell and a long tail.",
@@ -649,6 +734,7 @@
       "species": [
         {
           "name": "Placochelys",
+          "image": "images/reptiles/placochelys.svg",
           "time_period": "Middle Triassic",
           "location": "Europe",
           "description": "A Middle Triassic placodont from Europe. It was a small, turtle-like marine reptile with a broad, flat shell and short limbs.",
@@ -656,6 +742,7 @@
         },
         {
           "name": "Henodus",
+          "image": "images/reptiles/henodus.svg",
           "time_period": "Late Triassic",
           "location": "Europe",
           "description": "A Late Triassic placodont from Europe. It was a small, turtle-like marine reptile with a broad, flat shell and short limbs.",
@@ -663,6 +750,7 @@
         },
         {
           "name": "Lariosaurus",
+          "image": "images/reptiles/lariosaurus.svg",
           "time_period": "Middle Triassic",
           "location": "Europe",
           "description": "A Middle Triassic nothosaur from Europe. It was a small, lizard-like marine reptile with a long body and short limbs.",
@@ -670,6 +758,7 @@
         },
         {
           "name": "Claudiosaurus",
+          "image": "images/reptiles/claudiosaurus.svg",
           "time_period": "Early Permian",
           "location": "Madagascar",
           "description": "An Early Permian nothosaur from Madagascar. It was a small, lizard-like marine reptile with a long body and short limbs.",
@@ -677,6 +766,7 @@
         },
         {
           "name": "Ceresiosaurus",
+          "image": "images/reptiles/ceresiosaurus.svg",
           "time_period": "Middle Triassic",
           "location": "Europe",
           "description": "A Middle Triassic nothosaur from Europe. It was a small, lizard-like marine reptile with a long body and short limbs.",
@@ -684,6 +774,7 @@
         },
         {
           "name": "Pistosaurus",
+          "image": "images/reptiles/pistosaurus.svg",
           "time_period": "Middle Triassic",
           "location": "Europe",
           "description": "A Middle Triassic nothosaur from Europe. It was a small, lizard-like marine reptile with a long body and short limbs.",
@@ -691,6 +782,7 @@
         },
         {
           "name": "Nothosaurus",
+          "image": "images/reptiles/nothosaurus.svg",
           "time_period": "Middle Triassic",
           "location": "Europe",
           "description": "A Middle Triassic nothosaur from Europe. It was a small, lizard-like marine reptile with a long body and short limbs.",
@@ -698,6 +790,7 @@
         },
         {
           "name": "Placodus",
+          "image": "images/reptiles/placodus.svg",
           "time_period": "Early to Middle Triassic",
           "location": "Europe",
           "description": "An Early to Middle Triassic placodont from Europe. It was a small, turtle-like marine reptile with a broad, flat shell and short limbs.",
@@ -710,6 +803,7 @@
       "species": [
         {
           "name": "Plesiosaurus",
+          "image": "images/reptiles/plesiosaurus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic plesiosaur from Europe. It was a medium-sized marine reptile with a long neck, small head, and large flippers.",
@@ -717,6 +811,7 @@
         },
         {
           "name": "Kronosaurus",
+          "image": "images/reptiles/kronosaurus.svg",
           "time_period": "Early Cretaceous",
           "location": "Australia",
           "description": "An Early Cretaceous plesiosaur from Australia. It was a very large marine reptile with a short neck, large head, and powerful flippers.",
@@ -724,6 +819,7 @@
         },
         {
           "name": "Elasmosaurus",
+          "image": "images/reptiles/elasmosaurus.svg",
           "time_period": "Late Cretaceous",
           "location": "North America",
           "description": "A Late Cretaceous plesiosaur from North America. It was a large marine reptile with a very long neck, small head, and large flippers.",
@@ -731,6 +827,7 @@
         },
         {
           "name": "Peloneustes",
+          "image": "images/reptiles/peloneustes.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic plesiosaur from Europe. It was a medium-sized marine reptile with a short neck, large head, and powerful flippers.",
@@ -738,6 +835,7 @@
         },
         {
           "name": "Macroplata",
+          "image": "images/reptiles/macroplata.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic plesiosaur from Europe. It was a medium-sized marine reptile with a short neck, large head, and powerful flippers.",
@@ -745,6 +843,7 @@
         },
         {
           "name": "Cryptocleidus",
+          "image": "images/reptiles/cryptocleidus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic plesiosaur from Europe. It was a medium-sized marine reptile with a long neck, small head, and large flippers.",
@@ -752,6 +851,7 @@
         },
         {
           "name": "Liopleurodon",
+          "image": "images/reptiles/liopleurodon.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic plesiosaur from Europe. It was a very large marine reptile with a short neck, large head, and powerful flippers.",
@@ -759,6 +859,7 @@
         },
         {
           "name": "Muraenosaurus",
+          "image": "images/reptiles/muraenosaurus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic plesiosaur from Europe. It was a medium-sized marine reptile with a long neck, small head, and large flippers.",
@@ -766,6 +867,7 @@
         },
         {
           "name": "Cymbospondylus",
+          "image": "images/reptiles/cymbospondylus.svg",
           "time_period": "Middle Triassic",
           "location": "North America",
           "description": "A Middle Triassic ichthyosaur from North America. It was a large marine reptile with a long, slender body and a long tail.",
@@ -773,6 +875,7 @@
         },
         {
           "name": "Mixosaurus",
+          "image": "images/reptiles/mixosaurus.svg",
           "time_period": "Middle Triassic",
           "location": "Worldwide",
           "description": "A Middle Triassic ichthyosaur found worldwide. It was a small marine reptile with a short, compact body and a short tail.",
@@ -780,6 +883,7 @@
         },
         {
           "name": "Shonisaurus",
+          "image": "images/reptiles/shonisaurus.svg",
           "time_period": "Late Triassic",
           "location": "North America",
           "description": "A Late Triassic ichthyosaur from North America. It was a very large marine reptile with a long, slender body and a long tail.",
@@ -787,6 +891,7 @@
         },
         {
           "name": "Ichthyosaurus",
+          "image": "images/reptiles/ichthyosaurus.svg",
           "time_period": "Early Jurassic",
           "location": "Europe",
           "description": "An Early Jurassic ichthyosaur from Europe. It was a medium-sized marine reptile with a long, slender body and a long tail.",
@@ -794,6 +899,7 @@
         },
         {
           "name": "Stenopterygius",
+          "image": "images/reptiles/stenopterygius.svg",
           "time_period": "Early Jurassic",
           "location": "Europe",
           "description": "An Early Jurassic ichthyosaur from Europe. It was a medium-sized marine reptile with a long, slender body and a long tail.",
@@ -801,6 +907,7 @@
         },
         {
           "name": "Ophthalmosaurus",
+          "image": "images/reptiles/ophthalmosaurus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe and North America",
           "description": "A Late Jurassic ichthyosaur from Europe and North America. It was a medium-sized marine reptile with a long, slender body and a long tail.",
@@ -808,6 +915,7 @@
         },
         {
           "name": "Temnodontosaurus",
+          "image": "images/reptiles/temnodontosaurus.svg",
           "time_period": "Early Jurassic",
           "location": "Europe",
           "description": "An Early Jurassic ichthyosaur from Europe. It was a medium-sized marine reptile with a long, slender body and a long tail.",
@@ -815,6 +923,7 @@
         },
         {
           "name": "Eurhinosaurus",
+          "image": "images/reptiles/eurhinosaurus.svg",
           "time_period": "Early Jurassic",
           "location": "Europe",
           "description": "An Early Jurassic ichthyosaur from Europe. It was a medium-sized marine reptile with a long, slender body and a long tail.",
@@ -827,6 +936,7 @@
       "species": [
         {
           "name": "Araeoscelis",
+          "image": "images/reptiles/araeoscelis.svg",
           "time_period": "Early Permian",
           "location": "North America",
           "description": "An Early Permian diapsid from North America. It was a small, lizard-like reptile with a long tail and slender limbs.",
@@ -834,6 +944,7 @@
         },
         {
           "name": "Hovasaurus",
+          "image": "images/reptiles/hovasaurus.svg",
           "time_period": "Early Triassic",
           "location": "Madagascar",
           "description": "An Early Triassic thalattosaur from Madagascar. It was a small, lizard-like marine reptile with a long body and slender limbs.",
@@ -841,6 +952,7 @@
         },
         {
           "name": "Thadeosaurus",
+          "image": "images/reptiles/thadeosaurus.svg",
           "time_period": "Early Permian",
           "location": "Madagascar",
           "description": "An Early Permian thalattosaur from Madagascar. It was a small, lizard-like marine reptile with a long body and slender limbs.",
@@ -848,6 +960,7 @@
         },
         {
           "name": "Petrolacosaurus",
+          "image": "images/reptiles/petrolacosaurus.svg",
           "time_period": "Late Carboniferous",
           "location": "North America",
           "description": "A Late Carboniferous diapsid from North America. It was a small, lizard-like reptile with a long tail and slender limbs.",
@@ -855,6 +968,7 @@
         },
         {
           "name": "Coelurosauravus",
+          "image": "images/reptiles/coelurosauravus.svg",
           "time_period": "Early Permian",
           "location": "Madagascar",
           "description": "An Early Permian thalattosaur from Madagascar. It was a small, lizard-like marine reptile with a long body and slender limbs.",
@@ -862,6 +976,7 @@
         },
         {
           "name": "Champsosaurus",
+          "image": "images/reptiles/champsosaurus.svg",
           "time_period": "Late Cretaceous to Eocene",
           "location": "Europe and North America",
           "description": "A Late Cretaceous to Eocene choristodere from Europe and North America. It was a large, aquatic reptile with a long snout and a long tail.",
@@ -869,6 +984,7 @@
         },
         {
           "name": "Askeptosaurus",
+          "image": "images/reptiles/askeptosaurus.svg",
           "time_period": "Middle Triassic",
           "location": "Europe",
           "description": "A Middle Triassic thalattosaur from Europe. It was a small, lizard-like marine reptile with a long body and slender limbs.",
@@ -876,6 +992,7 @@
         },
         {
           "name": "Pleurosaurus",
+          "image": "images/reptiles/pleurosaurus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic sphenodont from Europe. It was a small, lizard-like marine reptile with a long body and slender limbs.",
@@ -883,6 +1000,7 @@
         },
         {
           "name": "Planocephalosaurus",
+          "image": "images/reptiles/planocephalosaurus.svg",
           "time_period": "Late Triassic",
           "location": "Europe",
           "description": "A Late Triassic sphenodont from Europe. It was a small, lizard-like marine reptile with a long body and slender limbs.",
@@ -895,6 +1013,7 @@
       "species": [
         {
           "name": "Platecarpus",
+          "image": "images/reptiles/platecarpus.svg",
           "time_period": "Late Cretaceous",
           "location": "North America",
           "description": "A Late Cretaceous mosasaur from North America. It was a large, marine lizard with a long, slender body and a long tail.",
@@ -902,6 +1021,7 @@
         },
         {
           "name": "Plotosaurus",
+          "image": "images/reptiles/plotosaurus.svg",
           "time_period": "Late Cretaceous",
           "location": "North America",
           "description": "A Late Cretaceous mosasaur from North America. It was a large, marine lizard with a long, slender body and a long tail.",
@@ -909,6 +1029,7 @@
         },
         {
           "name": "Megalania",
+          "image": "images/reptiles/megalania.svg",
           "time_period": "Pliocene to Recent",
           "location": "Australia",
           "description": "A Pliocene to Recent lizard from Australia. It was a very large terrestrial lizard with a robust body and a short tail.",
@@ -916,6 +1037,7 @@
         },
         {
           "name": "Tanystropheus",
+          "image": "images/reptiles/tanystropheus.svg",
           "time_period": "Middle Triassic",
           "location": "Europe",
           "description": "A Middle Triassic protosaur from Europe. It was a medium-sized reptile with an extremely long neck and a short body.",
@@ -923,6 +1045,7 @@
         },
         {
           "name": "Hyperodapedon",
+          "image": "images/reptiles/hyperodapedon.svg",
           "time_period": "Late Triassic",
           "location": "India and Scotland",
           "description": "A Late Triassic rhynchosaur from India and Scotland. It was a medium-sized reptile with a robust body and a short tail.",
@@ -930,6 +1053,7 @@
         },
         {
           "name": "Pachyrhachis",
+          "image": "images/reptiles/pachyrhachis.svg",
           "time_period": "Late Cretaceous",
           "location": "Middle East",
           "description": "A Late Cretaceous snake from the Middle East. It was a small, marine snake with a long, slender body and a short tail.",
@@ -937,6 +1061,7 @@
         },
         {
           "name": "Protorosaurus",
+          "image": "images/reptiles/protorosaurus.svg",
           "time_period": "Late Permian",
           "location": "Europe",
           "description": "A Late Permian protosaur from Europe. It was a medium-sized reptile with a long, slender body and a long tail.",
@@ -944,6 +1069,7 @@
         },
         {
           "name": "Ardeosaurus",
+          "image": "images/reptiles/ardeosaurus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic gecko from Europe. It was a small, lizard-like reptile with a slender body and a long tail.",
@@ -951,6 +1077,7 @@
         },
         {
           "name": "Kuehneosaurus",
+          "image": "images/reptiles/kuehneosaurus.svg",
           "time_period": "Early Triassic",
           "location": "Europe",
           "description": "An Early Triassic kuehneosaur from Europe. It was a small, gliding reptile with broad, wing-like extensions from its ribs.",
@@ -963,6 +1090,7 @@
       "species": [
         {
           "name": "Terrestrisuchus",
+          "image": "images/reptiles/terrestrisuchus.svg",
           "time_period": "Late Triassic",
           "location": "Europe",
           "description": "A Late Triassic crocodile from Europe. It was a small, slender crocodile with long limbs and a long tail.",
@@ -970,6 +1098,7 @@
         },
         {
           "name": "Gracilisuchus",
+          "image": "images/reptiles/gracilisuchus.svg",
           "time_period": "Middle Triassic",
           "location": "South America",
           "description": "A Middle Triassic crocodile from South America. It was a small, slender crocodile with long limbs and a long tail.",
@@ -977,6 +1106,7 @@
         },
         {
           "name": "Protosuchus",
+          "image": "images/reptiles/protosuchus.svg",
           "time_period": "Early Jurassic",
           "location": "North America",
           "description": "An Early Jurassic crocodile from North America. It was a small, robust crocodile with short limbs and a short tail.",
@@ -984,6 +1114,7 @@
         },
         {
           "name": "Bernissartia",
+          "image": "images/reptiles/bernissartia.svg",
           "time_period": "Early Cretaceous",
           "location": "Europe and Africa",
           "description": "An Early Cretaceous crocodile from Europe and Africa. It was a small, slender crocodile with long limbs and a long tail.",
@@ -991,6 +1122,7 @@
         },
         {
           "name": "Metriorhynchus",
+          "image": "images/reptiles/metriorhynchus.svg",
           "time_period": "Middle to Late Jurassic",
           "location": "Europe and South America",
           "description": "A Middle to Late Jurassic marine crocodile from Europe and South America. It was a large, marine crocodile with a long snout and a fish-like tail.",
@@ -998,6 +1130,7 @@
         },
         {
           "name": "Teleosaurus",
+          "image": "images/reptiles/teleosaurus.svg",
           "time_period": "Middle to Late Jurassic",
           "location": "Europe and South America",
           "description": "A Middle to Late Jurassic marine crocodile from Europe and South America. It was a large, marine crocodile with a long snout and a fish-like tail.",
@@ -1005,6 +1138,7 @@
         },
         {
           "name": "Deinosuchus",
+          "image": "images/reptiles/deinosuchus.svg",
           "time_period": "Late Cretaceous",
           "location": "North America",
           "description": "A Late Cretaceous crocodile from North America. It was a very large, robust crocodile with a broad snout and powerful jaws.",
@@ -1012,6 +1146,7 @@
         },
         {
           "name": "Pristichampsus",
+          "image": "images/reptiles/pristichampsus.svg",
           "time_period": "Late Eocene",
           "location": "Europe and North America",
           "description": "A Late Eocene crocodile from Europe and North America. It was a large, robust crocodile with a broad snout and powerful jaws.",
@@ -1024,6 +1159,7 @@
       "species": [
         {
           "name": "Eudimorphodon",
+          "image": "images/reptiles/eudimorphodon.svg",
           "time_period": "Early Jurassic",
           "location": "Italy",
           "description": "An Early Jurassic pterosaur from Italy. It was a small pterosaur with a long tail and many teeth, with a wingspan of 2 ft 4 in (70 cm).",
@@ -1031,6 +1167,7 @@
         },
         {
           "name": "Dimorphodon",
+          "image": "images/reptiles/dimorphodon.svg",
           "time_period": "Early Jurassic",
           "location": "Europe",
           "description": "An Early Jurassic pterosaur from Europe. It was a medium-sized pterosaur with a long tail and a large head with two types of teeth, with a wingspan of 4 ft (1.2 m).",
@@ -1038,6 +1175,7 @@
         },
         {
           "name": "Rhamphorhynchus",
+          "image": "images/reptiles/rhamphorhynchus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic pterosaur from Europe. It was a medium-sized pterosaur with a long tail ending in a diamond-shaped vane, with a wingspan of 3 ft (90 cm).",
@@ -1045,6 +1183,7 @@
         },
         {
           "name": "Sordes",
+          "image": "images/reptiles/sordes.svg",
           "time_period": "Late Jurassic",
           "location": "Kazakhstan",
           "description": "A Late Jurassic pterosaur from Kazakhstan. It was a small pterosaur with a long tail and a wingspan of 1 ft 6 in (50 cm), notable for its fuzzy body covering suggesting warm-bloodedness.",
@@ -1052,6 +1191,7 @@
         },
         {
           "name": "Scaphognathus",
+          "image": "images/reptiles/scaphognathus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic pterosaur from Europe. It was a small pterosaur with a long tail and a wingspan of 3 ft 1 in (1 m), characterized by a deep head with a short snout.",
@@ -1059,6 +1199,7 @@
         },
         {
           "name": "Anurognathus",
+          "image": "images/reptiles/anurognathus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic pterosaur from Europe. It was a small pterosaur with a very short tail and a broad, short head, with a wingspan of 1 ft (30 cm).",
@@ -1066,6 +1207,7 @@
         },
         {
           "name": "Pterodactylus",
+          "image": "images/reptiles/pterodactylus.svg",
           "time_period": "Late Jurassic",
           "location": "Europe",
           "description": "A Late Jurassic pterosaur from Europe. It was a small pterosaur with a short tail, with a wingspan of 2 ft 8 in (75 cm).",
@@ -1073,6 +1215,7 @@
         },
         {
           "name": "Dsungaripterus",
+          "image": "images/reptiles/dsungaripterus.svg",
           "time_period": "Early Cretaceous",
           "location": "China",
           "description": "An Early Cretaceous pterosaur from China. It was a large pterosaur with a wingspan of 10 ft (3 m), featuring a bony crest on its head and an upward-curving jaw.",
@@ -1080,6 +1223,7 @@
         },
         {
           "name": "Pterodaustro",
+          "image": "images/reptiles/pterodaustro.svg",
           "time_period": "Early Cretaceous",
           "location": "South America",
           "description": "An Early Cretaceous pterosaur from South America. It was a medium-sized pterosaur with a wingspan of 7 ft 2 in (2.2 m), distinguished by its many bristle-like teeth.",
@@ -1087,6 +1231,7 @@
         },
         {
           "name": "Cearadactylus",
+          "image": "images/reptiles/cearadactylus.svg",
           "time_period": "Early Cretaceous",
           "location": "Brazil",
           "description": "An Early Cretaceous pterosaur from Brazil. It was a large pterosaur with a wingspan of 11 ft (3.5 m), characterized by large teeth and a hook-like structure on its upper jaw.",
@@ -1094,6 +1239,7 @@
         },
         {
           "name": "Quetzalcoatlus",
+          "image": "images/reptiles/quetzalcoatlus.svg",
           "time_period": "Late Cretaceous",
           "location": "North America",
           "description": "A Late Cretaceous pterosaur from North America. It was a very large pterosaur with a wingspan of up to 39 ft (12 m), making it one of the largest flying animals known.",
@@ -1101,6 +1247,7 @@
         },
         {
           "name": "Pteranodon",
+          "image": "images/reptiles/pteranodon.svg",
           "time_period": "Late Cretaceous",
           "location": "North America",
           "description": "A Late Cretaceous pterosaur from North America. It was a large pterosaur with a wingspan of up to 24 ft (7.3 m), known for its long, bony crest on its head.",
