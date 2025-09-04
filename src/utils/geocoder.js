@@ -27,12 +27,10 @@ const locationCoordinates = {
   "Spitsbergen": { lat: 78.22, lng: 15.65 },
   "Europe and Asia": { lat: 45.00, lng: 60.00 },
   "North America and Europe": { lat: 54.52, lng: -45.00 },
-  "Worldwide": { lat: 0, lng: 0 },
   "South America": { lat: -8.78, lng: -55.49 },
   "Lord Howe Island": { lat: -31.55, lng: 159.08 },
   "eastern Europe": { lat: 47.00, lng: 32.00 },
   "South Africa": { lat: -30.55, lng: 22.93 },
-  "Italy": { lat: 42.83, lng: 12.83 },
   "UK": { lat: 54.00, lng: -2.00 },
   "USA": { lat: 38.00, lng: -97.00 },
 };

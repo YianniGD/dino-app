@@ -1,0 +1,387 @@
+[
+  {
+    "name": "Bahariya Formation",
+    "description": "A Late Cretaceous deposit in Egypt's Western Desert, known for diverse dinosaur fossils, including Spinosaurus.",
+    "time_period": "Cretaceous",
+    "lat": 28.333333333333332,
+    "lng": 28.666666666666668
+  },
+  {
+    "name": "Bear Gulch Limestone",
+    "description": "A Mississippian (Early Carboniferous) formation in Montana, famous for its incredible preservation of ancient fish, sharks, and arthropods.",
+    "time_period": "Paleozoic",
+    "lat": 47.0,
+    "lng": -108.0
+  },
+  {
+    "name": "Candeleros Formation",
+    "description": "A Late Cretaceous deposit in Argentina's Neuqu\u00e9n Basin, a key site for giant carnivores like Giganotosaurus.",
+    "time_period": "Cretaceous",
+    "lat": -38.0,
+    "lng": -69.0
+  },
+  {
+    "name": "Chinle Formation",
+    "description": "A widespread Late Triassic geological unit in the southwestern U.S., famous for its vibrant petrified wood and early dinosaur fossils.",
+    "time_period": "Triassic",
+    "lat": 35.0,
+    "lng": -109.5
+  },
+  {
+    "name": "Clear Fork Group",
+    "description": "A series of Permian-age rocks in Texas, known for synapsids (mammal-like reptiles) and early amphibians.",
+    "time_period": "Paleozoic",
+    "lat": 33.18333333333333,
+    "lng": -99.5
+  },
+  {
+    "name": "Cleveland Shale",
+    "description": "A Late Devonian unit in Ohio, a lagerst\u00e4tte famous for the giant armored fish Dunkleosteus.",
+    "time_period": "Paleozoic",
+    "lat": 41.5,
+    "lng": -81.7
+  },
+  {
+    "name": "Cloverly Formation",
+    "description": "An Early Cretaceous unit in Wyoming and Montana, U.S., famous for Deinonychus, a raptor that inspired the Jurassic Park velociraptors.",
+    "time_period": "Cretaceous",
+    "lat": 44.5,
+    "lng": -107.5
+  },
+  {
+    "name": "Cynognathus Zone",
+    "description": "A biozone within the Triassic-age Karoo Supergroup in South Africa, defined by the presence of the early cynodont (mammal-like reptile) Cynognathus.",
+    "time_period": "Paleozoic",
+    "lat": -30.866666666666667,
+    "lng": 27.533333333333335
+  },
+  {
+    "name": "Dakota Formation",
+    "description": "A widespread Early Cretaceous rock unit in the central U.S., a source of plant and marine invertebrate fossils from an ancient seaway.",
+    "time_period": "Cretaceous",
+    "lat": 39.0,
+    "lng": -97.0
+  },
+  {
+    "name": "Dinosaur Park Formation",
+    "description": "A Late Cretaceous unit in Alberta, Canada, with a vast diversity of dinosaur fossils, including many horned and duck-billed dinosaurs.",
+    "time_period": "Cretaceous",
+    "lat": 50.75,
+    "lng": -111.5
+  },
+  {
+    "name": "Djadochta Formation",
+    "description": "A Late Cretaceous formation in the Gobi Desert of Mongolia, known for spectacular finds of Velociraptor and the 'fighting dinosaurs' fossil.",
+    "time_period": "Cretaceous",
+    "lat": 44.53333333333333,
+    "lng": 100.85
+  },
+  {
+    "name": "Downton Castle Sandstone",
+    "description": "A Silurian-Devonian boundary deposit in the UK, known for early fish fossils.",
+    "time_period": "Paleozoic",
+    "lat": 52.38333333333333,
+    "lng": -2.8166666666666664
+  },
+  {
+    "name": "Elliot Formation",
+    "description": "Part of the Karoo Basin in South Africa, this formation is a Late Triassic unit with rich vertebrate fossils.",
+    "time_period": "Triassic",
+    "lat": -29.95,
+    "lng": 27.883333333333333
+  },
+  {
+    "name": "Escuminac Formation",
+    "description": "A Late Devonian formation in Quebec, Canada, celebrated for its well-preserved fossil fish.",
+    "time_period": "Paleozoic",
+    "lat": 48.083333333333336,
+    "lng": -66.38333333333334
+  },
+  {
+    "name": "Frontier Formation",
+    "description": "A Late Cretaceous unit in the western U.S., known for marine and terrestrial fossils, including dinosaurs and giant marine reptiles.",
+    "time_period": "Cretaceous",
+    "lat": 42.5,
+    "lng": -109.5
+  },
+  {
+    "name": "Ghost Ranch",
+    "description": "A famous Late Triassic fossil site in New Mexico, renowned for the discovery of hundreds of Coelophysis skeletons.",
+    "time_period": "Triassic",
+    "lat": 36.233333333333334,
+    "lng": -106.48333333333333
+  },
+  {
+    "name": "Gosau Group",
+    "description": "A Late Cretaceous series of deposits in Austria and Germany, with a mix of marine and terrestrial fossils, including dinosaur remains.",
+    "time_period": "Cretaceous",
+    "lat": 47.583333333333336,
+    "lng": 13.533333333333333
+  },
+  {
+    "name": "Hell Creek Formation",
+    "description": "A Late Cretaceous deposit spanning Montana and the Dakotas, a famous site for the last non-avian dinosaurs, including Tyrannosaurus rex and Triceratops.",
+    "time_period": "Cretaceous",
+    "lat": 46.0,
+    "lng": -105.0
+  },
+  {
+    "name": "Horseshoe Canyon Formation",
+    "description": "A Late Cretaceous unit in Alberta, Canada, known for its diverse dinosaurs, including the pachycephalosaur Dracorex.",
+    "time_period": "Cretaceous",
+    "lat": 51.233333333333334,
+    "lng": -113.31666666666666
+  },
+  {
+    "name": "Hunsr\u00fcck Slates",
+    "description": "An Early Devonian formation in Germany, a lagerst\u00e4tte known for its pyritized fossils of marine animals.",
+    "time_period": "Paleozoic",
+    "lat": 49.916666666666664,
+    "lng": 7.333333333333333
+  },
+  {
+    "name": "Iren Dabasu Formation",
+    "description": "A Late Cretaceous formation in Inner Mongolia, China, a key site for feathered dinosaurs and early tyrannosaurs.",
+    "time_period": "Cretaceous",
+    "lat": 43.45,
+    "lng": 110.28333333333333
+  },
+  {
+    "name": "Javelina Formation",
+    "description": "A Late Cretaceous unit in Texas' Big Bend National Park, a source of dinosaur fossils, including the long-necked Alamosaurus.",
+    "time_period": "Cretaceous",
+    "lat": 29.333333333333332,
+    "lng": -103.33333333333333
+  },
+  {
+    "name": "Joggins Formation",
+    "description": "A Pennsylvanian (Late Carboniferous) deposit in Nova Scotia, a UNESCO World Heritage Site known for its 'fossilized forest.'",
+    "time_period": "Paleozoic",
+    "lat": 45.7,
+    "lng": -64.43333333333334
+  },
+  {
+    "name": "Karoo Basin",
+    "description": "A vast sedimentary basin in South Africa, famous for its nearly continuous record of Permian and Triassic fossils.",
+    "time_period": "Paleozoic and Mesozoic",
+    "lat": -30.0,
+    "lng": 24.0
+  },
+  {
+    "name": "Kayenta Formation",
+    "description": "An Early Jurassic deposit in the southwestern U.S., notable for early dinosaurs, including the small carnivore Megapnosaurus.",
+    "time_period": "Jurassic",
+    "lat": 36.96666666666667,
+    "lng": -110.18333333333334
+  },
+  {
+    "name": "Kimmeridge Clay",
+    "description": "A Late Jurassic marine deposit in southern England, an important source of marine fossils.",
+    "time_period": "Jurassic",
+    "lat": 50.6,
+    "lng": -2.15
+  },
+  {
+    "name": "Kirtland Formation",
+    "description": "A Late Cretaceous deposit in New Mexico, known for the last dinosaurs of North America.",
+    "time_period": "Cretaceous",
+    "lat": 36.416666666666664,
+    "lng": -108.25
+  },
+  {
+    "name": "Knollenmergel",
+    "description": "A Late Triassic rock unit in Germany, known for its dinosaur remains.",
+    "time_period": "Triassic",
+    "lat": 48.733333333333334,
+    "lng": 9.183333333333334
+  },
+  {
+    "name": "Lance Formation",
+    "description": "A Late Cretaceous unit in Wyoming, a contemporary of the Hell Creek Formation, with a similar fauna including T. rex and Triceratops.",
+    "time_period": "Cretaceous",
+    "lat": 42.5,
+    "lng": -105.5
+  },
+  {
+    "name": "Lesmahagow Inlier",
+    "description": "A Silurian-Devonian site in Scotland, an important locality for early arthropod fossils.",
+    "time_period": "Paleozoic",
+    "lat": 55.65,
+    "lng": -3.95
+  },
+  {
+    "name": "Lias Formation",
+    "description": "A general term for Early Jurassic marine deposits in Western Europe, rich in marine reptile and ammonite fossils.",
+    "time_period": "Jurassic",
+    "lat": 52.483333333333334,
+    "lng": -1.6
+  },
+  {
+    "name": "Lossiemouth Sandstone",
+    "description": "A Late Triassic deposit in Scotland with fossils of early reptiles.",
+    "time_period": "Triassic",
+    "lat": 57.71666666666667,
+    "lng": -3.283333333333333
+  },
+  {
+    "name": "Lower Lias Formation",
+    "description": "The lowermost part of the Lias Group, representing the earliest Jurassic marine sediments.",
+    "time_period": "Jurassic",
+    "lat": 52.483333333333334,
+    "lng": -1.6
+  },
+  {
+    "name": "Meuse River",
+    "description": "A river in Western Europe, relevant to the history of paleontology due to early Neanderthal remains found in the region.",
+    "time_period": "N/A",
+    "lat": 51.833333333333336,
+    "lng": 4.166666666666667
+  },
+  {
+    "name": "Morrison Formation",
+    "description": "A vast Late Jurassic geological unit in the western U.S., one of the most famous dinosaur fossil sites in the world.",
+    "time_period": "Jurassic",
+    "lat": 40.416666666666664,
+    "lng": -108.2
+  },
+  {
+    "name": "Navesink Formation",
+    "description": "A Late Cretaceous marine unit in New Jersey, known for shark teeth and marine reptile fossils.",
+    "time_period": "Cretaceous",
+    "lat": 40.4,
+    "lng": -74.03333333333333
+  },
+  {
+    "name": "Nemegt Formation",
+    "description": "A Late Cretaceous formation in the Gobi Desert of Mongolia, known for its large dinosaurs, including Tarbosaurus.",
+    "time_period": "Cretaceous",
+    "lat": 44.5,
+    "lng": 100.83333333333333
+  },
+  {
+    "name": "Neuqu\u00e9n Basin",
+    "description": "A large sedimentary basin in Argentina, famous for a series of Late Cretaceous formations with giant dinosaurs.",
+    "time_period": "Cretaceous",
+    "lat": -38.0,
+    "lng": -69.0
+  },
+  {
+    "name": "Niobrara Formation",
+    "description": "A Late Cretaceous unit in the Great Plains, a marine chalk and shale deposit rich in fossils of mosasaurs and pterosaurs.",
+    "time_period": "Cretaceous",
+    "lat": 39.0,
+    "lng": -97.0
+  },
+  {
+    "name": "Ocher-Ocher Formation",
+    "description": "A typo; the correct name is likely Oshurkovo Formation, a Late Cretaceous site in Russia with dinosaur remains.",
+    "time_period": "Cretaceous",
+    "lat": 55.0,
+    "lng": 84.0
+  },
+  {
+    "name": "Old Red Sandstone",
+    "description": "A widespread Devonian-age rock sequence in the UK, known for its terrestrial and freshwater fish fossils.",
+    "time_period": "Paleozoic",
+    "lat": 56.18333333333333,
+    "lng": -3.5
+  },
+  {
+    "name": "Phosphoria Formation",
+    "description": "A Permian-age rock unit in the western U.S., notable for its rich phosphate deposits formed in an ancient seaway.",
+    "time_period": "Paleozoic",
+    "lat": 44.0,
+    "lng": -112.0
+  },
+  {
+    "name": "Shonisaurus State Park",
+    "description": "A state park in Nevada, the site of the largest known concentration of the Triassic ichthyosaur Shonisaurus popularis.",
+    "time_period": "Triassic",
+    "lat": 38.86666666666667,
+    "lng": -117.98333333333333
+  },
+  {
+    "name": "Solnhofen Limestone",
+    "description": "A Late Jurassic formation in Germany, a lagerst\u00e4tte known for delicate fossils, including the first Archaeopteryx.",
+    "time_period": "Jurassic",
+    "lat": 48.88333333333333,
+    "lng": 10.983333333333333
+  },
+  {
+    "name": "Stairway Sandstone",
+    "description": "A Mississippian (Early Carboniferous) unit in Arkansas, known for marine invertebrate fossils.",
+    "time_period": "Paleozoic",
+    "lat": 34.583333333333336,
+    "lng": -93.33333333333333
+  },
+  {
+    "name": "Stanton Formation",
+    "description": "A Missourian (Late Pennsylvanian) limestone unit in the midwestern U.S., a source of marine invertebrate fossils.",
+    "time_period": "Paleozoic",
+    "lat": 39.0,
+    "lng": -95.0
+  },
+  {
+    "name": "T\u00e9n\u00e9r\u00e9 Desert",
+    "description": "A vast desert region in the Sahara, Niger, known for the 'Dinosaur Graveyard,' a site with numerous dinosaur fossils.",
+    "time_period": "Cretaceous",
+    "lat": 18.416666666666668,
+    "lng": 10.916666666666666
+  },
+  {
+    "name": "Tendaguru Formation",
+    "description": "A Late Jurassic deposit in Tanzania, East Africa, known for large sauropods like Giraffatitan.",
+    "time_period": "Jurassic",
+    "lat": -10.25,
+    "lng": 39.5
+  },
+  {
+    "name": "Tugulu Group",
+    "description": "A major Jurassic-Cretaceous geological group in China's Junggar Basin, known for a range of dinosaur fossils.",
+    "time_period": "Jurassic and Cretaceous",
+    "lat": 44.5,
+    "lng": 87.5
+  },
+  {
+    "name": "Two Medicine Formation",
+    "description": "A Late Cretaceous unit in Montana, a key site for understanding dinosaur social behavior due to discoveries of nesting sites and egg clutches.",
+    "time_period": "Cretaceous",
+    "lat": 47.5,
+    "lng": -112.5
+  },
+  {
+    "name": "Upper Shaximiao Formation",
+    "description": "A Middle to Late Jurassic unit in Sichuan, China, with fossils of unique dinosaurs like the large sauropod Mamenchisaurus.",
+    "time_period": "Jurassic",
+    "lat": 29.583333333333332,
+    "lng": 104.63333333333334
+  },
+  {
+    "name": "Wangshi Formation",
+    "description": "A Late Cretaceous deposit in Shandong, China, known for its diverse dinosaur fossils, including the giant hadrosaur Shantungosaurus.",
+    "time_period": "Cretaceous",
+    "lat": 36.31666666666667,
+    "lng": 118.65
+  },
+  {
+    "name": "Wealden Group",
+    "description": "A series of Early Cretaceous formations in southern England, a source of the first dinosaur fossils discovered.",
+    "time_period": "Cretaceous",
+    "lat": 51.0,
+    "lng": -0.5
+  },
+  {
+    "name": "Whitehill Formation",
+    "description": "A section of the Permian-age Ecca Group in South Africa, noted for marine fossils, and part of the Karoo Basin.",
+    "time_period": "Paleozoic",
+    "lat": -31.166666666666668,
+    "lng": 25.833333333333332
+  },
+  {
+    "name": "Zorzino Limestone",
+    "description": "A Late Triassic formation in northern Italy, famous for its exceptionally well-preserved fossils of ancient marine life, including early pterosaurs.",
+    "time_period": "Triassic",
+    "lat": 45.833333333333336,
+    "lng": 9.883333333333333
+  }
+]

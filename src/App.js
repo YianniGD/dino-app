@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   const [filter, setFilter] = useState(null);
   const [selectedPoint, setSelectedPoint] = useState(null); // Manages overlay visibility
-  const [isRotationEnabled, setIsRotationEnabled] = useState(true);
+  const [isRotationEnabled, setIsRotationEnabled] = useState(false);
   const [isTimelineCollapsed, setIsTimelineCollapsed] = useState(false);
 
   const handlePointClick = (point) => {

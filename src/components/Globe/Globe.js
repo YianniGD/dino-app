@@ -15,8 +15,7 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
   const [selectedPoint, setSelectedPoint] = useState(null);
   const rotationTimeout = useRef();
   const markerElements = useRef(new Map());
-  const [globeTexture, setGlobeTexture] = useState(desiredTexture);
-  const [altitude, setAltitude] = useState(2.5); // Initial altitude
+  const globeTexture = desiredTexture;
 
   // Effect to clear selected point when overlay is closed, providing better UX
   useEffect(() => {
@@ -128,8 +127,7 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
         const coords = getCoordinates(species);
         if (coords) {
           // Assign a random icon to each species since there is no specific mapping.
-          const randomNumber = Math.floor(Math.random() * 161) + 1;
-          const iconUrl = `/dinosvg/Asset%20${randomNumber}.svg`;
+          const iconUrl = `/dinosvg/${species.image}`;
           return { ...coords, ...species, iconUrl };
         }
         return null;
@@ -267,15 +265,17 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
   const handlePointClick = useCallback((point) => {
     console.log('Point clicked in Globe.js:', point);
     // Center view on the original location, especially for jittered points
-    const { lat, lng } = point.originalLat ? { lat: point.originalLat, lng: point.originalLng } : point;
-    globeEl.current.pointOfView({ lat, lng, altitude: 2.5 }, 1000); // Faster 500ms animation
+    console.log('Point clicked in Globe.js:', point);
+    // Center view on the original location, especially for jittered points
+    // const { lat, lng } = point.originalLat ? { lat: point.originalLat, lng: point.originalLng } : point;
+    // globeEl.current.pointOfView({ lat, lng, altitude: 2.5 }, 1000); // Faster 500ms animation
 
     // Set selected state for visual feedback and propagate to parent
     setSelectedPoint(point);
     onPointClick(point);
   }, [onPointClick]);
 
-  const htmlElement = useCallback(d => {
+    const htmlElement = useCallback(d => {
     const el = document.createElement('div');
     el.className = 'marker-container'; // Add a class for styling
 
@@ -293,7 +293,7 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
     el.appendChild(name);
 
     return el;
-  }, [handlePointClick]); // Removed isRotationEnabled, isOverlayOpen from dependencies
+  }, []); // Removed isRotationEnabled, isOverlayOpen from dependencies
 
   return (
     <div className="globe-container">
