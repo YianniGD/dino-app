@@ -29,15 +29,7 @@
   font-style: italic;
 }
 
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+
 
 .overlay-image {
   width: 100%;
