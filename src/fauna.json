@@ -823,7 +823,8 @@
             "lng": -103.404
           },
           "image": "Asset 94.svg",
-          "overlay_image": "/Dinosaurs/Tyrannosaurus_Rex.png"
+          "overlay_image": "/Dinosaurs/Tyrannosaurus_Rex.png",
+          "skeleton_image": "/Dinosaurs/Tyrannosaurus_Rex_Skeleton.png"
         },
         {
           "name": "Tarbosaurus",
