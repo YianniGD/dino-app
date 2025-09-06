@@ -820,9 +820,10 @@
           "description": "The largest land carnivore from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was the largest land carnivore, 40 ft (12 m) long, with a massive head.",
           "coordinates": {
             "lat": 46.814,
-            "lng": -106.404
+            "lng": -103.404
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 94.svg",
+          "overlay_image": "/Dinosaurs/Tyrannosaurus_Rex.png"
         },
         {
           "name": "Tarbosaurus",
@@ -950,7 +951,7 @@
           "time_period": "Late Cretaceous",
           "description": "A late surviving hypsilophodont from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was a late surviving hypsilophodont, 13 ft (4 m) long, with well-preserved skeletons.",
           "coordinates": {
-            "lat": 46.811,
+            "lat": 43.811,
             "lng": -106.401
           },
           "image": "Asset 161.svg"
@@ -999,7 +1000,7 @@
           "time_period": "Late Cretaceous",
           "description": "The last ceratopsian from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was the last ceratopsian, 30 ft (9 m) long, with three horns.",
           "coordinates": {
-            "lat": 46.812,
+            "lat": 47.2,
             "lng": -106.402
           },
           "image": "Asset 159.svg"
@@ -1613,7 +1614,7 @@
           "description": "The largest and last ankylosaur from the Late Cretaceous of North America. Fossils were found in the Hell Creek Formation of Montana, USA. It was the largest and last ankylosaur, 30 ft (9 m) long, with a massive tail club and extensive armor.",
           "coordinates": {
             "lat": 46.81,
-            "lng": -106.4
+            "lng": -108.4
           },
           "image": "Asset 62.svg"
         }

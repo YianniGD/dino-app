@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import Globe from 'react-globe.gl';
 import { getCoordinates } from '../../utils/geocoder';
 import data from '../../fauna.json';
@@ -9,20 +9,12 @@ import './Globe.css';
 const desiredTexture = process.env.PUBLIC_URL + '/earth-day.jpg';
 const bumpMapTexture = process.env.PUBLIC_URL + '/earth-topology.jpg';
 
-const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
+const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabled, filter, selectedPoint }) => {
   const globeEl = useRef();
   const [markers, setMarkers] = useState([]);
-  const [selectedPoint, setSelectedPoint] = useState(null);
   const rotationTimeout = useRef();
   const markerElements = useRef(new Map());
   const globeTexture = desiredTexture;
-
-  // Effect to clear selected point when overlay is closed, providing better UX
-  useEffect(() => {
-    if (!isOverlayOpen) {
-      setSelectedPoint(null);
-    }
-  }, [isOverlayOpen]);
 
   // Effect to control globe auto-rotation based on user interaction and overlay state
   useEffect(() => {
@@ -216,19 +208,14 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
     });
 
     if (closestMarker) {
-      console.log('Closest marker clicked:', closestMarker.species_name);
-      // Center view on the original location, especially for jittered points
-      const { lat, lng } = closestMarker.originalLat ? { lat: closestMarker.originalLat, lng: closestMarker.originalLng } : closestMarker;
-      globeEl.current.pointOfView({ lat, lng, altitude: 2.5 }, 1000); // Faster 500ms animation
-
-      // Set selected state for visual feedback and propagate to parent
-      setSelectedPoint(closestMarker);
+      console.log('Closest marker clicked:', closestMarker.name);
       onPointClick(closestMarker);
+      // globeEl.current.pointOfView({ lat: closestMarker.originalLat || closestMarker.lat, lng: closestMarker.originalLng || closestMarker.lng, altitude: 1.5 }, 1000);
     } else {
       // If no marker was clicked, clear selected point
-      setSelectedPoint(null);
+      onBackgroundClick();
     }
-  }, [markers, onPointClick]); // Add markers to dependencies
+  }, [markers, onPointClick, onBackgroundClick]);
 
   const handleGlobeHover = useCallback(({ lat, lng }) => {
     // Find the closest marker to the hovered point
@@ -258,20 +245,12 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
     // You can add visual feedback for hover here if needed, e.g., set a hoveredPoint state
     // For now, just logging
     if (hoveredMarker) {
-      // console.log('Hovered over marker:', hoveredMarker.species_name);
+      // console.log('Hovered over marker:', hoveredMarker.name);
     }
-  }, [markers, isRotationEnabled, isOverlayOpen]); // Add markers, isRotationEnabled, isOverlayOpen to dependencies
+  }, [markers, isRotationEnabled, isOverlayOpen]);
 
   const handlePointClick = useCallback((point) => {
     console.log('Point clicked in Globe.js:', point);
-    // Center view on the original location, especially for jittered points
-    console.log('Point clicked in Globe.js:', point);
-    // Center view on the original location, especially for jittered points
-    // const { lat, lng } = point.originalLat ? { lat: point.originalLat, lng: point.originalLng } : point;
-    // globeEl.current.pointOfView({ lat, lng, altitude: 2.5 }, 1000); // Faster 500ms animation
-
-    // Set selected state for visual feedback and propagate to parent
-    setSelectedPoint(point);
     onPointClick(point);
   }, [onPointClick]);
 
@@ -283,17 +262,16 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
     const icon = document.createElement('img');
     icon.src = process.env.PUBLIC_URL + d.iconUrl; // Use PUBLIC_URL for icon path
     icon.className = 'marker-icon';
-    // Removed direct onclick from icon, will handle via onGlobeClick
     el.appendChild(icon);
 
     // Species Name
     const name = document.createElement('div');
     name.className = 'marker-name';
-    name.textContent = d.species_name;
+    name.textContent = d.name;
     el.appendChild(name);
 
     return el;
-  }, []); // Removed isRotationEnabled, isOverlayOpen from dependencies
+  }, []);
 
   return (
     <div className="globe-container">
@@ -307,12 +285,12 @@ const World = ({ onPointClick, isOverlayOpen, isRotationEnabled, filter }) => {
         htmlLat="lat"
         htmlLng="lng"
         htmlElement={htmlElement}
-        onGlobeClick={handleGlobeClick} // Reintroduce
-        onGlobeHover={handleGlobeHover} // Add new
+        onGlobeClick={handleGlobeClick}
+        onGlobeHover={handleGlobeHover}
         backgroundImageUrl={process.env.PUBLIC_URL + '/starfield.jpg'}
       />
     </div>
   );
 };
 
-export default World;
+export default memo(World);

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import './Overlay.css';
+import Specimen from '../Specimen/Specimen';
 
 const Overlay = ({ data, onClose }) => {
   const container = useRef(null);
@@ -31,16 +32,7 @@ const Overlay = ({ data, onClose }) => {
     <div className="overlay" ref={container} onClick={handleClose}>
       <div className="overlay-content" ref={content} onClick={(e) => e.stopPropagation()}>
         <button className="close-button" onClick={handleClose}>&times;</button>
-        {data && (
-          <>
-            <h2>{data.name}</h2>
-            <p>
-              <strong>Time Period:</strong> {data.epoch} {data.time_period}
-            </p>
-            <p><strong>Found In:</strong> {data.location}</p>
-            <p className="description">{data.description}</p>
-          </>
-        )}
+        {data && <Specimen specimen={data} />}
       </div>
     </div>
   );
