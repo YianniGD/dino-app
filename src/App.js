@@ -11,7 +11,7 @@ function App() {
   const [filter, setFilter] = useState(null);
   const [selectedPoint, setSelectedPoint] = useState(null); // Manages overlay visibility
   const [isRotationEnabled, setIsRotationEnabled] = useState(false);
-  const [isTimelineCollapsed, setIsTimelineCollapsed] = useState(false);
+  const [timelineDisplayState, setTimelineDisplayState] = useState('default'); // New state for timeline
 
   const handlePointClick = useCallback((point) => {
     console.log('Point clicked in App.js:', point);
@@ -35,13 +35,13 @@ function App() {
     setIsRotationEnabled(!isRotationEnabled);
   };
 
-  const toggleTimeline = () => {
-    setIsTimelineCollapsed(!isTimelineCollapsed);
-  };
+  const handleTimelineStateChange = useCallback((newState) => {
+    setTimelineDisplayState(newState);
+  }, []);
 
   return (
     <div className="app-container">
-      <main className={`content-area ${isTimelineCollapsed ? 'timeline-collapsed' : ''}`}>
+      <main className={`content-area ${timelineDisplayState === 'collapsed' ? 'timeline-collapsed' : ''}`}>
         <World
           onPointClick={handlePointClick}
           onBackgroundClick={handleGlobeBackgroundClick}
@@ -55,8 +55,8 @@ function App() {
           timelineData={timelineData}
           faunaData={data}
           onFaunaClick={handlePointClick}
-          isCollapsed={isTimelineCollapsed}
-          onToggle={toggleTimeline}
+          timelineState={timelineDisplayState}
+          onStateChange={handleTimelineStateChange}
           filter={filter}
           onFilterSelect={setFilter}
           onClearFilter={handleClearFilter}

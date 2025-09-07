@@ -50,8 +50,8 @@
         {
           "name": "Cheirolepis",
           "location": "Europe",
-          "time_period": "Mnamedle Devonian",
-          "description": "A primitive ray-finned fish from the Mnamedle Devonian of Europe. It was discovered in the Old Red Sandstone in Scotland. It was a primitive ray-finned fish, 1 ft (0.3 m) long.",
+          "time_period": "Middle Devonian",
+          "description": "A primitive ray-finned fish from the Middle Devonian of Europe. It was discovered in the Old Red Sandstone in Scotland. It was a primitive ray-finned fish, 1 ft (0.3 m) long.",
           "coordinates": {
             "lat": 59.6,
             "lng": -3.0
@@ -159,8 +159,8 @@
         {
           "name": "Osteolepis",
           "location": "Europe",
-          "time_period": "Mnamedle Devonian",
-          "description": "A fleshy-finned fish from the Mnamedle Devonian of Europe. Its fossils were found in the Old Red Sandstone in Scotland. It was a fleshy-finned fish, 1 ft (0.3 m) long.",
+          "time_period": "Middle Devonian",
+          "description": "A fleshy-finned fish from the Middle Devonian of Europe. Its fossils were found in the Old Red Sandstone in Scotland. It was a fleshy-finned fish, 1 ft (0.3 m) long.",
           "coordinates": {
             "lat": 60.0,
             "lng": -3.0
@@ -170,8 +170,8 @@
         {
           "name": "Dipterus",
           "location": "Europe",
-          "time_period": "Mnamedle Devonian",
-          "description": "A lungfish from the Mnamedle Devonian of Europe. It was discovered in the Old Red Sandstone in Scotland. It was a lungfish, 1 ft (0.3 m) long, that could breathe air.",
+          "time_period": "Middle Devonian",
+          "description": "A lungfish from the Middle Devonian of Europe. It was discovered in the Old Red Sandstone in Scotland. It was a lungfish, 1 ft (0.3 m) long, that could breathe air.",
           "coordinates": {
             "lat": 59.0,
             "lng": -3.0
@@ -824,7 +824,9 @@
           },
           "image": "Asset 94.svg",
           "overlay_image": "/Dinosaurs/Tyrannosaurus_Rex.png",
-          "skeleton_image": "/Dinosaurs/Tyrannosaurus_Rex_Skeleton.png"
+          "skeleton_image": "/Dinosaurs/Tyrannosaurus_Rex_Skeleton.png",
+          "lived_from_ma": 68,
+          "lived_to_ma": 66
         },
         {
           "name": "Tarbosaurus",

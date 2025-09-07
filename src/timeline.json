@@ -105,7 +105,9 @@
             "events": [
               "First true bony fish (Osteichthyes) appear: Sarcopterygii (lobe-finned fish) at ~418 ma and Actinopterygii (ray-finned fishes) at ~420 ma.",
               "First arachnid appears at ~420 ma.",
-              "Jawed cartilaginous fish, Class Chondrichthyes, appear at ~422 ma."
+              "Jawed cartilaginous fish, Class Chondrichthyes, appear at ~422 ma.",
+              "Jawless fish like *Jamoytius* appear.",
+              "Spiny sharks like *Climatius* appear."
             ]
           },
           "Ludlow": {
@@ -162,7 +164,8 @@
               "Oldest Eurypterid fossils are known from the Lower Ordovician of New York.",
               "The Great Ordovician Radiation, also called the 'Ordovician Explosion', adds more than three times the biodiversity of the preceding Cambrian Explosion.",
               "The period begins with rising sea levels, creating new shallow environments.",
-              "The last trilobite order to appear, Phacopida, occurs in the fossil record at the base of the Ordovician."
+              "The last trilobite order to appear, Phacopida, occurs in the fossil record at the base of the Ordovician.",
+              "Primitive jawless fish like *Arandaspis* appear."
             ]
           }
         }

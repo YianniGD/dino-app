@@ -11,14 +11,66 @@ const parseDuration = (durationStr) => {
     if (!durationStr) return { start: 0, end: 0 };
     // A safe eval for simple math like "11 / 1000" for 'ka' units
     const evaluate = (str) => new Function(`return ${str}`)();
-    let processedStr = durationStr.replace(' ma', '').replace(' to present', ' to 0').replace(' to today', ' to 0');
+    let processedStr = durationStr.replace(/ ma/g, '').replace(' to present', ' to 0').replace(' to today', ' to 0');
     if (processedStr.includes('ka')) {
-        processedStr = processedStr.replace(' ka', ' / 1000');
+        processedStr = processedStr.replace(/ ka/g, ' / 1000');
     }
     const parts = String(processedStr).split(' to ');
     const start = evaluate(parts[0]);
     const end = parts[1] ? evaluate(parts[1]) : start;
     return { start, end };
+};
+
+const createTimePeriodMap = (timelineData) => {
+    const timePeriodMap = {};
+
+    if (!timelineData) {
+        return timePeriodMap;
+    }
+
+    for (const era of Object.values(timelineData)) {
+        for (const [periodName, periodData] of Object.entries(era.periods)) {
+            timePeriodMap[periodName] = parseDuration(periodData.duration);
+            if (periodData.epochs) {
+                for (const [epochName, epochData] of Object.entries(periodData.epochs)) {
+                    // Mapping for "Late Cretaceous", "Early Jurassic", etc.
+                    if (epochName === 'Upper') {
+                        timePeriodMap[`Late ${periodName}`] = parseDuration(epochData.duration);
+                    } else if (epochName === 'Lower') {
+                        timePeriodMap[`Early ${periodName}`] = parseDuration(epochData.duration);
+                    } else if (epochName === 'Middle') {
+                        timePeriodMap[`Middle ${periodName}`] = parseDuration(epochData.duration);
+                    }
+                    timePeriodMap[epochName] = parseDuration(epochData.duration);
+                }
+            }
+        }
+    }
+
+    // Manual mapping for Carboniferous
+    if (timelineData.Paleozoic && timelineData.Paleozoic.periods.Carboniferous) {
+        const carboniferous = timelineData.Paleozoic.periods.Carboniferous;
+        if (carboniferous.epochs.Pennsylvanian) {
+            timePeriodMap['Late Carboniferous'] = parseDuration(carboniferous.epochs.Pennsylvanian.duration);
+        }
+        if (carboniferous.epochs.Mississippian) {
+            timePeriodMap['Early Carboniferous'] = parseDuration(carboniferous.epochs.Mississippian.duration);
+        }
+    }
+
+
+    return timePeriodMap;
+};
+
+const formatEpochName = (epochName) => {
+    switch (epochName) {
+        case 'Upper':
+            return 'Late';
+        case 'Lower':
+            return 'Early';
+        default:
+            return epochName;
+    }
 };
 
 
@@ -27,6 +79,7 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, timelineSta
     const timelineWrapperRef = useRef(null);
     const draggableInstance = useRef(null);
     const resizeHandleRef = useRef(null);
+    const [selectedFauna, setSelectedFauna] = useState(null);
 
     // --- Internal State Management for Controlled/Uncontrolled Component ---
     // This allows the timeline to manage its own state if props aren't provided,
@@ -44,23 +97,105 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, timelineSta
         isControlled ? onStateChange?.(newState) : setInternalState(newState);
     }, [isControlled, onStateChange]);
 
-    const scale = 10; // pixels per million years
+    const scale = 20; // pixels per million years
     const maxTime = 541; // Paleozoic start, our zero point on the timeline
     const totalWidth = maxTime * scale;
 
+    const timePeriodMap = useMemo(() => createTimePeriodMap(timelineData), [timelineData]);
+
     const allSpecies = useMemo(() => {
         if (!faunaData) return [];
-        return Object.values(faunaData).flatMap(subcategories =>
-            subcategories.flatMap(sc => sc.species || [])
-        );
+        const uniqueSpecies = new Map();
+        Object.values(faunaData).forEach(subcategories => {
+            subcategories.forEach(sc => {
+                if (sc.species) {
+                    sc.species.forEach(s => {
+                        // Create a more robust unique key
+                        const uniqueKey = `${s.name}-${s.location}-${s.time_period}-${s.lived_from_ma || ''}-${s.lived_to_ma || ''}`;
+                        if (!uniqueSpecies.has(uniqueKey)) {
+                            uniqueSpecies.set(uniqueKey, s);
+                        }
+                    });
+                }
+            });
+        });
+        return Array.from(uniqueSpecies.values());
     }, [faunaData]);
 
-    const faunaWithTimeData = useMemo(() => allSpecies.map(dino => {
-        if (dino.lived_from_ma === undefined || dino.lived_to_ma === undefined) {
-            return null;
-        }
-        return dino;
-    }).filter(Boolean), [allSpecies]);
+    const faunaWithTimeData = useMemo(() => {
+        const findBestMatchingPeriod = (dino, timelineData, timePeriodMap) => {
+            const dinoStart = dino.lived_from_ma;
+            const dinoEnd = dino.lived_to_ma;
+
+            let bestMatch = null;
+            let smallestDuration = Infinity;
+
+            for (const era of Object.values(timelineData)) {
+                for (const [periodName, periodData] of Object.entries(era.periods)) {
+                    const periodRange = timePeriodMap[periodName];
+                    if (periodRange && dinoStart <= periodRange.start && dinoEnd >= periodRange.end) {
+                        const duration = periodRange.start - periodRange.end;
+                        if (duration < smallestDuration) {
+                            smallestDuration = duration;
+                            bestMatch = periodName;
+                        }
+                    }
+
+                    if (periodData.epochs) {
+                        for (const [epochName, epochData] of Object.entries(periodData.epochs)) {
+                            const fullEpochName = `${formatEpochName(epochName)} ${periodName}`; // e.g., "Late Cretaceous"
+                            const epochRange = timePeriodMap[fullEpochName] || timePeriodMap[epochName]; // Try full name first, then just epoch name
+                            
+                            if (epochRange && dinoStart <= epochRange.start && dinoEnd >= epochRange.end) {
+                                const duration = epochRange.start - epochRange.end;
+                                if (duration < smallestDuration) {
+                                    smallestDuration = duration;
+                                    bestMatch = fullEpochName; // Store the full epoch name
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return bestMatch;
+        };
+
+        return allSpecies.map(dino => {
+            let processedDino = { ...dino };
+
+            if (dino.lived_from_ma === undefined || dino.lived_to_ma === undefined) {
+                if (dino.time_period) {
+                    const timePeriod = dino.time_period;
+                    if (timePeriodMap[timePeriod]) {
+                        const timeRange = timePeriodMap[timePeriod];
+                        processedDino = { ...processedDino, lived_from_ma: timeRange.start, lived_to_ma: timeRange.end };
+                    } else if (timePeriod.includes('-Present')) {
+                        const startTimePeriod = timePeriod.replace('-Present', '');
+                        if (timePeriodMap[startTimePeriod]) {
+                            const timeRange = timePeriodMap[startTimePeriod];
+                            processedDino = { ...processedDino, lived_from_ma: timeRange.start, lived_to_ma: 0 };
+                        }
+                    } else if (timePeriod.includes(' and ')) {
+                        const parts = timePeriod.split(' and ');
+                        const startPeriod = parts[0];
+                        const endPeriod = parts[1];
+                        if (timePeriodMap[startPeriod] && timePeriodMap[endPeriod]) {
+                            const startRange = timePeriodMap[startPeriod];
+                            const endRange = timePeriodMap[endPeriod];
+                            processedDino = { ...processedDino, lived_from_ma: startRange.start, lived_to_ma: endRange.end };
+                        }
+                    }
+                }
+            }
+
+            if (processedDino.lived_from_ma === undefined || processedDino.lived_to_ma === undefined) {
+                return null; // Cannot determine time range, filter out
+            }
+
+            const renderPeriod = findBestMatchingPeriod(processedDino, timelineData, timePeriodMap);
+            return { ...processedDino, renderPeriod };
+        }).filter(Boolean);
+    }, [allSpecies, timelineData, timePeriodMap]);
 
     useEffect(() => {
         if (timelineWrapperRef.current && timelineContainerRef.current && !draggableInstance.current) {
@@ -195,11 +330,12 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, timelineSta
 
     const renderTimeMarkers = () => {
         const markers = [];
-        for (let i = 0; i <= maxTime; i += 50) {
+        for (let i = 0; i <= maxTime; i += 10) {
             const position = (maxTime - i) * scale;
+            const isMajorMarker = i % 50 === 0;
             markers.push(
-                <div key={`marker-${i}`} className="time-marker" style={{ left: `${position}px` }}>
-                    <span className="time-marker-label">{i} ma</span>
+                <div key={`marker-${i}`} className={`time-marker ${isMajorMarker ? '' : 'time-marker-minor'}`} style={{ left: `${position}px` }}>
+                    {isMajorMarker && <span className="time-marker-label">{i} ma</span>}
                 </div>
             );
         }
@@ -283,18 +419,52 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, timelineSta
                                         return dino.lived_to_ma <= periodStart && dino.lived_from_ma >= periodEnd;
                                     });
 
+                                    const layout = { lanes: [] }; // Each lane will be an array of placed markers
+
+                                    const positionedFauna = faunaInPeriod.map(dino => {
+                                        const dinoStart = (periodStart - dino.lived_from_ma) * scale;
+                                        const dinoWidth = Math.max((dino.lived_from_ma - dino.lived_to_ma) * scale, 5);
+                                        const dinoEnd = dinoStart + dinoWidth;
+
+                                        let placed = false;
+                                        for (let i = 0; i < layout.lanes.length; i++) {
+                                            const lane = layout.lanes[i];
+                                            const hasOverlap = lane.some(placedDino => {
+                                                const buffer = 15; // 10px buffer
+                                                return dinoStart < (placedDino.end + buffer) && dinoEnd > placedDino.start;
+                                            });
+
+                                            if (!hasOverlap) {
+                                                lane.push({ start: dinoStart, end: dinoEnd });
+                                                dino.lane = i;
+                                                placed = true;
+                                                break;
+                                            }
+                                        }
+
+                                        if (!placed) {
+                                            layout.lanes.push([{ start: dinoStart, end: dinoEnd }]);
+                                            dino.lane = layout.lanes.length - 1;
+                                        }
+
+                                        return dino;
+                                    });
+
+                                    const maxLane = positionedFauna.reduce((max, dino) => Math.max(max, dino.lane), -1);
+                                    const requiredFaunaHeight = (maxLane + 1) * 30 + 25; // 30px per lane, 25px bottom offset
+
                                     return (
-                                        <div key={periodName} className="period-block" style={{ left: `${periodPosition}px`, width: `${periodWidth}px` }}>
+                                        <div key={periodName} className="period-block" style={{ left: `${periodPosition}px`, width: `${periodWidth}px`, minHeight: `${requiredFaunaHeight}px` }}>
                                             <h4 className="period-title">{periodName}</h4>
                                             <div className="fauna-container">
-                                                {faunaInPeriod.map((dino, index) => {
+                                                {positionedFauna.map((dino, index) => {
                                                     const dinoPosition = (periodStart - dino.lived_from_ma) * scale;
                                                     const dinoWidth = (dino.lived_from_ma - dino.lived_to_ma) * scale;
                                                     return (
                                                         <div
                                                             key={dino.name}
                                                             className="fauna-marker"
-                                                            style={{ left: `${dinoPosition}px`, width: `${Math.max(dinoWidth, 5)}px`, bottom: `${25 + (index % 3) * 22}px` }}
+                                                            style={{ left: `${dinoPosition}px`, width: `${Math.max(dinoWidth, 5)}px`, bottom: `${25 + dino.lane * 30}px` }}
                                                             title={`${dino.name} (${dino.lived_from_ma}-${dino.lived_to_ma} ma)`}
                                                             onClick={() => onFaunaClick && onFaunaClick(dino)}>
                                                             <div className="fauna-label">{dino.name}</div>
@@ -307,9 +477,19 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, timelineSta
                                                     const { start: epochStart, end: epochEnd } = parseDuration(epochData.duration);
                                                     const epochPosition = (periodStart - epochStart) * scale;
                                                     const epochWidth = (epochStart - epochEnd) * scale;
+                                                    const formatEpochName = (epochName) => {
+                                                        switch (epochName) {
+                                                            case 'Upper':
+                                                                return 'Late';
+                                                            case 'Lower':
+                                                                return 'Early';
+                                                            default:
+                                                                return epochName;
+                                                        }
+                                                    };
                                                     return (
                                                         <div key={epochName} className="epoch-block" style={{ left: `${epochPosition}px`, width: `${epochWidth}px` }}>
-                                                            <h5 className="epoch-title" title={`${epochName} (${epochData.duration})`}>{epochName}</h5>
+                                                            <h5 className="epoch-title" title={`${formatEpochName(epochName)} (${epochData.duration})`}>{formatEpochName(epochName)}</h5>
                                                         </div>
                                                     );
                                                 })}
