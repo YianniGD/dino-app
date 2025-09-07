@@ -3,6 +3,7 @@ import World from './components/Globe/Globe';
 import Overlay from './components/Overlay/Overlay';
 import GlobeControls from './components/Globe/GlobeControls';
 import HorizontalTimeline from './components/timeline/HorizontalTimeline';
+import NewTimeline from './components/NewTimeline/NewTimeline';
 import data from './fauna.json';
 import timelineData from './timeline.json';
 import './App.css';
@@ -12,6 +13,7 @@ function App() {
   const [selectedPoint, setSelectedPoint] = useState(null); // Manages overlay visibility
   const [isRotationEnabled, setIsRotationEnabled] = useState(false);
   const [timelineDisplayState, setTimelineDisplayState] = useState('default'); // New state for timeline
+  const [showNewTimeline, setShowNewTimeline] = useState(false);
 
   const handlePointClick = useCallback((point) => {
     console.log('Point clicked in App.js:', point);
@@ -39,6 +41,14 @@ function App() {
     setTimelineDisplayState(newState);
   }, []);
 
+  const handleOpenNewTimeline = () => {
+    setShowNewTimeline(true);
+  };
+
+  const handleCloseNewTimeline = () => {
+    setShowNewTimeline(false);
+  };
+
   return (
     <div className="app-container">
       <main className={`content-area ${timelineDisplayState === 'collapsed' ? 'timeline-collapsed' : ''}`}>
@@ -50,18 +60,25 @@ function App() {
           filter={filter}
           selectedPoint={selectedPoint}
         />
-        <GlobeControls isRotationEnabled={isRotationEnabled} onToggleRotation={toggleRotation} />
-        <HorizontalTimeline
-          timelineData={timelineData}
-          faunaData={data}
-          onFaunaClick={handlePointClick}
-          timelineState={timelineDisplayState}
-          onStateChange={handleTimelineStateChange}
-          filter={filter}
-          onFilterSelect={setFilter}
-          onClearFilter={handleClearFilter}
+        <GlobeControls 
+          isRotationEnabled={isRotationEnabled} 
+          onToggleRotation={toggleRotation} 
+          onOpenNewTimeline={handleOpenNewTimeline} 
         />
+        <div style={{ display: 'none' }}>
+          <HorizontalTimeline
+            timelineData={timelineData}
+            faunaData={data}
+            onFaunaClick={handlePointClick}
+            timelineState={timelineDisplayState}
+            onStateChange={handleTimelineStateChange}
+            filter={filter}
+            onFilterSelect={setFilter}
+            onClearFilter={handleClearFilter}
+          />
+        </div>
         {selectedPoint && <Overlay data={selectedPoint} onClose={handleOverlayClose} />}
+        {showNewTimeline && <NewTimeline data={timelineData} onClose={handleCloseNewTimeline} />}
       </main>
     </div>
   );

@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "start_date": {
+        "year": "-68000000"
+      },
+      "end_date": {
+        "year": "-66000000"
+      },
+      "text": {
+        "headline": "Tyrannosaurus",
+        "text": "The largest land carnivore from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was the largest land carnivore, 40 ft (12 m) long, with a massive head."
+      },
+      "media": {
+        "url": "/Dinosaurs/Tyrannosaurus_Rex.png",
+        "caption": "Tyrannosaurus Rex",
+        "credit": ""
+      },
+      "group": "Late Cretaceous"
+    }
+  ]
+}

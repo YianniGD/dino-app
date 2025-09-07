@@ -12,7 +12,9 @@
             "lat": 45.0,
             "lng": -75.0
           },
-          "image": "Asset 144.svg"
+          "image": "Asset 144.svg",
+          "lived_from_ma": 383.7,
+          "lived_to_ma": 372.2
         },
         {
           "name": "Amia",
@@ -23,7 +25,9 @@
             "lat": 42.5,
             "lng": -81.7
           },
-          "image": "Asset 144.svg"
+          "image": "Asset 144.svg",
+          "lived_from_ma": 145,
+          "lived_to_ma": 0
         },
         {
           "name": "Platysomus",
@@ -34,7 +38,9 @@
             "lat": 56.87,
             "lng": -4.25
           },
-          "image": "Asset 144.svg"
+          "image": "Asset 144.svg",
+          "lived_from_ma": "345",
+          "lived_to_ma": "255"
         },
         {
           "name": "Saurichthys",
@@ -45,7 +51,9 @@
             "lat": 45.5,
             "lng": 10.0
           },
-          "image": "Asset 144.svg"
+          "image": "Asset 144.svg",
+          "lived_from_ma": "252",
+          "lived_to_ma": "201"
         },
         {
           "name": "Cheirolepis",
@@ -56,7 +64,9 @@
             "lat": 59.6,
             "lng": -3.0
           },
-          "image": "Asset 144.svg"
+          "image": "Asset 144.svg",
+          "lived_from_ma": "408",
+          "lived_to_ma": "360"
         },
         {
           "name": "Leptolepis",
@@ -67,7 +77,9 @@
             "lat": 48.95,
             "lng": 11.2
           },
-          "image": "Asset 144.svg"
+          "image": "Asset 144.svg",
+          "lived_from_ma": "200",
+          "lived_to_ma": "146"
         },
         {
           "name": "Pteronisculus",
@@ -78,7 +90,9 @@
             "lat": 45.0,
             "lng": 10.0
           },
-          "image": "Asset 144.svg"
+          "image": "Asset 144.svg",
+          "lived_from_ma": "51",
+          "lived_to_ma": ""
         },
         {
           "name": "Ceratodus",
@@ -89,7 +103,9 @@
             "lat": -29.0,
             "lng": 28.0
           },
-          "image": "Asset 144.svg"
+          "image": "Asset 144.svg",
+          "lived_from_ma": "228",
+          "lived_to_ma": "70"
         }
       ]
     },
@@ -105,7 +121,9 @@
             "lat": -22.5,
             "lng": 134.0
           },
-          "image": "Asset 137.svg"
+          "image": "Asset 137.svg",
+          "lived_from_ma": "480",
+          "lived_to_ma": "470"
         },
         {
           "name": "Jamoytius",
@@ -116,7 +134,9 @@
             "lat": 55.0,
             "lng": -2.0
           },
-          "image": "Asset 137.svg"
+          "image": "Asset 137.svg",
+          "lived_from_ma": "444",
+          "lived_to_ma": "433"
         },
         {
           "name": "Pteraspis",
@@ -127,7 +147,9 @@
             "lat": 51.4,
             "lng": -1.6
           },
-          "image": "Asset 137.svg"
+          "image": "Asset 137.svg",
+          "lived_from_ma": "416",
+          "lived_to_ma": "398"
         },
         {
           "name": "Cephalaspis",
@@ -138,24 +160,15 @@
             "lat": 55.4,
             "lng": -2.6
           },
-          "image": "Asset 137.svg"
+          "image": "Asset 137.svg",
+          "lived_from_ma": "416",
+          "lived_to_ma": "398"
         }
       ]
     },
     {
       "subcategory_name": "Fleshy-Lobed Fishes",
       "species": [
-        {
-          "name": "Eusthenopteron",
-          "location": "North America",
-          "time_period": "Late Devonian",
-          "description": "A fleshy-finned fish from the Late Devonian of North America. Its fossils were found in the Escuminac Formation in Quebec, Canada. It was a fleshy-finned fish, 3 ft (1 m) long.",
-          "coordinates": {
-            "lat": 45.0,
-            "lng": -77.0
-          },
-          "image": "Asset 139.svg"
-        },
         {
           "name": "Osteolepis",
           "location": "Europe",
@@ -165,7 +178,9 @@
             "lat": 60.0,
             "lng": -3.0
           },
-          "image": "Asset 139.svg"
+          "image": "Asset 139.svg",
+          "lived_from_ma": "416",
+          "lived_to_ma": "359"
         },
         {
           "name": "Dipterus",
@@ -176,7 +191,9 @@
             "lat": 59.0,
             "lng": -3.0
           },
-          "image": "Asset 139.svg"
+          "image": "Asset 139.svg",
+          "lived_from_ma": "392",
+          "lived_to_ma": "382"
         },
         {
           "name": "Latimeria",
@@ -187,7 +204,9 @@
             "lat": -3.0,
             "lng": 43.0
           },
-          "image": "Asset 139.svg"
+          "image": "Asset 139.svg",
+          "lived_from_ma": "420",
+          "lived_to_ma": "0"
         }
       ]
     },
@@ -203,7 +222,9 @@
             "lat": 41.8,
             "lng": -81.7
           },
-          "image": "Asset 136.svg"
+          "image": "Asset 136.svg",
+          "lived_from_ma": "385",
+          "lived_to_ma": "359"
         },
         {
           "name": "Stethacanthus",
@@ -214,7 +235,9 @@
             "lat": 41.5,
             "lng": -81.7
           },
-          "image": "Asset 136.svg"
+          "image": "Asset 136.svg",
+          "lived_from_ma": "390",
+          "lived_to_ma": "320"
         },
         {
           "name": "Helicoprion",
@@ -225,7 +248,9 @@
             "lat": 43.5,
             "lng": -104.0
           },
-          "image": "Asset 136.svg"
+          "image": "Asset 136.svg",
+          "lived_from_ma": "290",
+          "lived_to_ma": "230"
         },
         {
           "name": "Xenacanthus",
@@ -236,7 +261,9 @@
             "lat": 34.6,
             "lng": -99.4
           },
-          "image": "Asset 136.svg"
+          "image": "Asset 136.svg",
+          "lived_from_ma": "360",
+          "lived_to_ma": "208"
         },
         {
           "name": "Hybodus",
@@ -247,7 +274,9 @@
             "lat": 50.85,
             "lng": -0.33
           },
-          "image": "Asset 136.svg"
+          "image": "Asset 136.svg",
+          "lived_from_ma": "260",
+          "lived_to_ma": "75"
         }
       ]
     },
@@ -263,7 +292,9 @@
             "lat": 55.0,
             "lng": -4.0
           },
-          "image": "Asset 143.svg"
+          "image": "Asset 143.svg",
+          "lived_from_ma": "419",
+          "lived_to_ma": "360"
         },
         {
           "name": "Ischnacanthus",
@@ -274,7 +305,9 @@
             "lat": 50.4,
             "lng": -2.6
           },
-          "image": "Asset 143.svg"
+          "image": "Asset 143.svg",
+          "lived_from_ma": "419",
+          "lived_to_ma": "410"
         },
         {
           "name": "Dunkleosteus",
@@ -285,18 +318,22 @@
             "lat": 43.5,
             "lng": -81.7
           },
-          "image": "Asset 143.svg"
+          "image": "Asset 143.svg",
+          "lived_from_ma": "382",
+          "lived_to_ma": "358"
         },
         {
           "name": "Gemuendina",
           "location": "Europe",
           "time_period": "Early Devonian",
-          "description": "A placoderm from the Early Devonian of Europe. It was discovered in the Hunsr\u00c3\u00bcck Slates in Germany. It was a placoderm, 1 ft (0.3 m) long, with an armored head.",
+          "description": "A placoderm from the Early Devonian of Europe. It was discovered in the Hunsr\u00fcck Slates in Germany. It was a placoderm, 1 ft (0.3 m) long, with an armored head.",
           "coordinates": {
             "lat": 49.95,
             "lng": 11.2
           },
-          "image": "Asset 143.svg"
+          "image": "Asset 143.svg",
+          "lived_from_ma": "409",
+          "lived_to_ma": "403"
         },
         {
           "name": "Dinichthys",
@@ -307,7 +344,9 @@
             "lat": 41.5,
             "lng": -80.7
           },
-          "image": "Asset 143.svg"
+          "image": "Asset 143.svg",
+          "lived_from_ma": "374",
+          "lived_to_ma": "360"
         },
         {
           "name": "Bothriolepis",
@@ -318,7 +357,9 @@
             "lat": 47.0,
             "lng": -75.0
           },
-          "image": "Asset 143.svg"
+          "image": "Asset 143.svg",
+          "lived_from_ma": "390",
+          "lived_to_ma": "358"
         }
       ]
     }
@@ -336,7 +377,9 @@
             "lat": 49.8,
             "lng": 8.6
           },
-          "image": "Asset 158.svg"
+          "image": "Asset 158.svg",
+          "lived_from_ma": "210",
+          "lived_to_ma": "200"
         },
         {
           "name": "Archelon",
@@ -347,7 +390,9 @@
             "lat": 39.0,
             "lng": -98.0
           },
-          "image": "Asset 158.svg"
+          "image": "Asset 158.svg",
+          "lived_from_ma": "100",
+          "lived_to_ma": "66"
         },
         {
           "name": "Protostega",
@@ -358,7 +403,9 @@
             "lat": 38.712758828755426,
             "lng": -98.25419970238703
           },
-          "image": "Asset 158.svg"
+          "image": "Asset 158.svg",
+          "lived_from_ma": "100",
+          "lived_to_ma": "66"
         }
       ]
     },
@@ -374,7 +421,9 @@
             "lat": 45.75,
             "lng": 10.0
           },
-          "image": "Asset 160.svg"
+          "image": "Asset 160.svg",
+          "lived_from_ma": "210",
+          "lived_to_ma": "200"
         },
         {
           "name": "Dimorphodon",
@@ -385,7 +434,9 @@
             "lat": 50.71,
             "lng": -2.8
           },
-          "image": "Asset 160.svg"
+          "image": "Asset 160.svg",
+          "lived_from_ma": "200",
+          "lived_to_ma": "190"
         },
         {
           "name": "Pterodactylus",
@@ -396,7 +447,9 @@
             "lat": 49.5,
             "lng": 11.2
           },
-          "image": "Asset 160.svg"
+          "image": "Asset 160.svg",
+          "lived_from_ma": "155",
+          "lived_to_ma": "145"
         },
         {
           "name": "Rhamphorhynchus",
@@ -407,7 +460,9 @@
             "lat": 48.95,
             "lng": 11.2
           },
-          "image": "Asset 160.svg"
+          "image": "Asset 160.svg",
+          "lived_from_ma": "155",
+          "lived_to_ma": "145"
         },
         {
           "name": "Pteranodon",
@@ -418,7 +473,9 @@
             "lat": 39.0,
             "lng": -98.0
           },
-          "image": "Asset 160.svg"
+          "image": "Asset 160.svg",
+          "lived_from_ma": "80",
+          "lived_to_ma": "66"
         },
         {
           "name": "Quetzalcoatlus",
@@ -429,7 +486,9 @@
             "lat": 30.0,
             "lng": -103.0
           },
-          "image": "Asset 160.svg"
+          "image": "Asset 160.svg",
+          "lived_from_ma": "100",
+          "lived_to_ma": "66"
         }
       ]
     },
@@ -445,18 +504,22 @@
             "lat": 35.5,
             "lng": -111.75
           },
-          "image": "Asset 145.svg"
+          "image": "Asset 145.svg",
+          "lived_from_ma": "228",
+          "lived_to_ma": "202"
         },
         {
           "name": "Sarcosuchus",
           "location": "Africa",
           "time_period": "Early Cretaceous",
-          "description": "A giant crocodile from the Early Cretaceous of Africa. Its fossils were discovered in the T\u00c3\u00a9n\u00c3\u00a9r\u00c3\u00a9 Desert in Niger. It was a giant crocodile, 40 ft (12 m) long, with an enlarged bulb on its snout.",
+          "description": "A giant crocodile from the Early Cretaceous of Africa. Its fossils were discovered in the T\u00e9n\u00e9r\u00e9 Desert in Niger. It was a giant crocodile, 40 ft (12 m) long, with an enlarged bulb on its snout.",
           "coordinates": {
             "lat": 16.9,
             "lng": 9.1
           },
-          "image": "Asset 145.svg"
+          "image": "Asset 145.svg",
+          "lived_from_ma": "133",
+          "lived_to_ma": "110"
         },
         {
           "name": "Deinosuchus",
@@ -467,7 +530,9 @@
             "lat": 36.0,
             "lng": -107.0
           },
-          "image": "Asset 145.svg"
+          "image": "Asset 145.svg",
+          "lived_from_ma": "83",
+          "lived_to_ma": "72"
         }
       ]
     },
@@ -483,7 +548,9 @@
             "lat": 39.1,
             "lng": -95.7
           },
-          "image": "Asset 135.svg"
+          "image": "Asset 135.svg",
+          "lived_from_ma": "302",
+          "lived_to_ma": "300"
         },
         {
           "name": "Araeoscelis",
@@ -494,7 +561,9 @@
             "lat": 34.6,
             "lng": -99.0
           },
-          "image": "Asset 135.svg"
+          "image": "Asset 135.svg",
+          "lived_from_ma": "285",
+          "lived_to_ma": "275"
         },
         {
           "name": "Mesosaurus",
@@ -505,7 +574,9 @@
             "lat": -29.0,
             "lng": 27.0
           },
-          "image": "Asset 135.svg"
+          "image": "Asset 135.svg",
+          "lived_from_ma": "285",
+          "lived_to_ma": "275"
         },
         {
           "name": "Lystrosaurus",
@@ -516,7 +587,9 @@
             "lat": -29.0,
             "lng": 29.0
           },
-          "image": "Asset 135.svg"
+          "image": "Asset 135.svg",
+          "lived_from_ma": "252",
+          "lived_to_ma": "248"
         },
         {
           "name": "Arctops",
@@ -527,7 +600,9 @@
             "lat": -30.0,
             "lng": 26.0
           },
-          "image": "Asset 135.svg"
+          "image": "Asset 135.svg",
+          "lived_from_ma": "259",
+          "lived_to_ma": "251"
         }
       ]
     },
@@ -535,7 +610,7 @@
       "subcategory_name": "Marine Reptiles",
       "species": [
         {
-          "name": "Ichthyosaurs",
+          "name": "Ichthyosaurus",
           "location": "Europe",
           "time_period": "Early Jurassic",
           "description": "A fish-like marine reptile from the Early Jurassic of Europe. Its fossils were found in the Lias Formation of England. It was a fish-like marine reptile, 33 ft (10 m) long.",
@@ -543,7 +618,9 @@
             "lat": 50.85,
             "lng": -0.9
           },
-          "image": "Asset 161.svg"
+          "image": "Asset 161.svg",
+          "lived_from_ma": "199",
+          "lived_to_ma": "189"
         },
         {
           "name": "Shonisaurus",
@@ -554,29 +631,9 @@
             "lat": 39.0,
             "lng": -117.0
           },
-          "image": "Asset 161.svg"
-        },
-        {
-          "name": "Ichthyosaurus",
-          "location": "Europe",
-          "time_period": "Early Jurassic",
-          "description": "A small ichthyosaur from the Early Jurassic of Europe. Its fossils were found in the Lias Formation of England. It was a small ichthyosaur, 6 ft (1.8 m) long, with large eyes.",
-          "coordinates": {
-            "lat": 51.85,
-            "lng": -0.9
-          },
-          "image": "Asset 161.svg"
-        },
-        {
-          "name": "Plesiosaurus",
-          "location": "Europe",
-          "time_period": "Early Jurassic",
-          "description": "A long-necked reptile from the Early Jurassic of Europe. Its fossils were discovered in the Lias Formation of Dorset, England. It was a long-necked reptile, 11 ft (3.5 m) long.",
-          "coordinates": {
-            "lat": 50.85,
-            "lng": -0.08
-          },
-          "image": "Asset 161.svg"
+          "image": "Asset 161.svg",
+          "lived_from_ma": "227",
+          "lived_to_ma": "212"
         },
         {
           "name": "Liopleurodon",
@@ -587,7 +644,9 @@
             "lat": 50.35,
             "lng": -0.08
           },
-          "image": "Asset 161.svg"
+          "image": "Asset 161.svg",
+          "lived_from_ma": "166",
+          "lived_to_ma": "155"
         },
         {
           "name": "Elasmosaurus",
@@ -598,7 +657,9 @@
             "lat": 39.0,
             "lng": -98.0
           },
-          "image": "Asset 161.svg"
+          "image": "Asset 161.svg",
+          "lived_from_ma": "85",
+          "lived_to_ma": "65"
         },
         {
           "name": "Mosasaurus",
@@ -609,29 +670,9 @@
             "lat": 51.45,
             "lng": -0.07
           },
-          "image": "Asset 161.svg"
-        },
-        {
-          "name": "Pythonomorphs",
-          "location": "Europe",
-          "time_period": "Late Cretaceous",
-          "description": "An early snake from the Late Cretaceous of Europe. It was found in the Wealden Group of Sussex, England. It was an early snake, 33 ft (10 m) long, with a large head.",
-          "coordinates": {
-            "lat": 50.33,
-            "lng": -0.65
-          },
-          "image": "Asset 161.svg"
-        },
-        {
-          "name": "Plesiosaurus",
-          "location": "Europe",
-          "time_period": "Early Jurassic",
-          "description": "A long-necked reptile from the Early Jurassic of Europe. Its fossils were discovered in the Lias Formation of Dorset, England. It was a long-necked reptile, 11 ft (3.5 m) long.",
-          "coordinates": {
-            "lat": 50.85,
-            "lng": -0.075
-          },
-          "image": "Asset 161.svg"
+          "image": "Asset 161.svg",
+          "lived_from_ma": "82.7",
+          "lived_to_ma": "66"
         },
         {
           "name": "Pliosaurus",
@@ -642,7 +683,9 @@
             "lat": 50.85,
             "lng": -2.08
           },
-          "image": "Asset 161.svg"
+          "image": "Asset 161.svg",
+          "lived_from_ma": "163",
+          "lived_to_ma": "145"
         }
       ]
     },
@@ -658,7 +701,9 @@
             "lat": 36.56,
             "lng": -106.63
           },
-          "image": "Asset 41.svg"
+          "image": "Asset 41.svg",
+          "lived_from_ma": "228",
+          "lived_to_ma": "201"
         },
         {
           "name": "Compsognathus",
@@ -669,7 +714,9 @@
             "lat": 48.95,
             "lng": 11.2
           },
-          "image": "Asset 41.svg"
+          "image": "Asset 41.svg",
+          "lived_from_ma": "150",
+          "lived_to_ma": "145"
         },
         {
           "name": "Deinonychus",
@@ -680,7 +727,9 @@
             "lat": 42.0,
             "lng": -106.3
           },
-          "image": "Asset 41.svg"
+          "image": "Asset 41.svg",
+          "lived_from_ma": "115",
+          "lived_to_ma": "108"
         },
         {
           "name": "Velociraptor",
@@ -691,7 +740,9 @@
             "lat": 42.6,
             "lng": 103.0
           },
-          "image": "Asset 41.svg"
+          "image": "Asset 41.svg",
+          "lived_from_ma": "85.8",
+          "lived_to_ma": "70.6"
         },
         {
           "name": "Oviraptor",
@@ -699,10 +750,12 @@
           "time_period": "Late Cretaceous",
           "description": "A small theropod from the Late Cretaceous of Asia. Its fossils were found in the Djadochta Formation in Mongolia. It was a small theropod, 6 ft (1.8 m) long, with a toothless skull.",
           "coordinates": {
-            "lat": 43.760412289713734,
-            "lng": 102.40925476391699
+            "lat": 43.76,
+            "lng": 102.49
           },
-          "image": "Asset 41.svg"
+          "image": "Asset 41.svg",
+          "lived_from_ma": "85",
+          "lived_to_ma": "75"
         },
         {
           "name": "Dilophosaurus",
@@ -713,7 +766,9 @@
             "lat": 35.501,
             "lng": -111.751
           },
-          "image": "Asset 41.svg"
+          "image": "Asset 41.svg",
+          "lived_from_ma": "199",
+          "lived_to_ma": "182"
         }
       ]
     },
@@ -729,7 +784,9 @@
             "lat": 42.93,
             "lng": -105.736
           },
-          "image": "Asset 126.svg"
+          "image": "Asset 126.svg",
+          "lived_from_ma": "154",
+          "lived_to_ma": "145"
         },
         {
           "name": "Apatosaurus",
@@ -740,7 +797,9 @@
             "lat": 41.93,
             "lng": -104.736
           },
-          "image": "Asset 126.svg"
+          "image": "Asset 126.svg",
+          "lived_from_ma": "156",
+          "lived_to_ma": "151"
         },
         {
           "name": "Brachiosaurus",
@@ -751,18 +810,9 @@
             "lat": 42.3,
             "lng": -104.736
           },
-          "image": "Asset 126.svg"
-        },
-        {
-          "name": "Brontosaurus",
-          "location": "North America",
-          "time_period": "Late Jurassic",
-          "description": "A sauropod from the Late Jurassic of North America. Its fossils were discovered in the Morrison Formation of Wyoming. It was a sauropod, 75 ft (23 m) long.",
-          "coordinates": {
-            "lat": 41.03,
-            "lng": -105.6
-          },
-          "image": "Asset 126.svg"
+          "image": "Asset 126.svg",
+          "lived_from_ma": "156",
+          "lived_to_ma": "145"
         },
         {
           "name": "Supersaurus",
@@ -773,18 +823,22 @@
             "lat": 39.0,
             "lng": -107.0
           },
-          "image": "Asset 126.svg"
+          "image": "Asset 126.svg",
+          "lived_from_ma": "155",
+          "lived_to_ma": "145"
         },
         {
           "name": "Argentinosaurus",
           "location": "South America",
           "time_period": "Late Cretaceous",
-          "description": "A gigantic sauropod from the Late Cretaceous of South America. Its fossils were discovered in the Neuqu\u00c3\u00a9n Basin in Argentina. It was a gigantic sauropod, 115 ft (35 m) long, with vertebrae over 5 ft tall.",
+          "description": "A gigantic sauropod from the Late Cretaceous of South America. Its fossils were discovered in the Neuqu\u00e9n Basin in Argentina. It was a gigantic sauropod, 115 ft (35 m) long, with vertebrae over 5 ft tall.",
           "coordinates": {
             "lat": -39.0,
             "lng": -69.0
           },
-          "image": "Asset 126.svg"
+          "image": "Asset 126.svg",
+          "lived_from_ma": "97",
+          "lived_to_ma": "93.5"
         },
         {
           "name": "Amphicoelias",
@@ -792,10 +846,12 @@
           "time_period": "Late Jurassic",
           "description": "A gigantic sauropod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation in Colorado. It was a gigantic sauropod, 190 ft (58 m) long, known from a single vertebra.",
           "coordinates": {
-            "lat": 39.287225193528485,
-            "lng": -107.61861924026236
+            "lat": 39.28,
+            "lng": -107.6181924026236
           },
-          "image": "Asset 126.svg"
+          "image": "Asset 126.svg",
+          "lived_from_ma": "150",
+          "lived_to_ma": "145"
         }
       ]
     },
@@ -811,7 +867,9 @@
             "lat": 43.93,
             "lng": -105.736
           },
-          "image": "Asset 94.svg"
+          "image": "Asset 94.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Tyrannosaurus",
@@ -837,7 +895,9 @@
             "lat": 43.5,
             "lng": 103.5
           },
-          "image": "Asset 94.svg"
+          "image": "Asset 94.svg",
+          "lived_from_ma": "72",
+          "lived_to_ma": "66"
         },
         {
           "name": "Spinosaurus",
@@ -848,7 +908,9 @@
             "lat": 28.4,
             "lng": -10.0
           },
-          "image": "Asset 94.svg"
+          "image": "Asset 94.svg",
+          "lived_from_ma": "112",
+          "lived_to_ma": "93"
         },
         {
           "name": "Giganotosaurus",
@@ -859,7 +921,9 @@
             "lat": -38.6,
             "lng": -69.2
           },
-          "image": "Asset 94.svg"
+          "image": "Asset 94.svg",
+          "lived_from_ma": "100",
+          "lived_to_ma": "97"
         },
         {
           "name": "Carcharodontosaurus",
@@ -870,94 +934,9 @@
             "lat": 29.4,
             "lng": -10.0
           },
-          "image": "Asset 94.svg"
-        }
-      ]
-    },
-    {
-      "subcategory_name": "Iguanodonts",
-      "species": [
-        {
-          "name": "Camptosaurus",
-          "location": "North America",
-          "time_period": "Late Jurassic",
-          "description": "A primitive ornithopod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation of Colorado, Utah, and Wyoming. It was a primitive ornithopod, 23 ft (7 m) long.",
-          "coordinates": {
-            "lat": 41.93,
-            "lng": -106.736
-          },
-          "image": "Asset 15.svg"
-        },
-        {
-          "name": "Iguanodon",
-          "location": "Europe",
-          "time_period": "Early Cretaceous",
-          "description": "A well-known ornithopod from the Early Cretaceous of Europe. It was discovered in the Wealden Group of Sussex, England. It was a well-known ornithopod, 33 ft (10 m) long, with a thumb spike.",
-          "coordinates": {
-            "lat": 50.85,
-            "lng": -0.18
-          },
-          "image": "Asset 15.svg"
-        },
-        {
-          "name": "Tenontosaurus",
-          "location": "North America",
-          "time_period": "Early Cretaceous",
-          "description": "An ornithopod from the Early Cretaceous of North America. Its fossils were discovered in the Cloverly Formation of Montana and Wyoming. It was an ornithopod, 23 ft (7 m) long, with a long tail.",
-          "coordinates": {
-            "lat": 42.0,
-            "lng": -105.4
-          },
-          "image": "Asset 15.svg"
-        }
-      ]
-    },
-    {
-      "subcategory_name": "Hypsilophodonts",
-      "species": [
-        {
-          "name": "Lesothosaurus",
-          "location": "Africa",
-          "time_period": "Early Jurassic",
-          "description": "A small bipedal herbivore from the Early Jurassic of Africa. Its fossils were discovered in the Elliot Formation in Lesotho. It was a small bipedal herbivore, 3 ft (1 m) long.",
-          "coordinates": {
-            "lat": -29.5,
-            "lng": 27.5
-          },
-          "image": "Asset 161.svg"
-        },
-        {
-          "name": "Hypsilophodon",
-          "location": "Europe",
-          "time_period": "Early Cretaceous",
-          "description": "A small bipedal herbivore from the Early Cretaceous of Europe. Fossils were discovered on the Isle of Wight, England. It was a small bipedal herbivore, 7 ft (2 m) long.",
-          "coordinates": {
-            "lat": 50.68,
-            "lng": -1.6
-          },
-          "image": "Asset 161.svg"
-        },
-        {
-          "name": "Dryosaurus",
-          "location": "North America",
-          "time_period": "Late Jurassic",
-          "description": "A small bipedal herbivore from the Late Jurassic of North America. It was found in the Morrison Formation of Wyoming, USA. It was a small bipedal herbivore, 10 ft (3 m) long.",
-          "coordinates": {
-            "lat": 45.5,
-            "lng": -107.0
-          },
-          "image": "Asset 161.svg"
-        },
-        {
-          "name": "Thescelosaurus",
-          "location": "North America",
-          "time_period": "Late Cretaceous",
-          "description": "A late surviving hypsilophodont from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was a late surviving hypsilophodont, 13 ft (4 m) long, with well-preserved skeletons.",
-          "coordinates": {
-            "lat": 43.811,
-            "lng": -106.401
-          },
-          "image": "Asset 161.svg"
+          "image": "Asset 94.svg",
+          "lived_from_ma": "99",
+          "lived_to_ma": "94"
         }
       ]
     },
@@ -973,7 +952,9 @@
             "lat": 44.601,
             "lng": 103.001
           },
-          "image": "Asset 159.svg"
+          "image": "Asset 159.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Chasmosaurus",
@@ -984,7 +965,9 @@
             "lat": 50.93,
             "lng": -111.9
           },
-          "image": "Asset 159.svg"
+          "image": "Asset 159.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Styracosaurus",
@@ -995,7 +978,9 @@
             "lat": 50.73,
             "lng": -111.45
           },
-          "image": "Asset 159.svg"
+          "image": "Asset 159.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Triceratops",
@@ -1006,7 +991,9 @@
             "lat": 47.2,
             "lng": -106.402
           },
-          "image": "Asset 159.svg"
+          "image": "Asset 159.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Torosaurus",
@@ -1017,7 +1004,9 @@
             "lat": 46.022839987832015,
             "lng": -105.78588614877887
           },
-          "image": "Asset 159.svg"
+          "image": "Asset 159.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Pachyrhinosaurus",
@@ -1028,7 +1017,9 @@
             "lat": 53.53,
             "lng": -113.5
           },
-          "image": "Asset 159.svg"
+          "image": "Asset 159.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Centrosaurus",
@@ -1039,24 +1030,15 @@
             "lat": 50.73,
             "lng": -110.45
           },
-          "image": "Asset 159.svg"
+          "image": "Asset 159.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         }
       ]
     },
     {
-      "subcategory_name": "Fabrosaurs, Heterodontosaurids, and Pachycephalosaurs",
+      "subcategory_name": "Bird-hipped Dinosaurs",
       "species": [
-        {
-          "name": "Lesothosaurus",
-          "location": "Africa",
-          "time_period": "Early Jurassic",
-          "description": "A small bipedal herbivore from the Early Jurassic of Africa. Its fossils were discovered in the Elliot Formation in Lesotho. It was a small bipedal herbivore, 3 ft (1 m) long.",
-          "coordinates": {
-            "lat": -30.5,
-            "lng": 29.5
-          },
-          "image": "Asset 141.svg"
-        },
         {
           "name": "Heterodontosaurus",
           "location": "Africa",
@@ -1066,7 +1048,9 @@
             "lat": -29.0,
             "lng": 26.0
           },
-          "image": "Asset 141.svg"
+          "image": "Asset 141.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Stegoceras",
@@ -1077,7 +1061,9 @@
             "lat": 50.73,
             "lng": -111.35
           },
-          "image": "Asset 141.svg"
+          "image": "Asset 141.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Pachycephalosaurus",
@@ -1088,7 +1074,22 @@
             "lat": 46.813,
             "lng": -106.403
           },
-          "image": "Asset 141.svg"
+          "image": "Asset 141.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
+        },
+        {
+          "name": "Thescelosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A late surviving hypsilophodont from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was a late surviving hypsilophodont, 13 ft (4 m) long, with well-preserved skeletons.",
+          "coordinates": {
+            "lat": 43.811,
+            "lng": -106.401
+          },
+          "image": "Asset 161.svg",
+          "lived_from_ma": "75",
+          "lived_to_ma": "66"
         }
       ]
     },
@@ -1104,7 +1105,9 @@
             "lat": -30.0,
             "lng": 26.0
           },
-          "image": "Asset 138.svg"
+          "image": "Asset 138.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Ornithosuchus",
@@ -1115,7 +1118,9 @@
             "lat": 55.87,
             "lng": -4.25
           },
-          "image": "Asset 138.svg"
+          "image": "Asset 138.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Postosuchus",
@@ -1126,7 +1131,9 @@
             "lat": 34.6,
             "lng": -100.0
           },
-          "image": "Asset 138.svg"
+          "image": "Asset 138.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Plateosaurus",
@@ -1137,18 +1144,9 @@
             "lat": 49.8,
             "lng": 8.6
           },
-          "image": "Asset 138.svg"
-        },
-        {
-          "name": "Coelophysis",
-          "location": "North America",
-          "time_period": "Late Triassic",
-          "description": "A small theropod from the Late Triassic of North America. It was found in the Ghost Ranch quarry in New Mexico. It was a small theropod, 10 ft (3 m) long, that was known from many skeletons.",
-          "coordinates": {
-            "lat": 36.56,
-            "lng": -106.63
-          },
-          "image": "Asset 138.svg"
+          "image": "Asset 138.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         }
       ]
     },
@@ -1164,7 +1162,9 @@
             "lat": 45.75,
             "lng": -63.85
           },
-          "image": "Asset 134.svg"
+          "image": "Asset 134.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Dimetrodon",
@@ -1175,7 +1175,9 @@
             "lat": 34.6,
             "lng": -99.4
           },
-          "image": "Asset 134.svg"
+          "image": "Asset 134.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Edaphosaurus",
@@ -1186,7 +1188,9 @@
             "lat": 34.6,
             "lng": -99.2
           },
-          "image": "Asset 134.svg"
+          "image": "Asset 134.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Cotylorhynchus",
@@ -1197,7 +1201,9 @@
             "lat": 33.6,
             "lng": -99.3
           },
-          "image": "Asset 134.svg"
+          "image": "Asset 134.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Pareiasaurus",
@@ -1208,7 +1214,9 @@
             "lat": 44.6,
             "lng": 56.6
           },
-          "image": "Asset 134.svg"
+          "image": "Asset 134.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         }
       ]
     },
@@ -1224,7 +1232,9 @@
             "lat": -29.5,
             "lng": 25.5
           },
-          "image": "Asset 121.svg"
+          "image": "Asset 121.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Hypsilophodon",
@@ -1235,7 +1245,9 @@
             "lat": 51.68,
             "lng": -1.29
           },
-          "image": "Asset 121.svg"
+          "image": "Asset 121.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Dryosaurus",
@@ -1246,7 +1258,9 @@
             "lat": 44.5,
             "lng": -106.0
           },
-          "image": "Asset 121.svg"
+          "image": "Asset 121.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Camptosaurus",
@@ -1257,7 +1271,9 @@
             "lat": 41.93,
             "lng": -102.736
           },
-          "image": "Asset 121.svg"
+          "image": "Asset 121.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Tenontosaurus",
@@ -1268,7 +1284,9 @@
             "lat": 42.3,
             "lng": -105.7
           },
-          "image": "Asset 121.svg"
+          "image": "Asset 121.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Iguanodon",
@@ -1279,7 +1297,9 @@
             "lat": 50.85,
             "lng": -0.22
           },
-          "image": "Asset 121.svg"
+          "image": "Asset 121.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         }
       ]
     },
@@ -1295,7 +1315,9 @@
             "lat": 40.23,
             "lng": -74.0
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Bactrosaurus",
@@ -1306,7 +1328,9 @@
             "lat": 43.5,
             "lng": 103.8
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Anatosaurus",
@@ -1317,7 +1341,9 @@
             "lat": 42.8,
             "lng": -106.0
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Maiasaura",
@@ -1328,7 +1354,9 @@
             "lat": 47.0,
             "lng": -112.0
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Shantungosaurus",
@@ -1339,7 +1367,9 @@
             "lat": 36.5,
             "lng": 117.5
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Kritosaurus",
@@ -1350,7 +1380,9 @@
             "lat": 36.001,
             "lng": -107.001
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Edmontosaurus",
@@ -1361,7 +1393,9 @@
             "lat": 53.531,
             "lng": -113.501
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Prosaurolophus",
@@ -1372,18 +1406,22 @@
             "lat": 50.73,
             "lng": -109.45
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Saurolophus",
           "location": "North America and Asia",
           "time_period": "Late Cretaceous",
-          "description": "A hadrosaur with a solname crest from the Late Cretaceous of North America and Asia. It was found in the Dinosaur Park Formation of Alberta, Canada, and the Nemegt Formation of Mongolia. The Canadian site is at approximately 50.730\u00c2\u00b0 N, 111.450\u00c2\u00b0 W. It was a hadrosaur with a solname, rod-like crest on its head, 30 ft (9 m) long.",
+          "description": "A hadrosaur with a solname crest from the Late Cretaceous of North America and Asia. It was found in the Dinosaur Park Formation of Alberta, Canada, and the Nemegt Formation of Mongolia. The Canadian site is at approximately 50.730\u00b0 N, 111.450\u00b0 W. It was a hadrosaur with a solname, rod-like crest on its head, 30 ft (9 m) long.",
           "coordinates": {
             "lat": 50.73,
             "lng": -111.7
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Tsintaosaurus",
@@ -1394,7 +1432,9 @@
             "lat": 36.5,
             "lng": 119.5
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Corythosaurus",
@@ -1405,7 +1445,9 @@
             "lat": 50.2,
             "lng": -110.45
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Lambeosaurus",
@@ -1416,7 +1458,9 @@
             "lat": 49.13,
             "lng": -111.2
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Hypacrosaurus",
@@ -1424,10 +1468,12 @@
           "time_period": "Late Cretaceous",
           "description": "A hadrosaur with a broad, flat crest from the Late Cretaceous of North America. Fossils were found in the Horseshoe Canyon Formation of Alberta, Canada. It was a hadrosaur with a broad, flat crest, 30 ft (9 m) long.",
           "coordinates": {
-            "lat": 52.934455213899355,
-            "lng": -113.89790734486158
+            "lat": 52.93,
+            "lng": -113.89
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Parasaurolophus",
@@ -1438,7 +1484,9 @@
             "lat": 50.78,
             "lng": -111.35
           },
-          "image": "Asset 80.svg"
+          "image": "Asset 80.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         }
       ]
     },
@@ -1454,7 +1502,9 @@
             "lat": 41.23,
             "lng": -105.736
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Kentrosaurus",
@@ -1465,7 +1515,9 @@
             "lat": -10.0,
             "lng": 39.5
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Tuojiangosaurus",
@@ -1476,7 +1528,9 @@
             "lat": 29.35,
             "lng": 104.77
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Wuerhosaurus",
@@ -1487,7 +1541,9 @@
             "lat": 45.0,
             "lng": 88.0
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Hylaeosaurus",
@@ -1498,7 +1554,9 @@
             "lat": 50.85,
             "lng": -1.08
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Scelnameosaurus",
@@ -1509,7 +1567,9 @@
             "lat": 50.711,
             "lng": -2.801
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Polacanthus",
@@ -1520,7 +1580,9 @@
             "lat": 50.686,
             "lng": -1.298
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Sauropelta",
@@ -1531,7 +1593,9 @@
             "lat": 41.6,
             "lng": -105.0
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Silvisaurus",
@@ -1542,7 +1606,9 @@
             "lat": 39.0,
             "lng": -98.0
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Struthiosaurus",
@@ -1553,7 +1619,9 @@
             "lat": 47.6,
             "lng": 13.5
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Nodosaurus",
@@ -1564,7 +1632,9 @@
             "lat": 42.0,
             "lng": -104.3
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Euoplocephalus",
@@ -1575,7 +1645,9 @@
             "lat": 51.73,
             "lng": -111.25
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Talarurus",
@@ -1586,7 +1658,9 @@
             "lat": 43.1,
             "lng": 103.5
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "",
+          "lived_to_ma": ""
         },
         {
           "name": "Saichania",
@@ -1597,7 +1671,9 @@
             "lat": 43.5,
             "lng": 105.5
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "83.6",
+          "lived_to_ma": "70.6"
         },
         {
           "name": "Panoplosaurus",
@@ -1608,7 +1684,9 @@
             "lat": 50.43,
             "lng": -110.45
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "76",
+          "lived_to_ma": "75"
         },
         {
           "name": "Ankylosaurus",
@@ -1619,7 +1697,9 @@
             "lat": 46.81,
             "lng": -108.4
           },
-          "image": "Asset 62.svg"
+          "image": "Asset 62.svg",
+          "lived_from_ma": "68",
+          "lived_to_ma": "66"
         }
       ]
     }
@@ -1637,18 +1717,9 @@
             "lat": 72.0,
             "lng": -23.0
           },
-          "image": "Asset 61.svg"
-        },
-        {
-          "name": "Acanthostega",
-          "location": "Europe",
-          "time_period": "Late Devonian",
-          "description": "A fish-amphibian from the Late Devonian of Europe. Its fossils were found in eastern Greenland. It was a fish-amphibian, 2 ft (0.6 m) long, that had both gills and lungs.",
-          "coordinates": {
-            "lat": 72.0,
-            "lng": -22.0
-          },
-          "image": "Asset 61.svg"
+          "image": "Asset 61.svg",
+          "lived_from_ma": "367",
+          "lived_to_ma": "362"
         },
         {
           "name": "Eryops",
@@ -1659,7 +1730,9 @@
             "lat": 34.2,
             "lng": -98.6
           },
-          "image": "Asset 61.svg"
+          "image": "Asset 61.svg",
+          "lived_from_ma": "310",
+          "lived_to_ma": "295"
         },
         {
           "name": "Diplocaulus",
@@ -1670,24 +1743,10 @@
             "lat": 33.3,
             "lng": -99.5
           },
-          "image": "Asset 61.svg"
+          "image": "Asset 61.svg",
+          "lived_from_ma": "299",
+          "lived_to_ma": "251"
         },
-        {
-          "name": "Labyrinthodonts",
-          "location": "Europe",
-          "time_period": "Late Devonian",
-          "description": "An early amphibian from the Late Devonian of Europe. Its fossils were found in the Canis Formation in Greenland. It was an early amphibian, 6 ft (1.8 m) long, with a skull resembling a labyrinth.",
-          "coordinates": {
-            "lat": 72.5,
-            "lng": -22.0
-          },
-          "image": "Asset 61.svg"
-        }
-      ]
-    },
-    {
-      "subcategory_name": "Early Reptiles",
-      "species": [
         {
           "name": "Seymouria",
           "location": "North America",
@@ -1697,7 +1756,9 @@
             "lat": 34.9,
             "lng": -99.3
           },
-          "image": "Asset 134.svg"
+          "image": "Asset 134.svg",
+          "lived_from_ma": "280",
+          "lived_to_ma": "270"
         },
         {
           "name": "Acanthostega",
@@ -1708,18 +1769,9 @@
             "lat": 73.0,
             "lng": -22.5
           },
-          "image": "Asset 134.svg"
-        },
-        {
-          "name": "Ichthyostega",
-          "location": "Europe",
-          "time_period": "Late Devonian",
-          "description": "The first amphibian from the Late Devonian of Europe. It was discovered in the Canis Formation in Greenland. It was the first amphibian, 5 ft (1.5 m) long.",
-          "coordinates": {
-            "lat": 72.6,
-            "lng": -22.3
-          },
-          "image": "Asset 134.svg"
+          "image": "Asset 134.svg",
+          "lived_from_ma": "370",
+          "lived_to_ma": "365"
         }
       ]
     }
