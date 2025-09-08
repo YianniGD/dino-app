@@ -17,17 +17,17 @@
           "lived_to_ma": 372.2
         },
         {
-          "name": "Amia",
-          "location": "Europe",
-          "time_period": "Early Cretaceous-Present",
+          "name": "Cyclurus",
+          "location": "Africa",
+          "time_period": "Early Cretaceous",
           "description": "A primitive ray-finned fish from the Early Cretaceous to the present. Its fossils were found in the Morrison Formation of Wyoming. It was a primitive ray-finned fish, 2 ft (0.6 m) long.",
           "coordinates": {
-            "lat": 42.5,
-            "lng": -81.7
+            "lat": -18.7,
+            "lng": 46.8
           },
           "image": "Asset 144.svg",
           "lived_from_ma": 145,
-          "lived_to_ma": 0
+          "lived_to_ma": 33
         },
         {
           "name": "Platysomus",
