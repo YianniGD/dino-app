@@ -91,8 +91,8 @@
             "lng": 10.0
           },
           "image": "Asset 144.svg",
-          "lived_from_ma": "51",
-          "lived_to_ma": ""
+          "lived_from_ma": "252",
+          "lived_to_ma": "237"
         },
         {
           "name": "Ceratodus",
@@ -400,8 +400,8 @@
           "time_period": "Late Cretaceous",
           "description": "A large turtle from the Late Cretaceous of North America. It was found in the Niobrara Formation in Kansas, USA. It was a large turtle, 10 ft (3 m) long.",
           "coordinates": {
-            "lat": 38.712758828755426,
-            "lng": -98.25419970238703
+            "lat": 38.71,
+            "lng": -98.25
           },
           "image": "Asset 158.svg",
           "lived_from_ma": "100",
@@ -868,8 +868,8 @@
             "lng": -105.736
           },
           "image": "Asset 94.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "157",
+          "lived_to_ma": "145"
         },
         {
           "name": "Tyrannosaurus",
@@ -944,17 +944,17 @@
       "subcategory_name": "Horned Dinosaurs",
       "species": [
         {
-          "name": "Protoceratops",
+          "name": "Yinlong Downsi",
           "location": "Asia",
           "time_period": "Late Cretaceous",
-          "description": "The first nameentified ceratopsian from the Late Cretaceous of Asia. Its fossils were found in the Djadochta Formation in Mongolia. It was the first nameentified ceratopsian, 6 ft (1.8 m) long, with a large bony frill.",
+          "description": "The first named ceratopsian from the Late Cretaceous of Asia. Its fossils were found in the Djadochta Formation in Mongolia. It was the first nameentified ceratopsian, 6 ft (1.8 m) long, with a large bony frill.",
           "coordinates": {
             "lat": 44.601,
             "lng": 103.001
           },
           "image": "Asset 159.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "161",
+          "lived_to_ma": "155"
         },
         {
           "name": "Chasmosaurus",
@@ -966,8 +966,8 @@
             "lng": -111.9
           },
           "image": "Asset 159.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "76",
+          "lived_to_ma": "70"
         },
         {
           "name": "Styracosaurus",
@@ -979,8 +979,8 @@
             "lng": -111.45
           },
           "image": "Asset 159.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "75.5",
+          "lived_to_ma": "74.5"
         },
         {
           "name": "Triceratops",
@@ -992,8 +992,8 @@
             "lng": -106.402
           },
           "image": "Asset 159.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "68",
+          "lived_to_ma": "66"
         },
         {
           "name": "Torosaurus",
@@ -1005,8 +1005,8 @@
             "lng": -105.78588614877887
           },
           "image": "Asset 159.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "68",
+          "lived_to_ma": "66"
         },
         {
           "name": "Pachyrhinosaurus",
@@ -1018,8 +1018,8 @@
             "lng": -113.5
           },
           "image": "Asset 159.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "73.5",
+          "lived_to_ma": "69"
         },
         {
           "name": "Centrosaurus",
@@ -1031,8 +1031,8 @@
             "lng": -110.45
           },
           "image": "Asset 159.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "76.5",
+          "lived_to_ma": "75"
         }
       ]
     },
@@ -1049,8 +1049,8 @@
             "lng": 26.0
           },
           "image": "Asset 141.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "200",
+          "lived_to_ma": "145"
         },
         {
           "name": "Stegoceras",
@@ -1062,8 +1062,8 @@
             "lng": -111.35
           },
           "image": "Asset 141.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "77",
+          "lived_to_ma": "74"
         },
         {
           "name": "Pachycephalosaurus",
@@ -1075,8 +1075,8 @@
             "lng": -106.403
           },
           "image": "Asset 141.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "72",
+          "lived_to_ma": "66"
         },
         {
           "name": "Thescelosaurus",
@@ -1106,8 +1106,8 @@
             "lng": 26.0
           },
           "image": "Asset 138.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "248",
+          "lived_to_ma": "245"
         },
         {
           "name": "Ornithosuchus",
@@ -1119,8 +1119,8 @@
             "lng": -4.25
           },
           "image": "Asset 138.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "237",
+          "lived_to_ma": "227"
         },
         {
           "name": "Postosuchus",
@@ -1132,8 +1132,8 @@
             "lng": -100.0
           },
           "image": "Asset 138.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "230",
+          "lived_to_ma": "208"
         },
         {
           "name": "Plateosaurus",
@@ -1145,8 +1145,8 @@
             "lng": 8.6
           },
           "image": "Asset 138.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "214",
+          "lived_to_ma": "204"
         }
       ]
     },
@@ -1163,8 +1163,8 @@
             "lng": -63.85
           },
           "image": "Asset 134.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "318",
+          "lived_to_ma": "312"
         },
         {
           "name": "Dimetrodon",
@@ -1176,8 +1176,8 @@
             "lng": -99.4
           },
           "image": "Asset 134.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "299",
+          "lived_to_ma": "265"
         },
         {
           "name": "Edaphosaurus",
@@ -1189,8 +1189,8 @@
             "lng": -99.2
           },
           "image": "Asset 134.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "303",
+          "lived_to_ma": "272"
         },
         {
           "name": "Cotylorhynchus",
@@ -1202,8 +1202,8 @@
             "lng": -99.3
           },
           "image": "Asset 134.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "279",
+          "lived_to_ma": "270"
         },
         {
           "name": "Pareiasaurus",
@@ -1215,8 +1215,8 @@
             "lng": 56.6
           },
           "image": "Asset 134.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "265",
+          "lived_to_ma": "252"
         }
       ]
     },
@@ -1233,8 +1233,8 @@
             "lng": 25.5
           },
           "image": "Asset 121.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "201",
+          "lived_to_ma": "190"
         },
         {
           "name": "Hypsilophodon",
@@ -1246,8 +1246,8 @@
             "lng": -1.29
           },
           "image": "Asset 121.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "130",
+          "lived_to_ma": "125"
         },
         {
           "name": "Dryosaurus",
@@ -1259,8 +1259,8 @@
             "lng": -106.0
           },
           "image": "Asset 121.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "156.3",
+          "lived_to_ma": "146.8"
         },
         {
           "name": "Camptosaurus",
@@ -1272,8 +1272,8 @@
             "lng": -102.736
           },
           "image": "Asset 121.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "156.3",
+          "lived_to_ma": "146.8"
         },
         {
           "name": "Tenontosaurus",
@@ -1285,8 +1285,8 @@
             "lng": -105.7
           },
           "image": "Asset 121.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "120",
+          "lived_to_ma": "100"
         },
         {
           "name": "Iguanodon",
@@ -1298,8 +1298,8 @@
             "lng": -0.22
           },
           "image": "Asset 121.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "140",
+          "lived_to_ma": "110"
         }
       ]
     },
@@ -1316,8 +1316,8 @@
             "lng": -74.0
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "83.6",
+          "lived_to_ma": "77.9"
         },
         {
           "name": "Bactrosaurus",
@@ -1329,8 +1329,8 @@
             "lng": 103.8
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "96",
+          "lived_to_ma": "85"
         },
         {
           "name": "Anatosaurus",
@@ -1342,8 +1342,8 @@
             "lng": -106.0
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "70",
+          "lived_to_ma": "65"
         },
         {
           "name": "Maiasaura",
@@ -1355,8 +1355,8 @@
             "lng": -112.0
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "80",
+          "lived_to_ma": "75"
         },
         {
           "name": "Shantungosaurus",
@@ -1368,8 +1368,8 @@
             "lng": 117.5
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "83",
+          "lived_to_ma": "74"
         },
         {
           "name": "Kritosaurus",
@@ -1381,8 +1381,8 @@
             "lng": -107.001
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "74.5",
+          "lived_to_ma": "66"
         },
         {
           "name": "Edmontosaurus",
@@ -1394,8 +1394,8 @@
             "lng": -113.501
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "73",
+          "lived_to_ma": "66"
         },
         {
           "name": "Prosaurolophus",
@@ -1407,8 +1407,8 @@
             "lng": -109.45
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "76.9",
+          "lived_to_ma": "66.04"
         },
         {
           "name": "Saurolophus",
@@ -1420,8 +1420,8 @@
             "lng": -111.7
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "83",
+          "lived_to_ma": "66"
         },
         {
           "name": "Tsintaosaurus",
@@ -1433,8 +1433,8 @@
             "lng": 119.5
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "83.6",
+          "lived_to_ma": "72.1"
         },
         {
           "name": "Corythosaurus",
@@ -1446,8 +1446,8 @@
             "lng": -110.45
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "76",
+          "lived_to_ma": "74"
         },
         {
           "name": "Lambeosaurus",
@@ -1459,8 +1459,8 @@
             "lng": -111.2
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "76",
+          "lived_to_ma": "75"
         },
         {
           "name": "Hypacrosaurus",
@@ -1472,8 +1472,8 @@
             "lng": -113.89
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "75",
+          "lived_to_ma": "67"
         },
         {
           "name": "Parasaurolophus",
@@ -1485,8 +1485,8 @@
             "lng": -111.35
           },
           "image": "Asset 80.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "76.9",
+          "lived_to_ma": "66.04"
         }
       ]
     },
@@ -1503,8 +1503,8 @@
             "lng": -105.736
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "155",
+          "lived_to_ma": "145"
         },
         {
           "name": "Kentrosaurus",
@@ -1516,8 +1516,8 @@
             "lng": 39.5
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "155",
+          "lived_to_ma": "150"
         },
         {
           "name": "Tuojiangosaurus",
@@ -1529,8 +1529,8 @@
             "lng": 104.77
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "168",
+          "lived_to_ma": "146"
         },
         {
           "name": "Wuerhosaurus",
@@ -1542,8 +1542,8 @@
             "lng": 88.0
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "132",
+          "lived_to_ma": "113"
         },
         {
           "name": "Hylaeosaurus",
@@ -1555,11 +1555,11 @@
             "lng": -1.08
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "132",
+          "lived_to_ma": "113"
         },
         {
-          "name": "Scelnameosaurus",
+          "name": "Elasmosaurus",
           "location": "Europe",
           "time_period": "Early Jurassic",
           "description": "A primitive armored dinosaur from the Early Jurassic of Europe. Its fossils were found in the Lower Lias Formation of Dorset, England. It was a primitive armored dinosaur, 13 ft (4 m) long, covered in small bony plates.",
@@ -1568,8 +1568,8 @@
             "lng": -2.801
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "85",
+          "lived_to_ma": "65"
         },
         {
           "name": "Polacanthus",
@@ -1581,8 +1581,8 @@
             "lng": -1.298
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "130",
+          "lived_to_ma": "125"
         },
         {
           "name": "Sauropelta",
@@ -1594,21 +1594,21 @@
             "lng": -105.0
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "116",
+          "lived_to_ma": "91"
         },
         {
           "name": "Silvisaurus",
-          "location": "Dakota Formation",
-          "time_period": "Early Cretaceous",
+          "location": "North America",
+          "time_period": "Middle Cretaceous",
           "description": "A small nodosaur from the Early Cretaceous of North America. Fossils were found in the Dakota Formation of Kansas, USA. It was a small nodosaur, 13 ft (4 m) long, with a domed skull and conical spikes.",
           "coordinates": {
             "lat": 39.0,
             "lng": -98.0
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "121",
+          "lived_to_ma": "112"
         },
         {
           "name": "Struthiosaurus",
@@ -1620,8 +1620,8 @@
             "lng": 13.5
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "85",
+          "lived_to_ma": "66"
         },
         {
           "name": "Nodosaurus",
@@ -1633,8 +1633,8 @@
             "lng": -104.3
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "110",
+          "lived_to_ma": "90"
         },
         {
           "name": "Euoplocephalus",
@@ -1646,8 +1646,8 @@
             "lng": -111.25
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "76",
+          "lived_to_ma": "66"
         },
         {
           "name": "Talarurus",
@@ -1659,8 +1659,8 @@
             "lng": 103.5
           },
           "image": "Asset 62.svg",
-          "lived_from_ma": "",
-          "lived_to_ma": ""
+          "lived_from_ma": "96",
+          "lived_to_ma": "89"
         },
         {
           "name": "Saichania",
