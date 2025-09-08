@@ -9,13 +9,14 @@ const Specimen = ({ specimen }) => {
 
   useEffect(() => {
     const container = imageContainerRef.current;
-    if (!container || !isXrayEnabled || !skeletonRef.current) return;
+    const skeleton = skeletonRef.current;
+    if (!container || !isXrayEnabled || !skeleton) return;
 
     const handleMouseMove = (e) => {
       const rect = container.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      gsap.to(skeletonRef.current, {
+      gsap.to(skeleton, {
         clipPath: `circle(100px at ${x}px ${y}px)`,
         duration: 0.1,
       });
@@ -26,7 +27,7 @@ const Specimen = ({ specimen }) => {
     return () => {
       container.removeEventListener('mousemove', handleMouseMove);
       // Reset clip-path when effect is disabled
-      gsap.to(skeletonRef.current, { clipPath: 'circle(0% at 50% 50%)', duration: 0.1 });
+      gsap.to(skeleton, { clipPath: 'circle(0% at 50% 50%)', duration: 0.1 });
     };
   }, [isXrayEnabled]);
 

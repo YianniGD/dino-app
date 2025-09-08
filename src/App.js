@@ -3,17 +3,15 @@ import World from './components/Globe/Globe';
 import Overlay from './components/Overlay/Overlay';
 import GlobeControls from './components/Globe/GlobeControls';
 import HorizontalTimeline from './components/timeline/HorizontalTimeline';
-import NewTimeline from './components/NewTimeline/NewTimeline';
-import data from './fauna.json';
 import timelineData from './timeline.json';
+import faunaData from './fauna.json';
 import './App.css';
 
 function App() {
-  const [filter, setFilter] = useState(null);
   const [selectedPoint, setSelectedPoint] = useState(null); // Manages overlay visibility
   const [isRotationEnabled, setIsRotationEnabled] = useState(false);
-  const [timelineDisplayState, setTimelineDisplayState] = useState('default'); // New state for timeline
-  const [showNewTimeline, setShowNewTimeline] = useState(false);
+  const [timelineState, setTimelineState] = useState('default');
+  const [filter, setFilter] = useState(null);
 
   const handlePointClick = useCallback((point) => {
     console.log('Point clicked in App.js:', point);
@@ -24,10 +22,6 @@ function App() {
     setSelectedPoint(null);
   }, []);
 
-  const handleClearFilter = () => {
-    setFilter(null);
-  };
-
   // An example of how you might close an overlay
   const handleOverlayClose = () => {
     setSelectedPoint(null);
@@ -37,48 +31,44 @@ function App() {
     setIsRotationEnabled(!isRotationEnabled);
   };
 
-  const handleTimelineStateChange = useCallback((newState) => {
-    setTimelineDisplayState(newState);
-  }, []);
-
-  const handleOpenNewTimeline = () => {
-    setShowNewTimeline(true);
+  const handleTimelineStateChange = (newState) => {
+    setTimelineState(newState);
   };
 
-  const handleCloseNewTimeline = () => {
-    setShowNewTimeline(false);
+  const handleFilterSelect = (newFilter) => {
+    setFilter(newFilter);
+  };
+
+  const handleClearFilter = () => {
+    setFilter(null);
   };
 
   return (
     <div className="app-container">
-      <main className={`content-area ${timelineDisplayState === 'collapsed' ? 'timeline-collapsed' : ''}`}>
+      <main className={`content-area timeline-${timelineState}`}>
         <World
           onPointClick={handlePointClick}
           onBackgroundClick={handleGlobeBackgroundClick}
           isOverlayOpen={!!selectedPoint}
           isRotationEnabled={isRotationEnabled}
-          filter={filter}
           selectedPoint={selectedPoint}
+          filter={filter}
         />
         <GlobeControls 
           isRotationEnabled={isRotationEnabled} 
           onToggleRotation={toggleRotation} 
-          onOpenNewTimeline={handleOpenNewTimeline} 
         />
-        <div style={{ display: 'none' }}>
-          <HorizontalTimeline
-            timelineData={timelineData}
-            faunaData={data}
-            onFaunaClick={handlePointClick}
-            timelineState={timelineDisplayState}
-            onStateChange={handleTimelineStateChange}
-            filter={filter}
-            onFilterSelect={setFilter}
-            onClearFilter={handleClearFilter}
-          />
-        </div>
         {selectedPoint && <Overlay data={selectedPoint} onClose={handleOverlayClose} />}
-        {showNewTimeline && <NewTimeline data={timelineData} onClose={handleCloseNewTimeline} />}
+        <HorizontalTimeline 
+          timelineData={timelineData}
+          faunaData={faunaData}
+          onFaunaClick={handlePointClick}
+          timelineState={timelineState}
+          onStateChange={handleTimelineStateChange}
+          filter={filter}
+          onFilterSelect={handleFilterSelect}
+          onClearFilter={handleClearFilter}
+        />
       </main>
     </div>
   );

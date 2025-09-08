@@ -249,11 +249,6 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     }
   }, [markers, isRotationEnabled, isOverlayOpen]);
 
-  const handlePointClick = useCallback((point) => {
-    console.log('Point clicked in Globe.js:', point);
-    onPointClick(point);
-  }, [onPointClick]);
-
     const htmlElement = useCallback(d => {
     const el = document.createElement('div');
     el.className = 'marker-container'; // Add a class for styling

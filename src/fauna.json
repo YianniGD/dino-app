@@ -1559,19 +1559,6 @@
           "lived_to_ma": "113"
         },
         {
-          "name": "Elasmosaurus",
-          "location": "Europe",
-          "time_period": "Early Jurassic",
-          "description": "A primitive armored dinosaur from the Early Jurassic of Europe. Its fossils were found in the Lower Lias Formation of Dorset, England. It was a primitive armored dinosaur, 13 ft (4 m) long, covered in small bony plates.",
-          "coordinates": {
-            "lat": 50.711,
-            "lng": -2.801
-          },
-          "image": "Asset 62.svg",
-          "lived_from_ma": "85",
-          "lived_to_ma": "65"
-        },
-        {
           "name": "Polacanthus",
           "location": "Europe",
           "time_period": "Early Cretaceous",
