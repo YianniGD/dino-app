@@ -1,0 +1,1894 @@
+// Fix: Export animalData to allow it to be imported into other modules.
+export const animalData = {
+  "fishes": [
+    {
+      "subcategory_name": "Ray-finned Fish",
+      "species": [
+        {
+          "name": "Eusthenopteron",
+          "location": "North America",
+          "time_period": "Late Devonian",
+          "description": "A fleshy-finned fish from the Late Devonian of North America. Its fossils were found in the Escuminac Formation in Quebec, Canada.It was a fleshy-finned fish, 3 ft (1 m) long.",
+          "coordinates": {
+            "lat": 45.0,
+            "lng": -75.0
+          },
+          "image": "Asset 144.svg",
+          "lived_from_ma": 383.7,
+          "lived_to_ma": 372.2,
+          "timelineIndex": 0
+        },
+        {
+          "name": "Cyclurus",
+          "location": "Africa",
+          "time_period": "Early Cretaceous",
+          "description": "A primitive ray-finned fish from the Early Cretaceous to the present. Its fossils were found in the Morrison Formation of Wyoming. It was a primitive ray-finned fish, 2 ft (0.6 m) long.",
+          "coordinates": {
+            "lat": -18.7,
+            "lng": 46.8
+          },
+          "image": "Asset 144.svg",
+          "lived_from_ma": 145,
+          "lived_to_ma": 33,
+          "timelineIndex": 1
+        },
+        {
+          "name": "Platysomus",
+          "location": "Europe",
+          "time_period": "Early Carboniferous",
+          "description": "A deep-bodied fish from the Early Carboniferous of Europe. Its fossils were found in the Bear Gulch Limestone in Scotland. It was a deep-bodied fish, 1 ft (0.3 m) long.",
+          "coordinates": {
+            "lat": 56.87,
+            "lng": -4.25
+          },
+          "image": "Asset 144.svg",
+          "lived_from_ma": "345",
+          "lived_to_ma": "255",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Saurichthys",
+          "location": "Europe",
+          "time_period": "Early Triassic",
+          "description": "A primitive ray-finned fish from the Early Triassic of Europe. Its fossils were found in the Triassic deposits of Germany. It was a primitive ray-finned fish, 3 ft (1 m) long.",
+          "coordinates": {
+            "lat": 45.5,
+            "lng": 10.0
+          },
+          "image": "Asset 144.svg",
+          "lived_from_ma": "252",
+          "lived_to_ma": "201",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Cheirolepis",
+          "location": "Europe",
+          "time_period": "Middle Devonian",
+          "description": "A primitive ray-finned fish from the Middle Devonian of Europe. It was discovered in the Old Red Sandstone in Scotland. It was a primitive ray-finned fish, 1 ft (0.3 m) long.",
+          "coordinates": {
+            "lat": 59.6,
+            "lng": -3.0
+          },
+          "image": "Asset 144.svg",
+          "lived_from_ma": "408",
+          "lived_to_ma": "360",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Leptolepis",
+          "location": "Europe",
+          "time_period": "Late Jurassic",
+          "description": "A primitive ray-finned fish from the Late Jurassic of Europe. Its fossils were found in the Solnhofen Limestone in Germany. It was a primitive ray-finned fish, 1 ft (0.3 m) long, that looked like a herring.",
+          "coordinates": {
+            "lat": 48.95,
+            "lng": 11.2
+          },
+          "image": "Asset 144.svg",
+          "lived_from_ma": "200",
+          "lived_to_ma": "146",
+          "timelineIndex": 5
+        },
+        {
+          "name": "Pteronisculus",
+          "location": "Europe",
+          "time_period": "Early Triassic",
+          "description": "A small ray-finned fish from the Early Triassic of Europe. Its fossils were discovered in the Triassic deposits of Germany. It was a small ray-finned fish, 6 inches (15 cm) long.",
+          "coordinates": {
+            "lat": 45.0,
+            "lng": 10.0
+          },
+          "image": "Asset 144.svg",
+          "lived_from_ma": "252",
+          "lived_to_ma": "237",
+          "timelineIndex": 6
+        },
+        {
+          "name": "Ceratodus",
+          "location": "Africa and Australia",
+          "time_period": "Late Devonian",
+          "description": "A lungfish from the Late Devonian of Africa and Australia. Its fossils were found in the Elliot Formation of South Africa. It was a lungfish, 6 ft (1.8 m) long, with large, rounded teeth.",
+          "coordinates": {
+            "lat": -29.0,
+            "lng": 28.0
+          },
+          "image": "Asset 144.svg",
+          "lived_from_ma": "228",
+          "lived_to_ma": "70",
+          "timelineIndex": 7
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Jawless Fishes",
+      "species": [
+        {
+          "name": "Arandaspis",
+          "location": "Australia",
+          "time_period": "Early Ordovician",
+          "description": "A primitive jawless fish from the Early Ordovician of Australia. Its fossils were found in the Stairway Sandstone. It was a primitive jawless fish, 8 inches (20 cm) long.",
+          "coordinates": {
+            "lat": -22.5,
+            "lng": 134.0
+          },
+          "image": "Asset 137.svg",
+          "lived_from_ma": "480",
+          "lived_to_ma": "470",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Jamoytius",
+          "location": "Europe",
+          "time_period": "Late Silurian",
+          "description": "A jawless fish from the Late Silurian of Europe. Its fossils were found in the Lesmahagow Inlier in Scotland. It was a jawless fish, 8 inches (20 cm) long, with an eel-like body.",
+          "coordinates": {
+            "lat": 55.0,
+            "lng": -2.0
+          },
+          "image": "Asset 137.svg",
+          "lived_from_ma": "444",
+          "lived_to_ma": "433",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Pteraspis",
+          "location": "Europe",
+          "time_period": "Early Devonian",
+          "description": "A jawless fish from the Early Devonian of Europe. Its fossils were discovered in the Downton Castle Sandstone in England. It was a jawless fish, 1 ft (0.3 m) long, with a pointed snout.",
+          "coordinates": {
+            "lat": 51.4,
+            "lng": -1.6
+          },
+          "image": "Asset 137.svg",
+          "lived_from_ma": "416",
+          "lived_to_ma": "398",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Cephalaspis",
+          "location": "Europe",
+          "time_period": "Early Devonian",
+          "description": "A jawless fish from the Early Devonian of Europe. Its fossils were found in the Downton Castle Sandstone in England. It was a jawless fish, 1 ft (0.3 m) long, with a bony head shield.",
+          "coordinates": {
+            "lat": 55.4,
+            "lng": -2.6
+          },
+          "image": "Asset 137.svg",
+          "lived_from_ma": "416",
+          "lived_to_ma": "398",
+          "timelineIndex": 3
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Fleshy-Lobed Fishes",
+      "species": [
+        {
+          "name": "Osteolepis",
+          "location": "Europe",
+          "time_period": "Middle Devonian",
+          "description": "A fleshy-finned fish from the Middle Devonian of Europe. Its fossils were found in the Old Red Sandstone in Scotland. It was a fleshy-finned fish, 1 ft (0.3 m) long.",
+          "coordinates": {
+            "lat": 60.0,
+            "lng": -3.0
+          },
+          "image": "Asset 139.svg",
+          "lived_from_ma": "416",
+          "lived_to_ma": "359",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Dipterus",
+          "location": "Europe",
+          "time_period": "Middle Devonian",
+          "description": "A lungfish from the Middle Devonian of Europe. It was discovered in the Old Red Sandstone in Scotland. It was a lungfish, 1 ft (0.3 m) long, that could breathe air.",
+          "coordinates": {
+            "lat": 59.0,
+            "lng": -3.0
+          },
+          "image": "Asset 139.svg",
+          "lived_from_ma": "392",
+          "lived_to_ma": "382",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Latimeria",
+          "location": "Africa",
+          "time_period": "Late Devonian-Present",
+          "description": "A living fossil from the Late Devonian to the present day. It was discovered off the coast of South Africa. It is a living fossil, 6 ft (1.8 m) long, that was thought to be extinct.",
+          "coordinates": {
+            "lat": -3.0,
+            "lng": 43.0
+          },
+          "image": "Asset 139.svg",
+          "lived_from_ma": "420",
+          "lived_to_ma": "0",
+          "timelineIndex": 2
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Cartilaginous fishes",
+      "species": [
+        {
+          "name": "Cladoselache",
+          "location": "North America",
+          "time_period": "Late Devonian",
+          "description": "A primitive shark from the Late Devonian of North America. Its fossils were found in the Cleveland Shale in Ohio. It was a primitive shark, 3 ft (1 m) long.",
+          "coordinates": {
+            "lat": 41.8,
+            "lng": -81.7
+          },
+          "image": "Asset 136.svg",
+          "lived_from_ma": "385",
+          "lived_to_ma": "359",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Stethacanthus",
+          "location": "North America",
+          "time_period": "Early Carboniferous",
+          "description": "A primitive shark from the Early Carboniferous of North America. Its fossils were found in the Bear Gulch Limestone in Montana. It was a primitive shark, 2 ft (0.6 m) long, with a unique spine and bristle-covered patch on its back.",
+          "coordinates": {
+            "lat": 41.5,
+            "lng": -81.7
+          },
+          "image": "Asset 136.svg",
+          "lived_from_ma": "390",
+          "lived_to_ma": "320",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Helicoprion",
+          "location": "North America",
+          "time_period": "Early Permian",
+          "description": "A primitive shark from the Early Permian of North America. Its fossils were discovered in the Phosphoria Formation in Wyoming. It was a primitive shark, 23 ft (7 m) long, with a whorl of teeth.",
+          "coordinates": {
+            "lat": 43.5,
+            "lng": -104.0
+          },
+          "image": "Asset 136.svg",
+          "lived_from_ma": "290",
+          "lived_to_ma": "230",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Xenacanthus",
+          "location": "North America and Europe",
+          "time_period": "Early Permian",
+          "description": "A primitive shark from the Early Permian of North America and Europe. Its fossils were found in the Clear Fork Group in Texas. It was a primitive shark, 3 ft (1 m) long, with a sharp spine behind its head.",
+          "coordinates": {
+            "lat": 34.6,
+            "lng": -99.4
+          },
+          "image": "Asset 136.svg",
+          "lived_from_ma": "360",
+          "lived_to_ma": "208",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Hybodus",
+          "location": "Europe",
+          "time_period": "Early Cretaceous",
+          "description": "A primitive shark from the Early Cretaceous of Europe. It was discovered in the Wealden Group of Sussex, England. It was a primitive shark, 6 ft (1.8 m) long, with two dorsal fins.",
+          "coordinates": {
+            "lat": 50.85,
+            "lng": -0.33
+          },
+          "image": "Asset 136.svg",
+          "lived_from_ma": "260",
+          "lived_to_ma": "75",
+          "timelineIndex": 4
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Armored Sharks",
+      "species": [
+        {
+          "name": "Climatius",
+          "location": "Europe",
+          "time_period": "Late Silurian",
+          "description": "A spiny shark from the Late Silurian of Europe. Its fossils were found in the Lesmahagow Inlier in Scotland. It was a spiny shark, 6 inches (15 cm) long, with large eyes.",
+          "coordinates": {
+            "lat": 55.0,
+            "lng": -4.0
+          },
+          "image": "Asset 143.svg",
+          "lived_from_ma": "419",
+          "lived_to_ma": "360",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Ischnacanthus",
+          "location": "Europe",
+          "time_period": "Early Devonian",
+          "description": "A spiny shark from the Early Devonian of Europe. It was discovered in the Downton Castle Sandstone in England. It was a spiny shark, 6 inches (15 cm) long, with rows of spines.",
+          "coordinates": {
+            "lat": 50.4,
+            "lng": -2.6
+          },
+          "image": "Asset 143.svg",
+          "lived_from_ma": "419",
+          "lived_to_ma": "410",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Dunkleosteus",
+          "location": "North America",
+          "time_period": "Late Devonian",
+          "description": "A placoderm from the Late Devonian of North America. Its fossils were found in the Cleveland Shale in Ohio. It was a placoderm, 33 ft (10 m) long, with massive bony plates on its head.",
+          "coordinates": {
+            "lat": 43.5,
+            "lng": -81.7
+          },
+          "image": "Asset 143.svg",
+          "lived_from_ma": "382",
+          "lived_to_ma": "358",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Gemuendina",
+          "location": "Europe",
+          "time_period": "Early Devonian",
+          "description": "A placoderm from the Early Devonian of Europe. It was discovered in the Hunsr\u00fcck Slates in Germany. It was a placoderm, 1 ft (0.3 m) long, with an armored head.",
+          "coordinates": {
+            "lat": 49.95,
+            "lng": 11.2
+          },
+          "image": "Asset 143.svg",
+          "lived_from_ma": "409",
+          "lived_to_ma": "403",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Dinichthys",
+          "location": "North America",
+          "time_period": "Late Devonian",
+          "description": "A placoderm from the Late Devonian of North America. Its fossils were found in the Cleveland Shale in Ohio. It was a placoderm, 11 ft (3.5 m) long, with a bony jaw.",
+          "coordinates": {
+            "lat": 41.5,
+            "lng": -80.7
+          },
+          "image": "Asset 143.svg",
+          "lived_from_ma": "374",
+          "lived_to_ma": "360",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Bothriolepis",
+          "location": "North America",
+          "time_period": "Late Devonian",
+          "description": "A placoderm from the Late Devonian of North America. Its fossils were found in the Escuminac Formation in Quebec, Canada. It was a placoderm, 1 ft (0.3 m) long, with bony armor.",
+          "coordinates": {
+            "lat": 47.0,
+            "lng": -75.0
+          },
+          "image": "Asset 143.svg",
+          "lived_from_ma": "390",
+          "lived_to_ma": "358",
+          "timelineIndex": 5
+        }
+      ]
+    }
+  ],
+  "reptiles": [
+    {
+      "subcategory_name": "Turtles",
+      "species": [
+        {
+          "name": "Proganochelys",
+          "location": "Europe",
+          "time_period": "Late Triassic",
+          "description": "A primitive turtle from the Late Triassic of Europe. Its fossils were found in the Knollenmergel of Germany.It was a primitive turtle, 3 ft (1 m) long, with teeth on the roof of its mouth.",
+          "coordinates": {
+            "lat": 49.8,
+            "lng": 8.6
+          },
+          "image": "Asset 158.svg",
+          "lived_from_ma": "210",
+          "lived_to_ma": "200",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Archelon",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The largest turtle from the Late Cretaceous of North America. Its fossils were discovered in the Niobrara Formation in Kansas, USA. It was the largest turtle, 13 ft (4 m) long.",
+          "coordinates": {
+            "lat": 39.0,
+            "lng": -98.0
+          },
+          "image": "Asset 158.svg",
+          "lived_from_ma": "100",
+          "lived_to_ma": "66",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Protostega",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A large turtle from the Late Cretaceous of North America. It was found in the Niobrara Formation in Kansas, USA. It was a large turtle, 10 ft (3 m) long.",
+          "coordinates": {
+            "lat": 38.71,
+            "lng": -98.25
+          },
+          "image": "Asset 158.svg",
+          "lived_from_ma": "100",
+          "lived_to_ma": "66",
+          "timelineIndex": 2
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Flying Reptiles",
+      "species": [
+        {
+          "name": "Eudimorphodon",
+          "location": "Europe",
+          "time_period": "Late Triassic",
+          "description": "A primitive flying reptile from the Late Triassic of Europe. Its fossils were discovered in the Zorzino Limestone in Italy. It was a primitive flying reptile, 3 ft (1 m) wingspan.",
+          "coordinates": {
+            "lat": 45.75,
+            "lng": 10.0
+          },
+          "image": "Asset 160.svg",
+          "lived_from_ma": "210",
+          "lived_to_ma": "200",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Dimorphodon",
+          "location": "Europe",
+          "time_period": "Early Jurassic",
+          "description": "A pterosaur from the Early Jurassic of Europe. Its fossils were found in the Lower Lias Formation of Dorset, England. It was a pterosaur, 4 ft (1.2 m) wingspan, with a large head.",
+          "coordinates": {
+            "lat": 50.71,
+            "lng": -2.8
+          },
+          "image": "Asset 160.svg",
+          "lived_from_ma": "200",
+          "lived_to_ma": "190",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Pterodactylus",
+          "location": "Europe",
+          "time_period": "Late Jurassic",
+          "description": "A small pterosaur from the Late Jurassic of Europe. It was discovered in the Solnhofen Limestone in Germany. It was a small pterosaur, 3 ft (1 m) wingspan, with a short tail.",
+          "coordinates": {
+            "lat": 49.5,
+            "lng": 11.2
+          },
+          "image": "Asset 160.svg",
+          "lived_from_ma": "155",
+          "lived_to_ma": "145",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Rhamphorhynchus",
+          "location": "Europe",
+          "time_period": "Late Jurassic",
+          "description": "A long-tailed pterosaur from the Late Jurassic of Europe. Its fossils were found in the Solnhofen Limestone in Germany. It was a long-tailed pterosaur, 3 ft (1 m) wingspan, with a diamond-shaped vane on its tail.",
+          "coordinates": {
+            "lat": 48.95,
+            "lng": 11.2
+          },
+          "image": "Asset 160.svg",
+          "lived_from_ma": "155",
+          "lived_to_ma": "145",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Pteranodon",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A large pterosaur from the Late Cretaceous of North America. Its fossils were discovered in the Niobrara Formation in Kansas. It was a large pterosaur, 20 ft (6 m) wingspan, with a large head crest.",
+          "coordinates": {
+            "lat": 39.0,
+            "lng": -98.0
+          },
+          "image": "Asset 160.svg",
+          "lived_from_ma": "80",
+          "lived_to_ma": "66",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Quetzalcoatlus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The largest flying reptile from the Late Cretaceous of North America. Its fossils were found in the Javelina Formation in Texas. It was the largest flying reptile, 36 ft (11 m) wingspan.",
+          "coordinates": {
+            "lat": 30.0,
+            "lng": -103.0
+          },
+          "image": "Asset 160.svg",
+          "lived_from_ma": "100",
+          "lived_to_ma": "66",
+          "timelineIndex": 5
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Crocodiles",
+      "species": [
+        {
+          "name": "Protosuchus",
+          "location": "North America",
+          "time_period": "Early Jurassic",
+          "description": "A primitive crocodile from the Early Jurassic of North America. Its fossils were found in the Kayenta Formation in Arizona. It was a primitive crocodile, 3 ft (1 m) long.",
+          "coordinates": {
+            "lat": 35.5,
+            "lng": -111.75
+          },
+          "image": "Asset 145.svg",
+          "lived_from_ma": "228",
+          "lived_to_ma": "202",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Sarcosuchus",
+          "location": "Africa",
+          "time_period": "Early Cretaceous",
+          "description": "A giant crocodile from the Early Cretaceous of Africa. Its fossils were discovered in the T\u00e9n\u00e9r\u00e9 Desert in Niger. It was a giant crocodile, 40 ft (12 m) long, with an enlarged bulb on its snout.",
+          "coordinates": {
+            "lat": 16.9,
+            "lng": 9.1
+          },
+          "image": "Asset 145.svg",
+          "lived_from_ma": "133",
+          "lived_to_ma": "110",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Deinosuchus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A giant crocodile from the Late Cretaceous of North America. Its fossils were found in the Kirtland Formation of New Mexico. It was a giant crocodile, 33 ft (10 m) long, that preyed on dinosaurs.",
+          "coordinates": {
+            "lat": 36.0,
+            "lng": -107.0
+          },
+          "image": "Asset 145.svg",
+          "lived_from_ma": "83",
+          "lived_to_ma": "72",
+          "timelineIndex": 2
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Early Diapsids",
+      "species": [
+        {
+          "name": "Petrolacosaurus",
+          "location": "North America",
+          "time_period": "Late Carboniferous",
+          "description": "A primitive diapsid from the Late Carboniferous of North America. Its fossils were found in the Stanton Formation in Kansas. It was a primitive diapsid, 1 ft (0.3 m) long, that was the earliest-known member of the group.",
+          "coordinates": {
+            "lat": 39.1,
+            "lng": -95.7
+          },
+          "image": "Asset 135.svg",
+          "lived_from_ma": "302",
+          "lived_to_ma": "300",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Araeoscelis",
+          "location": "North America",
+          "time_period": "Early Permian",
+          "description": "A primitive diapsid from the Early Permian of North America. Its fossils were discovered in the Clear Fork Group in Texas. It was a primitive diapsid, 2 ft (0.6 m) long.",
+          "coordinates": {
+            "lat": 34.6,
+            "lng": -99.0
+          },
+          "image": "Asset 135.svg",
+          "lived_from_ma": "285",
+          "lived_to_ma": "275",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Mesosaurus",
+          "location": "Africa and South America",
+          "time_period": "Early Permian",
+          "description": "An early marine reptile from the Early Permian of Africa and South America. It was found in the Whitehill Formation in South Africa. It was an early marine reptile, 3 ft (1 m) long.",
+          "coordinates": {
+            "lat": -29.0,
+            "lng": 27.0
+          },
+          "image": "Asset 135.svg",
+          "lived_from_ma": "285",
+          "lived_to_ma": "275",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Lystrosaurus",
+          "location": "Africa and Antarctica",
+          "time_period": "Late Permian and Early Triassic",
+          "description": "A dicynodont from the Late Permian and Early Triassic of Africa and Antarctica. Its fossils were discovered in the Cynognathus Zone in South Africa. It was a dicynodont, 3 ft (1 m) long, with two tusks.",
+          "coordinates": {
+            "lat": -29.0,
+            "lng": 29.0
+          },
+          "image": "Asset 135.svg",
+          "lived_from_ma": "252",
+          "lived_to_ma": "248",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Arctops",
+          "location": "Africa",
+          "time_period": "Late Permian",
+          "description": "A gorgonopsian from the Late Permian of Africa. Its fossils were found in the Karoo Basin of South Africa. It was a gorgonopsian, 6 ft (1.8 m) long, with canine teeth.",
+          "coordinates": {
+            "lat": -30.0,
+            "lng": 26.0
+          },
+          "image": "Asset 135.svg",
+          "lived_from_ma": "259",
+          "lived_to_ma": "251",
+          "timelineIndex": 4
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Marine Reptiles",
+      "species": [
+        {
+          "name": "Ichthyosaurus",
+          "location": "Europe",
+          "time_period": "Early Jurassic",
+          "description": "A fish-like marine reptile from the Early Jurassic of Europe. Its fossils were found in the Lias Formation of England. It was a fish-like marine reptile, 33 ft (10 m) long.",
+          "coordinates": {
+            "lat": 50.85,
+            "lng": -0.9
+          },
+          "image": "Asset 161.svg",
+          "lived_from_ma": "199",
+          "lived_to_ma": "189",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Shonisaurus",
+          "location": "North America",
+          "time_period": "Late Triassic",
+          "description": "A large ichthyosaur from the Late Triassic of North America. Its fossils were discovered in the Shonisaurus State Park in Nevada. It was a large ichthyosaur, 50 ft (15 m) long.",
+          "coordinates": {
+            "lat": 39.0,
+            "lng": -117.0
+          },
+          "image": "Asset 161.svg",
+          "lived_from_ma": "227",
+          "lived_to_ma": "212",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Liopleurodon",
+          "location": "Europe",
+          "time_period": "Late Jurassic",
+          "description": "A large plesiosaur from the Late Jurassic of Europe. Its fossils were found in the Kimmernamege Clay of England. It was a large plesiosaur, 33 ft (10 m) long, with a short neck.",
+          "coordinates": {
+            "lat": 50.35,
+            "lng": -0.08
+          },
+          "image": "Asset 161.svg",
+          "lived_from_ma": "166",
+          "lived_to_ma": "155",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Elasmosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A long-necked plesiosaur from the Late Cretaceous of North America. Its fossils were discovered in the Niobrara Formation in Kansas. It was a long-necked plesiosaur, 46 ft (14 m) long, with a very long neck.",
+          "coordinates": {
+            "lat": 39.0,
+            "lng": -98.0
+          },
+          "image": "Asset 161.svg",
+          "lived_from_ma": "85",
+          "lived_to_ma": "65",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Mosasaurus",
+          "location": "Europe",
+          "time_period": "Late Cretaceous",
+          "description": "A mosasaur from the Late Cretaceous of Europe. Its fossils were discovered in the Meuse River in the Netherlands. It was a mosasaur, 33 ft (10 m) long, with a snake-like body.",
+          "coordinates": {
+            "lat": 51.45,
+            "lng": -0.07
+          },
+          "image": "Asset 161.svg",
+          "lived_from_ma": "82.7",
+          "lived_to_ma": "66",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Pliosaurus",
+          "location": "Europe",
+          "time_period": "Late Jurassic",
+          "description": "A short-necked reptile from the Late Jurassic of Europe. It was found in the Kimmernamege Clay of Dorset, England. It was a short-necked reptile, 40 ft (12 m) long, with a massive head.",
+          "coordinates": {
+            "lat": 50.85,
+            "lng": -2.08
+          },
+          "image": "Asset 161.svg",
+          "lived_from_ma": "163",
+          "lived_to_ma": "145",
+          "timelineIndex": 5
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Small Carnivores",
+      "species": [
+        {
+          "name": "Coelophysis",
+          "location": "North America",
+          "time_period": "Late Triassic",
+          "description": "A small theropod from the Late Triassic of North America. It was found in the Ghost Ranch quarry in New Mexico, USA. It was a small theropod, 10 ft (3 m) long, that was known from many skeletons.",
+          "coordinates": {
+            "lat": 36.56,
+            "lng": -106.63
+          },
+          "image": "Asset 41.svg",
+          "lived_from_ma": "228",
+          "lived_to_ma": "201",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Compsognathus",
+          "location": "Europe",
+          "time_period": "Late Jurassic",
+          "description": "A small theropod from the Late Jurassic of Europe. Its fossils were discovered in the Solnhofen Limestone in Germany. It was a small theropod, 3 ft (1 m) long, that was known from two skeletons.",
+          "coordinates": {
+            "lat": 48.95,
+            "lng": 11.2
+          },
+          "image": "Asset 41.svg",
+          "lived_from_ma": "150",
+          "lived_to_ma": "145",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Deinonychus",
+          "location": "North America",
+          "time_period": "Early Cretaceous",
+          "description": "A dromaeosaur from the Early Cretaceous of North America. Its fossils were found in the Cloverly Formation of Montana and Wyoming. It was a dromaeosaur, 10 ft (3 m) long, with a large, sickle-like claw on its foot.",
+          "coordinates": {
+            "lat": 42.0,
+            "lng": -106.3
+          },
+          "image": "Asset 41.svg",
+          "lived_from_ma": "115",
+          "lived_to_ma": "108",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Velociraptor",
+          "location": "Asia",
+          "time_period": "Late Cretaceous",
+          "description": "A dromaeosaur from the Late Cretaceous of Asia. It was discovered in the Djadochta Formation in Mongolia. It was a dromaeosaur, 6 ft (1.8 m) long, with a large claw.",
+          "coordinates": {
+            "lat": 42.6,
+            "lng": 103.0
+          },
+          "image": "Asset 41.svg",
+          "lived_from_ma": "85.8",
+          "lived_to_ma": "70.6",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Oviraptor",
+          "location": "Asia",
+          "time_period": "Late Cretaceous",
+          "description": "A small theropod from the Late Cretaceous of Asia. Its fossils were found in the Djadochta Formation in Mongolia. It was a small theropod, 6 ft (1.8 m) long, with a toothless skull.",
+          "coordinates": {
+            "lat": 43.76,
+            "lng": 102.49
+          },
+          "image": "Asset 41.svg",
+          "lived_from_ma": "85",
+          "lived_to_ma": "75",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Dilophosaurus",
+          "location": "North America",
+          "time_period": "Early Jurassic",
+          "description": "A theropod from the Early Jurassic of North America. It was discovered in the Kayenta Formation in Arizona. It was a theropod, 20 ft (6 m) long, with two crests on its head.",
+          "coordinates": {
+            "lat": 35.501,
+            "lng": -111.751
+          },
+          "image": "Asset 41.svg",
+          "lived_from_ma": "199",
+          "lived_to_ma": "182",
+          "timelineIndex": 5
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Long Necked Dinosaurs",
+      "species": [
+        {
+          "name": "Diplodocus",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A well-known sauropod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation in Colorado, Utah, and Wyoming. A major site is Como Bluff, Wyoming. It was a well-known sauropod, 85 ft (26 m) long.",
+          "coordinates": {
+            "lat": 42.93,
+            "lng": -105.736
+          },
+          "image": "Asset 126.svg",
+          "lived_from_ma": "154",
+          "lived_to_ma": "145",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Apatosaurus",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A sauropod from the Late Jurassic of North America. Its fossils were discovered in the Morrison Formation of Wyoming. It was a sauropod, 75 ft (23 m) long, with a heavy build.",
+          "coordinates": {
+            "lat": 41.93,
+            "lng": -104.736
+          },
+          "image": "Asset 126.svg",
+          "lived_from_ma": "156",
+          "lived_to_ma": "151",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Brachiosaurus",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A sauropod from the Late Jurassic of North America. It was found in the Morrison Formation of Colorado. It was a sauropod, 75 ft (23 m) long, with front legs longer than its back legs.",
+          "coordinates": {
+            "lat": 42.3,
+            "lng": -104.736
+          },
+          "image": "Asset 126.svg",
+          "lived_from_ma": "156",
+          "lived_to_ma": "145",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Supersaurus",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A gigantic sauropod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation in Colorado. It was a gigantic sauropod, 100 ft (30 m) long.",
+          "coordinates": {
+            "lat": 39.0,
+            "lng": -107.0
+          },
+          "image": "Asset 126.svg",
+          "lived_from_ma": "155",
+          "lived_to_ma": "145",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Argentinosaurus",
+          "location": "South America",
+          "time_period": "Late Cretaceous",
+          "description": "A gigantic sauropod from the Late Cretaceous of South America. Its fossils were discovered in the Neuqu\u00e9n Basin in Argentina. It was a gigantic sauropod, 115 ft (35 m) long, with vertebrae over 5 ft tall.",
+          "coordinates": {
+            "lat": -39.0,
+            "lng": -69.0
+          },
+          "image": "Asset 126.svg",
+          "lived_from_ma": "97",
+          "lived_to_ma": "93.5",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Amphicoelias",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A gigantic sauropod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation in Colorado. It was a gigantic sauropod, 190 ft (58 m) long, known from a single vertebra.",
+          "coordinates": {
+            "lat": 39.28,
+            "lng": -107.6181924026236
+          },
+          "image": "Asset 126.svg",
+          "lived_from_ma": "150",
+          "lived_to_ma": "145",
+          "timelineIndex": 5
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Large Carnivores",
+      "species": [
+        {
+          "name": "Allosaurus",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A large theropod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation in Colorado, Utah, and Wyoming. A major site is Como Bluff, Wyoming. It was a large theropod, 36 ft (11 m) long.",
+          "coordinates": {
+            "lat": 43.93,
+            "lng": -105.736
+          },
+          "image": "Asset 94.svg",
+          "lived_from_ma": "157",
+          "lived_to_ma": "145",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Tyrannosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The largest land carnivore from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was the largest land carnivore, 40 ft (12 m) long, with a massive head.",
+          "coordinates": {
+            "lat": 46.814,
+            "lng": -103.404
+          },
+          "image": "Asset 94.svg",
+          "overlay_image": "/Dinosaurs/Tyrannosaurus_Rex.png",
+          "skeleton_image": "/Dinosaurs/Tyrannosaurus_Rex_Skeleton.png",
+          "lived_from_ma": 68,
+          "lived_to_ma": 66,
+          "timelineIndex": 1
+        },
+        {
+          "name": "Tarbosaurus",
+          "location": "Asia",
+          "time_period": "Late Cretaceous",
+          "description": "A tyrannosaur from the Late Cretaceous of Asia. Its fossils were found in the Nemegt Formation in Mongolia. It was a tyrannosaur, 33 ft (10 m) long, with a narrow snout.",
+          "coordinates": {
+            "lat": 43.5,
+            "lng": 103.5
+          },
+          "image": "Asset 94.svg",
+          "lived_from_ma": "72",
+          "lived_to_ma": "66",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Spinosaurus",
+          "location": "Africa",
+          "time_period": "Early Cretaceous",
+          "description": "A large theropod from the Early Cretaceous of Africa. Its fossils were discovered in the Bahariya Formation in Egypt. It was a large theropod, 49 ft (15 m) long, with a large sail on its back.",
+          "coordinates": {
+            "lat": 28.4,
+            "lng": -10.0
+          },
+          "image": "Asset 94.svg",
+          "lived_from_ma": "112",
+          "lived_to_ma": "93",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Giganotosaurus",
+          "location": "South America",
+          "time_period": "Early Cretaceous",
+          "description": "A large theropod from the Early Cretaceous of South America. Its fossils were found in the Candeleros Formation in Argentina. It was a large theropod, 46 ft (14 m) long, with a large skull.",
+          "coordinates": {
+            "lat": -38.6,
+            "lng": -69.2
+          },
+          "image": "Asset 94.svg",
+          "lived_from_ma": "100",
+          "lived_to_ma": "97",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Carcharodontosaurus",
+          "location": "Africa",
+          "time_period": "Early Cretaceous",
+          "description": "A large theropod from the Early Cretaceous of Africa. It was discovered in the Bahariya Formation in Egypt. It was a large theropod, 43 ft (13 m) long, with saw-like teeth.",
+          "coordinates": {
+            "lat": 29.4,
+            "lng": -10.0
+          },
+          "image": "Asset 94.svg",
+          "lived_from_ma": "99",
+          "lived_to_ma": "94",
+          "timelineIndex": 5
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Horned Dinosaurs",
+      "species": [
+        {
+          "name": "Yinlong Downsi",
+          "location": "Asia",
+          "time_period": "Late Cretaceous",
+          "description": "The first named ceratopsian from the Late Cretaceous of Asia. Its fossils were found in the Djadochta Formation in Mongolia. It was the first nameentified ceratopsian, 6 ft (1.8 m) long, with a large bony frill.",
+          "coordinates": {
+            "lat": 44.601,
+            "lng": 103.001
+          },
+          "image": "Asset 159.svg",
+          "lived_from_ma": "161",
+          "lived_to_ma": "155",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Chasmosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A ceratopsian with a very long frill from the Late Cretaceous of North America. Its fossils were discovered in the Dinosaur Park Formation of Alberta, Canada. It was a ceratopsian with a very long frill, 16 ft (5 m) long.",
+          "coordinates": {
+            "lat": 50.93,
+            "lng": -111.9
+          },
+          "image": "Asset 159.svg",
+          "lived_from_ma": "76",
+          "lived_to_ma": "70",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Styracosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A ceratopsian with many spikes from the Late Cretaceous of North America. It was found in the Dinosaur Park Formation of Alberta, Canada. It was a ceratopsian with many spikes, 18 ft (5.5 m) long, featuring a large horn on its nose.",
+          "coordinates": {
+            "lat": 50.73,
+            "lng": -111.45
+          },
+          "image": "Asset 159.svg",
+          "lived_from_ma": "75.5",
+          "lived_to_ma": "74.5",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Triceratops",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The last ceratopsian from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was the last ceratopsian, 30 ft (9 m) long, with three horns.",
+          "coordinates": {
+            "lat": 47.2,
+            "lng": -106.402
+          },
+          "image": "Asset 159.svg",
+          "lived_from_ma": "68",
+          "lived_to_ma": "66",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Torosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A ceratopsian with a giant frill from the Late Cretaceous of North America. Its fossils were found in the Hell Creek Formation of Montana. It was a ceratopsian with a giant frill, 25 ft (7.6 m) long.",
+          "coordinates": {
+            "lat": 46.022839987832015,
+            "lng": -105.78588614877887
+          },
+          "image": "Asset 159.svg",
+          "lived_from_ma": "68",
+          "lived_to_ma": "66",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Pachyrhinosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A ceratopsian with a thick nose from the Late Cretaceous of North America. Its fossils were discovered in the Horseshoe Canyon Formation of Alberta, Canada. It was a ceratopsian with a thick nose, 20 ft (6 m) long.",
+          "coordinates": {
+            "lat": 53.53,
+            "lng": -113.5
+          },
+          "image": "Asset 159.svg",
+          "lived_from_ma": "73.5",
+          "lived_to_ma": "69",
+          "timelineIndex": 5
+        },
+        {
+          "name": "Centrosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A ceratopsian with a large horn from the Late Cretaceous of North America. It was found in the Dinosaur Park Formation of Alberta, Canada. It was a ceratopsian with a large horn, 18 ft (5.5 m) long.",
+          "coordinates": {
+            "lat": 50.73,
+            "lng": -110.45
+          },
+          "image": "Asset 159.svg",
+          "lived_from_ma": "76.5",
+          "lived_to_ma": "75",
+          "timelineIndex": 6
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Bird-hipped Dinosaurs",
+      "species": [
+        {
+          "name": "Heterodontosaurus",
+          "location": "Africa",
+          "time_period": "Early Jurassic",
+          "description": "A primitive ornithischian from the Early Jurassic of Africa. Its fossils were found in the Elliot Formation in South Africa. It was a primitive ornithischian, 4 ft (1.2 m) long, with different kinds of teeth.",
+          "coordinates": {
+            "lat": -29.0,
+            "lng": 26.0
+          },
+          "image": "Asset 141.svg",
+          "lived_from_ma": "200",
+          "lived_to_ma": "145",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Stegoceras",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A pachycephalosaur from the Late Cretaceous of North America. Its fossils were discovered in the Dinosaur Park Formation of Alberta. It was a pachycephalosaur, 8 ft (2.5 m) long, with a solname, dome-like skull.",
+          "coordinates": {
+            "lat": 50.73,
+            "lng": -111.35
+          },
+          "image": "Asset 141.svg",
+          "lived_from_ma": "77",
+          "lived_to_ma": "74",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Pachycephalosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The largest pachycephalosaur from the Late Cretaceous of North America. Its fossils were found in the Hell Creek Formation of Montana. It was the largest pachycephalosaur, 15 ft (4.5 m) long, with a very thick, bony skull cap.",
+          "coordinates": {
+            "lat": 46.813,
+            "lng": -106.403
+          },
+          "image": "Asset 141.svg",
+          "lived_from_ma": "72",
+          "lived_to_ma": "66",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Thescelosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A late surviving hypsilophodont from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was a late surviving hypsilophodont, 13 ft (4 m) long, with well-preserved skeletons.",
+          "coordinates": {
+            "lat": 43.811,
+            "lng": -106.401
+          },
+          "image": "Asset 161.svg",
+          "lived_from_ma": "75",
+          "lived_to_ma": "66",
+          "timelineIndex": 3
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Early Ruling Reptiles",
+      "species": [
+        {
+          "name": "Euparkeria",
+          "location": "Africa",
+          "time_period": "Early Triassic",
+          "description": "A small thecodont from the Early Triassic of Africa. Its fossils were found in the Cynognathus Zone in South Africa. It was a small thecodont, 3 ft (1 m) long, with long legs.",
+          "coordinates": {
+            "lat": -30.0,
+            "lng": 26.0
+          },
+          "image": "Asset 138.svg",
+          "lived_from_ma": "248",
+          "lived_to_ma": "245",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Ornithosuchus",
+          "location": "Europe",
+          "time_period": "Late Triassic",
+          "description": "A pseudosuchian from the Late Triassic of Europe. It was discovered in the Lossiemouth Sandstone in Scotland. It was a pseudosuchian, 13 ft (4 m) long, that looked similar to a dinosaur.",
+          "coordinates": {
+            "lat": 55.87,
+            "lng": -4.25
+          },
+          "image": "Asset 138.svg",
+          "lived_from_ma": "237",
+          "lived_to_ma": "227",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Postosuchus",
+          "location": "North America",
+          "time_period": "Late Triassic",
+          "description": "A large pseudosuchian from the Late Triassic of North America. Its fossils were found in the Chinle Formation in Texas. It was a large pseudosuchian, 16 ft (5 m) long, with a large, heavy skull.",
+          "coordinates": {
+            "lat": 34.6,
+            "lng": -100.0
+          },
+          "image": "Asset 138.svg",
+          "lived_from_ma": "230",
+          "lived_to_ma": "208",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Plateosaurus",
+          "location": "Europe",
+          "time_period": "Late Triassic",
+          "description": "A prosauropod from the Late Triassic of Europe. Its fossils were discovered in the Knollenmergel of Germany. It was a prosauropod, 20 ft (6 m) long, that was the most common dinosaur of its time.",
+          "coordinates": {
+            "lat": 49.8,
+            "lng": 8.6
+          },
+          "image": "Asset 138.svg",
+          "lived_from_ma": "214",
+          "lived_to_ma": "204",
+          "timelineIndex": 3
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Early Reptiles",
+      "species": [
+        {
+          "name": "Hylonomus",
+          "location": "North America",
+          "time_period": "Early Carboniferous",
+          "description": "A primitive lizard from the Early Carboniferous of North America. Its fossils were discovered in a petrified tree stump in the Joggins Formation, Nova Scotia. It was the first primitive lizard, 1 ft (0.3 m) long.",
+          "coordinates": {
+            "lat": 45.75,
+            "lng": -63.85
+          },
+          "image": "Asset 134.svg",
+          "lived_from_ma": "318",
+          "lived_to_ma": "312",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Dimetrodon",
+          "location": "North America",
+          "time_period": "Early Permian",
+          "description": "A pelycosaur from the Early Permian of North America. Its fossils were found in the Clear Fork Group in Texas. It was a pelycosaur, 12 ft (3.5 m) long, with a large sail on its back.",
+          "coordinates": {
+            "lat": 34.6,
+            "lng": -99.4
+          },
+          "image": "Asset 134.svg",
+          "lived_from_ma": "299",
+          "lived_to_ma": "265",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Edaphosaurus",
+          "location": "North America",
+          "time_period": "Early Permian",
+          "description": "A pelycosaur from the Early Permian of North America. Its fossils were found in the Clear Fork Group in Texas. It was a pelycosaur, 11 ft (3 m) long, with a tall sail on its back.",
+          "coordinates": {
+            "lat": 34.6,
+            "lng": -99.2
+          },
+          "image": "Asset 134.svg",
+          "lived_from_ma": "303",
+          "lived_to_ma": "272",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Cotylorhynchus",
+          "location": "North America",
+          "time_period": "Early Permian",
+          "description": "A reptile from the Early Permian of North America. It was discovered in the Clear Fork Group of Oklahoma. It was a reptile, 15 ft (4.5 m) long.",
+          "coordinates": {
+            "lat": 33.6,
+            "lng": -99.3
+          },
+          "image": "Asset 134.svg",
+          "lived_from_ma": "279",
+          "lived_to_ma": "270",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Pareiasaurus",
+          "location": "Africa and Europe",
+          "time_period": "Late Permian",
+          "description": "A reptile from the Late Permian of Africa and Europe. It was found in the Ocher-Ocher Formation of Russia. It was a reptile, 8 ft (2.5 m) long, that was covered in small plates.",
+          "coordinates": {
+            "lat": 44.6,
+            "lng": 56.6
+          },
+          "image": "Asset 134.svg",
+          "lived_from_ma": "265",
+          "lived_to_ma": "252",
+          "timelineIndex": 4
+        }
+      ]
+    },
+    {
+      "subcategory_name": "early herbivores",
+      "species": [
+        {
+          "name": "Lesothosaurus",
+          "location": "Africa",
+          "time_period": "Early Jurassic",
+          "description": "A small bipedal herbivore from the Early Jurassic of Africa. Its fossils were discovered in the Elliot Formation in Lesotho. It was a small bipedal herbivore, 3 ft (1 m) long.",
+          "coordinates": {
+            "lat": -29.5,
+            "lng": 25.5
+          },
+          "image": "Asset 121.svg",
+          "lived_from_ma": "201",
+          "lived_to_ma": "190",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Hypsilophodon",
+          "location": "Europe",
+          "time_period": "Early Cretaceous",
+          "description": "A small bipedal herbivore from the Early Cretaceous of Europe. Fossils were discovered on the Isle of Wight, England. It was a small bipedal herbivore, 7 ft (2 m) long.",
+          "coordinates": {
+            "lat": 51.68,
+            "lng": -1.29
+          },
+          "image": "Asset 121.svg",
+          "lived_from_ma": "130",
+          "lived_to_ma": "125",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Dryosaurus",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A small bipedal herbivore from the Late Jurassic of North America. It was found in the Morrison Formation of Wyoming. It was a small bipedal herbivore, 10 ft (3 m) long.",
+          "coordinates": {
+            "lat": 44.5,
+            "lng": -106.0
+          },
+          "image": "Asset 121.svg",
+          "lived_from_ma": "156.3",
+          "lived_to_ma": "146.8",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Camptosaurus",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A primitive ornithopod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation of Colorado, Utah, and Wyoming. It was a primitive ornithopod, 23 ft (7 m) long.",
+          "coordinates": {
+            "lat": 41.93,
+            "lng": -102.736
+          },
+          "image": "Asset 121.svg",
+          "lived_from_ma": "156.3",
+          "lived_to_ma": "146.8",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Tenontosaurus",
+          "location": "North America",
+          "time_period": "Early Cretaceous",
+          "description": "An ornithopod from the Early Cretaceous of North America. Its fossils were discovered in the Cloverly Formation of Montana and Wyoming. It was an ornithopod, 23 ft (7 m) long, with a long tail.",
+          "coordinates": {
+            "lat": 42.3,
+            "lng": -105.7
+          },
+          "image": "Asset 121.svg",
+          "lived_from_ma": "120",
+          "lived_to_ma": "100",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Iguanodon",
+          "location": "Europe",
+          "time_period": "Early Cretaceous",
+          "description": "A well-known ornithopod from the Early Cretaceous of Europe. It was discovered in the Wealden Group of Sussex, England. It was a well-known ornithopod, 33 ft (10 m) long, with a thumb spike.",
+          "coordinates": {
+            "lat": 50.85,
+            "lng": -0.22
+          },
+          "image": "Asset 121.svg",
+          "lived_from_ma": "140",
+          "lived_to_ma": "110",
+          "timelineIndex": 5
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Duckbilled Dinosaurs",
+      "species": [
+        {
+          "name": "Hadrosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The first nameentified hadrosaur from the Late Cretaceous of North America. It was discovered in the Navesink Formation of New Jersey, USA. It was the first nameentified hadrosaur, 30 ft (9 m) long.",
+          "coordinates": {
+            "lat": 40.23,
+            "lng": -74.0
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "83.6",
+          "lived_to_ma": "77.9",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Bactrosaurus",
+          "location": "Asia",
+          "time_period": "Late Cretaceous",
+          "description": "A primitive hadrosaur from the Late Cretaceous of Asia. Its fossils were found in the Nemegt Formation of Mongolia and the Iren Dabasu Formation of China. It was a primitive hadrosaur, 20 ft (6 m) long, with a crest on its back.",
+          "coordinates": {
+            "lat": 43.5,
+            "lng": 103.8
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "96",
+          "lived_to_ma": "85",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Anatosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "Known as the \"duck lizard,\" this species was from the Late Cretaceous of North America. Its fossils were preserved in the Lance Formation of Wyoming and the Hell Creek Formation of Montana. It was known as the \"duck lizard,\" 33 ft (10 m) long, with well-preserved skeletons.",
+          "coordinates": {
+            "lat": 42.8,
+            "lng": -106.0
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "70",
+          "lived_to_ma": "66",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Maiasaura",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The \"good mother lizard\" from the Late Cretaceous of North America. Its nesting colonies were found in the Two Medicine Formation of Montana. It was 30 ft (9 m) long, famous for its nesting colonies, indicating parental care.",
+          "coordinates": {
+            "lat": 47.0,
+            "lng": -112.0
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "80",
+          "lived_to_ma": "75",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Shantungosaurus",
+          "location": "China",
+          "time_period": "Late Cretaceous",
+          "description": "The largest duckbilled dinosaur from the Late Cretaceous of China. Its fossils were found in the Wangshi Formation of Shandong Province. It was the largest duckbilled dinosaur, 43 ft (13 m) long.",
+          "coordinates": {
+            "lat": 36.5,
+            "lng": 117.5
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "83",
+          "lived_to_ma": "74",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Kritosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A hadrosaur with a nasal arch from the Late Cretaceous of North America. It was found in the Kirtland Formation of New Mexico, USA. It was a hadrosaur with a nasal arch, 33 ft (10 m) long.",
+          "coordinates": {
+            "lat": 36.001,
+            "lng": -107.001
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "74.5",
+          "lived_to_ma": "66",
+          "timelineIndex": 5
+        },
+        {
+          "name": "Edmontosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A common flat-headed hadrosaur from the Late Cretaceous of North America. Fossils were found in the Horseshoe Canyon Formation of Alberta, Canada. It was a common flat-headed hadrosaur, 33 ft (10 m) long.",
+          "coordinates": {
+            "lat": 53.531,
+            "lng": -113.501
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "73",
+          "lived_to_ma": "66",
+          "timelineIndex": 6
+        },
+        {
+          "name": "Prosaurolophus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A crested hadrosaur from the Late Cretaceous of North America. Its fossils were found in the Dinosaur Park Formation of Alberta, Canada. It was a hadrosaur with a small, bony lump on its head, 26 ft (8 m) long.",
+          "coordinates": {
+            "lat": 50.73,
+            "lng": -109.45
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "76.9",
+          "lived_to_ma": "66.04",
+          "timelineIndex": 7
+        },
+        {
+          "name": "Saurolophus",
+          "location": "North America and Asia",
+          "time_period": "Late Cretaceous",
+          "description": "A hadrosaur with a solname crest from the Late Cretaceous of North America and Asia. It was found in the Dinosaur Park Formation of Alberta, Canada, and the Nemegt Formation of Mongolia. The Canadian site is at approximately 50.730\u00b0 N, 111.450\u00b0 W. It was a hadrosaur with a solname, rod-like crest on its head, 30 ft (9 m) long.",
+          "coordinates": {
+            "lat": 50.73,
+            "lng": -111.7
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "83",
+          "lived_to_ma": "66",
+          "timelineIndex": 8
+        },
+        {
+          "name": "Tsintaosaurus",
+          "location": "Asia",
+          "time_period": "Late Cretaceous",
+          "description": "A hadrosaur with an upright crest from the Late Cretaceous of Asia. Its fossils were found in the Wangshi Formation of Shandong Province, China. It was a hadrosaur with an upright, single horn-like crest, 33 ft (10 m) long.",
+          "coordinates": {
+            "lat": 36.5,
+            "lng": 119.5
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "83.6",
+          "lived_to_ma": "72.1",
+          "timelineIndex": 9
+        },
+        {
+          "name": "Corythosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A hadrosaur with a helmet-like crest from the Late Cretaceous of North America. It was discovered in the Dinosaur Park Formation of Alberta, Canada. It was a hadrosaur with a tall, helmet-like crest, 30 ft (9 m) long, possibly used for sound production.",
+          "coordinates": {
+            "lat": 50.2,
+            "lng": -110.45
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "76",
+          "lived_to_ma": "74",
+          "timelineIndex": 10
+        },
+        {
+          "name": "Lambeosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A hadrosaur with a hollow crest from the Late Cretaceous of North America. It was found in the Dinosaur Park Formation of Alberta, Canada. It was a hadrosaur with a distinct, hollow crest, 30 ft (9 m) long.",
+          "coordinates": {
+            "lat": 49.13,
+            "lng": -111.2
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "76",
+          "lived_to_ma": "75",
+          "timelineIndex": 11
+        },
+        {
+          "name": "Hypacrosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A hadrosaur with a broad, flat crest from the Late Cretaceous of North America. Fossils were found in the Horseshoe Canyon Formation of Alberta, Canada. It was a hadrosaur with a broad, flat crest, 30 ft (9 m) long.",
+          "coordinates": {
+            "lat": 52.93,
+            "lng": -113.89
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "75",
+          "lived_to_ma": "67",
+          "timelineIndex": 12
+        },
+        {
+          "name": "Parasaurolophus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A hadrosaur with a long, tubular crest from the Late Cretaceous of North America. It was found in the Dinosaur Park Formation of Alberta, Canada. It was a hadrosaur with a long, tubular crest, 30 ft (9 m) long, likely used for vocalization.",
+          "coordinates": {
+            "lat": 50.78,
+            "lng": -111.35
+          },
+          "image": "Asset 80.svg",
+          "lived_from_ma": "76.9",
+          "lived_to_ma": "66.04",
+          "timelineIndex": 13
+        }
+      ]
+    },
+    {
+      "subcategory_name": "Armored Dinosaurs",
+      "species": [
+        {
+          "name": "Stegosaurus",
+          "location": "North America",
+          "time_period": "Late Jurassic",
+          "description": "A well-known stegosaur from the Late Jurassic of North America. It was found in the Morrison Formation of Colorado, Utah, and Wyoming. A major site is Como Bluff, Wyoming. It was a well-known stegosaur, 30 ft (9 m) long, with two rows of triangular plates on its back and tail spikes.",
+          "coordinates": {
+            "lat": 41.23,
+            "lng": -105.736
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "155",
+          "lived_to_ma": "145",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Kentrosaurus",
+          "location": "Africa",
+          "time_period": "Late Jurassic",
+          "description": "A smaller stegosaur from the Late Jurassic of Africa. Its fossils were discovered in the Tendaguru Formation in Tanzania. It was a smaller stegosaur, 16 ft (5 m) long, featuring broad plates on its front and long, sharp spikes on its back and tail.",
+          "coordinates": {
+            "lat": -10.0,
+            "lng": 39.5
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "155",
+          "lived_to_ma": "150",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Tuojiangosaurus",
+          "location": "China",
+          "time_period": "Late Jurassic",
+          "description": "A stegosaur from the Late Jurassic of China. Its fossils were found in the Upper Shaximiao Formation in Sichuan Province. It was a stegosaur, 23 ft (7 m) long, with tall dorsal spines and two tail spikes.",
+          "coordinates": {
+            "lat": 29.35,
+            "lng": 104.77
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "168",
+          "lived_to_ma": "146",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Wuerhosaurus",
+          "location": "China",
+          "time_period": "Early Cretaceous",
+          "description": "A stegosaur from the Early Cretaceous of China. Fossils were discovered in the Tugulu Group in the Junggar Basin, Xinjiang. It was a stegosaur, 20 ft (6 m) long, with low, flat plates.",
+          "coordinates": {
+            "lat": 45.0,
+            "lng": 88.0
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "132",
+          "lived_to_ma": "113",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Hylaeosaurus",
+          "location": "Europe",
+          "time_period": "Early Cretaceous",
+          "description": "An ankylosaur from the Early Cretaceous of Europe. It was discovered in the Wealden Group of Sussex, England. It was an ankylosaur, 20 ft (6 m) long, covered in bony plates and spikes.",
+          "coordinates": {
+            "lat": 50.85,
+            "lng": -1.08
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "132",
+          "lived_to_ma": "113",
+          "timelineIndex": 4
+        },
+        {
+          "name": "Polacanthus",
+          "location": "Europe",
+          "time_period": "Early Cretaceous",
+          "description": "An ankylosaur from the Early Cretaceous of Europe. Fossils were found on the Isle of Wight, England. It was an ankylosaur, 13 ft (4 m) long, featuring a shield of fused bony plates over its hips.",
+          "coordinates": {
+            "lat": 50.686,
+            "lng": -1.298
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "130",
+          "lived_to_ma": "125",
+          "timelineIndex": 5
+        },
+        {
+          "name": "Sauropelta",
+          "location": "North America",
+          "time_period": "Early Cretaceous",
+          "description": "A nodosaur from the Early Cretaceous of North America. Its fossils were discovered in the Cloverly Formation of Montana and Wyoming. It was a nodosaur, 25 ft (7.6 m) long, with large, flat plates over its neck and shoulders.",
+          "coordinates": {
+            "lat": 41.6,
+            "lng": -105.0
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "116",
+          "lived_to_ma": "91",
+          "timelineIndex": 6
+        },
+        {
+          "name": "Silvisaurus",
+          "location": "North America",
+          "time_period": "Middle Cretaceous",
+          "description": "A small nodosaur from the Early Cretaceous of North America. Fossils were found in the Dakota Formation of Kansas, USA. It was a small nodosaur, 13 ft (4 m) long, with a domed skull and conical spikes.",
+          "coordinates": {
+            "lat": 39.0,
+            "lng": -98.0
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "121",
+          "lived_to_ma": "112",
+          "timelineIndex": 7
+        },
+        {
+          "name": "Struthiosaurus",
+          "location": "Europe",
+          "time_period": "Late Cretaceous",
+          "description": "A small nodosaur from the Late Cretaceous of Europe. It was discovered in the Gosau Group of Austria. It was a small nodosaur, 10 ft (3 m) long.",
+          "coordinates": {
+            "lat": 47.6,
+            "lng": 13.5
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "85",
+          "lived_to_ma": "66",
+          "timelineIndex": 8
+        },
+        {
+          "name": "Nodosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The typical nodosaur from the Late Cretaceous of North America. It was found in the Frontier Formation of Wyoming. It was the typical nodosaur, 18 ft (5.5 m) long, known from one skeleton.",
+          "coordinates": {
+            "lat": 42.0,
+            "lng": -104.3
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "110",
+          "lived_to_ma": "90",
+          "timelineIndex": 9
+        },
+        {
+          "name": "Euoplocephalus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A well-known ankylosaur from the Late Cretaceous of North America. Its fossils were found in the Dinosaur Park Formation of Alberta, Canada. It was a well-known ankylosaur, 18 ft (5.5 m) long, with a broad, flat skull and a bony club tail.",
+          "coordinates": {
+            "lat": 51.73,
+            "lng": -111.25
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "76",
+          "lived_to_ma": "66",
+          "timelineIndex": 10
+        },
+        {
+          "name": "Talarurus",
+          "location": "Asia",
+          "time_period": "Late Cretaceous",
+          "description": "An ankylosaur from the Late Cretaceous of Asia. Its fossils were discovered in the Nemegt Formation in Mongolia. It was an ankylosaur, 16 ft (5 m) long, with a narrow skull and a large tail club.",
+          "coordinates": {
+            "lat": 43.1,
+            "lng": 103.5
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "96",
+          "lived_to_ma": "89",
+          "timelineIndex": 11
+        },
+        {
+          "name": "Saichania",
+          "location": "Asia",
+          "time_period": "Late Cretaceous",
+          "description": "An ankylosaur from the Late Cretaceous of Asia. Fossils were found in the Nemegt Formation in Mongolia. It was an ankylosaur, 16 ft (5 m) long, with a heavily armored skull and large nasal passages.",
+          "coordinates": {
+            "lat": 43.5,
+            "lng": 105.5
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "83.6",
+          "lived_to_ma": "70.6",
+          "timelineIndex": 12
+        },
+        {
+          "name": "Panoplosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "A nodosaur from the Late Cretaceous of North America. Its fossils were found in the Dinosaur Park Formation of Alberta, Canada. It was a nodosaur, 20 ft (6 m) long, with prominent spikes and shoulder plates.",
+          "coordinates": {
+            "lat": 50.43,
+            "lng": -110.45
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "76",
+          "lived_to_ma": "75",
+          "timelineIndex": 13
+        },
+        {
+          "name": "Ankylosaurus",
+          "location": "North America",
+          "time_period": "Late Cretaceous",
+          "description": "The largest and last ankylosaur from the Late Cretaceous of North America. Fossils were found in the Hell Creek Formation of Montana, USA. It was the largest and last ankylosaur, 30 ft (9 m) long, with a massive tail club and extensive armor.",
+          "coordinates": {
+            "lat": 46.81,
+            "lng": -108.4
+          },
+          "image": "Asset 62.svg",
+          "lived_from_ma": "68",
+          "lived_to_ma": "66",
+          "timelineIndex": 14
+        }
+      ]
+    }
+  ],
+  "amphibians": [
+    {
+      "subcategory_name": "Amphibians",
+      "species": [
+        {
+          "name": "Ichthyostega",
+          "location": "Europe",
+          "time_period": "Late Devonian",
+          "description": "The first amphibian from the Late Devonian of Europe. It was discovered in eastern Greenland. Widely thought of as the first amphibian, or four-legged fish. 5 ft (1.5 m) long.",
+          "coordinates": {
+            "lat": 72.0,
+            "lng": -23.0
+          },
+          "image": "Asset 61.svg",
+          "lived_from_ma": "367",
+          "lived_to_ma": "362",
+          "timelineIndex": 0
+        },
+        {
+          "name": "Eryops",
+          "location": "North America",
+          "time_period": "Early Permian",
+          "description": "An amphibian from the Early Permian of North America. Its fossils were discovered in the Clear Fork Group in Texas. It was an amphibian, 6 ft (1.8 m) long, with a broad skull.",
+          "coordinates": {
+            "lat": 34.2,
+            "lng": -98.6
+          },
+          "image": "Asset 61.svg",
+          "lived_from_ma": "310",
+          "lived_to_ma": "295",
+          "timelineIndex": 1
+        },
+        {
+          "name": "Diplocaulus",
+          "location": "North America",
+          "time_period": "Early Permian",
+          "description": "An amphibian from the Early Permian of North America. Its fossils were found in the Clear Fork Group in Texas. It was an amphibian, 3 ft (1 m) long, with a boomerang-shaped head.",
+          "coordinates": {
+            "lat": 33.3,
+            "lng": -99.5
+          },
+          "image": "Asset 61.svg",
+          "lived_from_ma": "299",
+          "lived_to_ma": "251",
+          "timelineIndex": 2
+        },
+        {
+          "name": "Seymouria",
+          "location": "North America",
+          "time_period": "Early Permian",
+          "description": "An amphibian from the Early Permian of North America. It was discovered in the Clear Fork Group of Texas. It was an amphibian, 2 ft (0.6 m) long, that was well-adapted for life on land.",
+          "coordinates": {
+            "lat": 34.9,
+            "lng": -99.3
+          },
+          "image": "Asset 134.svg",
+          "lived_from_ma": "280",
+          "lived_to_ma": "270",
+          "timelineIndex": 3
+        },
+        {
+          "name": "Acanthostega",
+          "location": "Europe",
+          "time_period": "Late Devonian",
+          "description": "A fish-amphibian from the Late Devonian of Europe. Its fossils were found in the Canis Formation in Greenland. It was a fish-amphibian, 2 ft (0.6 m) long, that had both gills and lungs.",
+          "coordinates": {
+            "lat": 73.0,
+            "lng": -22.5
+          },
+          "image": "Asset 134.svg",
+          "lived_from_ma": "370",
+          "lived_to_ma": "365",
+          "timelineIndex": 4
+        }
+      ]
+    }
+  ]
+};;

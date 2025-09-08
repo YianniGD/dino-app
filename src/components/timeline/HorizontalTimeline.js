@@ -416,7 +416,16 @@ const HorizontalTimeline = ({ timelineData, faunaData, onFaunaClick, timelineSta
                                     const faunaInPeriod = faunaWithTimeData.filter(dino => {
                                         // Check for overlap: (StartA <= EndB) and (EndA >= StartB)
                                         // In our case: (dino.lived_to_ma <= periodStart) and (dino.lived_from_ma >= periodEnd)
-                                        return dino.lived_to_ma <= periodStart && dino.lived_from_ma >= periodEnd;
+                                        const isWithinPeriodRange = dino.lived_to_ma <= periodStart && dino.lived_from_ma >= periodEnd;
+
+                                        // Ensure the dino's best matching period is either the current period or an epoch within it
+                                        const isBestMatchForCurrentPeriod = dino.renderPeriod === periodName ||
+                                            (periodData.epochs && Object.keys(periodData.epochs).some(epochKey => {
+                                                const fullEpochName = `${formatEpochName(epochKey)} ${periodName}`;
+                                                return dino.renderPeriod === fullEpochName || dino.renderPeriod === epochKey;
+                                            }));
+
+                                        return isWithinPeriodRange && isBestMatchForCurrentPeriod;
                                     });
 
                                     const layout = { lanes: [] }; // Each lane will be an array of placed markers
