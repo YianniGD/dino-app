@@ -271,7 +271,7 @@
           "time_period": "Early Cretaceous",
           "description": "A primitive shark from the Early Cretaceous of Europe. It was discovered in the Wealden Group of Sussex, England. It was a primitive shark, 6 ft (1.8 m) long, with two dorsal fins.",
           "coordinates": {
-            "lat": 50.85,
+            "lat": 49.85,
             "lng": -0.33
           },
           "image": "Asset 136.svg",
@@ -558,8 +558,8 @@
           "time_period": "Early Permian",
           "description": "A primitive diapsid from the Early Permian of North America. Its fossils were discovered in the Clear Fork Group in Texas. It was a primitive diapsid, 2 ft (0.6 m) long.",
           "coordinates": {
-            "lat": 34.6,
-            "lng": -99.0
+            "lat": 32.6,
+            "lng": -97.0
           },
           "image": "Asset 135.svg",
           "lived_from_ma": "285",
@@ -764,7 +764,7 @@
           "description": "A theropod from the Early Jurassic of North America. It was discovered in the Kayenta Formation in Arizona. It was a theropod, 20 ft (6 m) long, with two crests on its head.",
           "coordinates": {
             "lat": 35.501,
-            "lng": -111.751
+            "lng": -108.751
           },
           "image": "Asset 41.svg",
           "lived_from_ma": "199",
@@ -782,7 +782,7 @@
           "description": "A well-known sauropod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation in Colorado, Utah, and Wyoming. A major site is Como Bluff, Wyoming. It was a well-known sauropod, 85 ft (26 m) long.",
           "coordinates": {
             "lat": 42.93,
-            "lng": -105.736
+            "lng": -108.736
           },
           "image": "Asset 126.svg",
           "lived_from_ma": "154",
@@ -808,7 +808,7 @@
           "description": "A sauropod from the Late Jurassic of North America. It was found in the Morrison Formation of Colorado. It was a sauropod, 75 ft (23 m) long, with front legs longer than its back legs.",
           "coordinates": {
             "lat": 42.3,
-            "lng": -104.736
+            "lng": -111.736
           },
           "image": "Asset 126.svg",
           "lived_from_ma": "156",
@@ -820,7 +820,7 @@
           "time_period": "Late Jurassic",
           "description": "A gigantic sauropod from the Late Jurassic of North America. Its fossils were found in the Morrison Formation in Colorado. It was a gigantic sauropod, 100 ft (30 m) long.",
           "coordinates": {
-            "lat": 39.0,
+            "lat": 45.0,
             "lng": -107.0
           },
           "image": "Asset 126.svg",
@@ -962,7 +962,7 @@
           "time_period": "Late Cretaceous",
           "description": "A ceratopsian with a very long frill from the Late Cretaceous of North America. Its fossils were discovered in the Dinosaur Park Formation of Alberta, Canada. It was a ceratopsian with a very long frill, 16 ft (5 m) long.",
           "coordinates": {
-            "lat": 50.93,
+            "lat": 51.53,
             "lng": -111.9
           },
           "image": "Asset 159.svg",
@@ -989,7 +989,7 @@
           "description": "The last ceratopsian from the Late Cretaceous of North America. Its fossils were discovered in the Hell Creek Formation of Montana. It was the last ceratopsian, 30 ft (9 m) long, with three horns.",
           "coordinates": {
             "lat": 47.2,
-            "lng": -106.402
+            "lng": -102.402
           },
           "image": "Asset 159.svg",
           "lived_from_ma": "68",
@@ -1028,7 +1028,7 @@
           "description": "A ceratopsian with a large horn from the Late Cretaceous of North America. It was found in the Dinosaur Park Formation of Alberta, Canada. It was a ceratopsian with a large horn, 18 ft (5.5 m) long.",
           "coordinates": {
             "lat": 50.73,
-            "lng": -110.45
+            "lng": -109.45
           },
           "image": "Asset 159.svg",
           "lived_from_ma": "76.5",
@@ -1128,8 +1128,8 @@
           "time_period": "Late Triassic",
           "description": "A large pseudosuchian from the Late Triassic of North America. Its fossils were found in the Chinle Formation in Texas. It was a large pseudosuchian, 16 ft (5 m) long, with a large, heavy skull.",
           "coordinates": {
-            "lat": 34.6,
-            "lng": -100.0
+            "lat": 33.6,
+            "lng": -99.0
           },
           "image": "Asset 138.svg",
           "lived_from_ma": "230",
@@ -1185,7 +1185,7 @@
           "time_period": "Early Permian",
           "description": "A pelycosaur from the Early Permian of North America. Its fossils were found in the Clear Fork Group in Texas. It was a pelycosaur, 11 ft (3 m) long, with a tall sail on its back.",
           "coordinates": {
-            "lat": 34.6,
+            "lat": 31.6,
             "lng": -99.2
           },
           "image": "Asset 134.svg",
@@ -1198,7 +1198,7 @@
           "time_period": "Early Permian",
           "description": "A reptile from the Early Permian of North America. It was discovered in the Clear Fork Group of Oklahoma. It was a reptile, 15 ft (4.5 m) long.",
           "coordinates": {
-            "lat": 33.6,
+            "lat": 30.6,
             "lng": -99.3
           },
           "image": "Asset 134.svg",
@@ -1281,7 +1281,7 @@
           "time_period": "Early Cretaceous",
           "description": "An ornithopod from the Early Cretaceous of North America. Its fossils were discovered in the Cloverly Formation of Montana and Wyoming. It was an ornithopod, 23 ft (7 m) long, with a long tail.",
           "coordinates": {
-            "lat": 42.3,
+            "lat": 40.3,
             "lng": -105.7
           },
           "image": "Asset 121.svg",
@@ -1378,7 +1378,7 @@
           "description": "A hadrosaur with a nasal arch from the Late Cretaceous of North America. It was found in the Kirtland Formation of New Mexico, USA. It was a hadrosaur with a nasal arch, 33 ft (10 m) long.",
           "coordinates": {
             "lat": 36.001,
-            "lng": -107.001
+            "lng": -103.001
           },
           "image": "Asset 80.svg",
           "lived_from_ma": "74.5",
@@ -1390,7 +1390,7 @@
           "time_period": "Late Cretaceous",
           "description": "A common flat-headed hadrosaur from the Late Cretaceous of North America. Fossils were found in the Horseshoe Canyon Formation of Alberta, Canada. It was a common flat-headed hadrosaur, 33 ft (10 m) long.",
           "coordinates": {
-            "lat": 53.531,
+            "lat": 51.531,
             "lng": -113.501
           },
           "image": "Asset 80.svg",
@@ -1481,8 +1481,8 @@
           "time_period": "Late Cretaceous",
           "description": "A hadrosaur with a long, tubular crest from the Late Cretaceous of North America. It was found in the Dinosaur Park Formation of Alberta, Canada. It was a hadrosaur with a long, tubular crest, 30 ft (9 m) long, likely used for vocalization.",
           "coordinates": {
-            "lat": 50.78,
-            "lng": -111.35
+            "lat": 52.78,
+            "lng": -110.35
           },
           "image": "Asset 80.svg",
           "lived_from_ma": "76.9",
@@ -1551,7 +1551,7 @@
           "time_period": "Early Cretaceous",
           "description": "An ankylosaur from the Early Cretaceous of Europe. It was discovered in the Wealden Group of Sussex, England. It was an ankylosaur, 20 ft (6 m) long, covered in bony plates and spikes.",
           "coordinates": {
-            "lat": 50.85,
+            "lat": 48.85,
             "lng": -1.08
           },
           "image": "Asset 62.svg",
@@ -1565,7 +1565,7 @@
           "description": "An ankylosaur from the Early Cretaceous of Europe. Fossils were found on the Isle of Wight, England. It was an ankylosaur, 13 ft (4 m) long, featuring a shield of fused bony plates over its hips.",
           "coordinates": {
             "lat": 50.686,
-            "lng": -1.298
+            "lng": -0.298
           },
           "image": "Asset 62.svg",
           "lived_from_ma": "130",
@@ -1577,7 +1577,7 @@
           "time_period": "Early Cretaceous",
           "description": "A nodosaur from the Early Cretaceous of North America. Its fossils were discovered in the Cloverly Formation of Montana and Wyoming. It was a nodosaur, 25 ft (7.6 m) long, with large, flat plates over its neck and shoulders.",
           "coordinates": {
-            "lat": 41.6,
+            "lat": 38.6,
             "lng": -105.0
           },
           "image": "Asset 62.svg",
@@ -1617,7 +1617,7 @@
           "description": "The typical nodosaur from the Late Cretaceous of North America. It was found in the Frontier Formation of Wyoming. It was the typical nodosaur, 18 ft (5.5 m) long, known from one skeleton.",
           "coordinates": {
             "lat": 42.0,
-            "lng": -104.3
+            "lng": -100.3
           },
           "image": "Asset 62.svg",
           "lived_from_ma": "110",
@@ -1714,7 +1714,7 @@
           "time_period": "Early Permian",
           "description": "An amphibian from the Early Permian of North America. Its fossils were discovered in the Clear Fork Group in Texas. It was an amphibian, 6 ft (1.8 m) long, with a broad skull.",
           "coordinates": {
-            "lat": 34.2,
+            "lat": 32.2,
             "lng": -98.6
           },
           "image": "Asset 61.svg",
@@ -1727,7 +1727,7 @@
           "time_period": "Early Permian",
           "description": "An amphibian from the Early Permian of North America. Its fossils were found in the Clear Fork Group in Texas. It was an amphibian, 3 ft (1 m) long, with a boomerang-shaped head.",
           "coordinates": {
-            "lat": 33.3,
+            "lat": 28.3,
             "lng": -99.5
           },
           "image": "Asset 61.svg",

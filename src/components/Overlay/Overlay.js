@@ -65,8 +65,10 @@ const Overlay = ({ data, onClose, openXray }) => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="overlay-content" ref={content} onClick={(e) => e.stopPropagation()}>
-        {data && <AnimalDetailsCard animal={data} onClose={handleClose} openXray={() => openXray(data)} isCentered={true} />}
+      <div className="overlay-content" ref={content}>
+        <div style={{ pointerEvents: 'auto' }} onClick={(e) => e.stopPropagation()}>
+          {data && <AnimalDetailsCard animal={data} onClose={handleClose} openXray={() => openXray(data)} isCentered={true} />}
+        </div>
       </div>
     </div>
   );

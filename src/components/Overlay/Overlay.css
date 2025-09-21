@@ -21,6 +21,7 @@
   height: 100%;
   position: relative;
   text-align: left;
+  pointer-events: none; /* Allow clicks to pass through */
 }
 
 .overlay-content .description {

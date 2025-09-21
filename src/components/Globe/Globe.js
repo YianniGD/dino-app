@@ -1,22 +1,45 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import Globe from 'react-globe.gl';
+import * as THREE from 'three';
 import { getCoordinates } from '../../utils/geocoder';
 import data from '../../fauna.json';
+import locationsData from '../../Locations.json';
 import { timeHierarchy } from '../../utils/timeHierarchy';
 import { haversineDistance } from '../../utils/haversine';
 import './Globe.css';
 
-const desiredTexture = process.env.PUBLIC_URL + '/earth-day.jpg';
-const bumpMapTexture = process.env.PUBLIC_URL + '/earth-topology.jpg';
-
 const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabled, filter, selectedPoint }) => {
   const globeEl = useRef();
   const [markers, setMarkers] = useState([]);
+  const [globeMaterial, setGlobeMaterial] = useState(new THREE.MeshPhongMaterial());
   const rotationTimeout = useRef();
   const markerElements = useRef(new Map());
-  const globeTexture = desiredTexture;
 
-  // Effect to control globe auto-rotation based on user interaction and overlay state
+  useEffect(() => {
+    // Setup globe material
+    const material = new THREE.MeshPhongMaterial();
+    const textureLoader = new THREE.TextureLoader();
+
+    const colorTextureUrl = process.env.PUBLIC_URL + '/earth-day.jpg';
+    const bumpTextureUrl = process.env.PUBLIC_URL + '/bathymetry_bw_composite_4k.jpg';
+
+    // Load color texture
+    textureLoader.load(colorTextureUrl, texture => {
+      material.map = texture;
+      material.needsUpdate = true;
+    });
+
+    // Load bump map
+    textureLoader.load(bumpTextureUrl, texture => {
+      material.bumpMap = texture;
+      material.bumpScale = 0.15; // Adjust this value for intensity
+      material.needsUpdate = true;
+    });
+
+    setGlobeMaterial(material);
+  }, []);
+
+  // Effect to control globe auto-rotation
   useEffect(() => {
     const controls = globeEl.current?.controls();
     if (!controls) return;
@@ -24,16 +47,13 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     clearTimeout(rotationTimeout.current);
 
     if (!isRotationEnabled) {
-      // Globally disabled, so ensure rotation is off.
       controls.autoRotate = false;
       return;
     }
 
     if (isOverlayOpen) {
-      // Overlay is open, so stop rotation.
       controls.autoRotate = false;
     } else {
-      // Globally enabled and no overlay, so resume rotation after a delay.
       rotationTimeout.current = setTimeout(() => {
         if (globeEl.current) {
           globeEl.current.controls().autoRotate = true;
@@ -41,48 +61,40 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
       }, 3000);
     }
 
-    // Cleanup timeout on unmount or when isOverlayOpen changes
     return () => clearTimeout(rotationTimeout.current);
   }, [isOverlayOpen, isRotationEnabled]);
 
   useEffect(() => {
     if (globeEl.current) {
       globeEl.current.controls().autoRotateSpeed = 0.2;
-      globeEl.current.pointOfView({ lat: 20, lng: 0, altitude: 2.5 }, 1000);
+      globeEl.current.pointOfView({ lat: 45, lng: -100, altitude: 2.5 }, 1000);
     }
   }, []);
 
   useEffect(() => {
-    // --- Process data for markers ---
-    // This effect re-runs whenever the filter changes
+    // Process fauna data
     const allSpecies = Object.entries(data).flatMap(([categoryName, subcategories]) =>
       subcategories.flatMap(sc =>
-        sc.species.map(s => ({ ...s, parentCategory: categoryName }))
+        sc.species.map(s => ({ ...s, parentCategory: categoryName, dataType: 'fauna' }))
       )
     );
 
-    // Pre-filter species to only include those from Paleozoic, Mesozoic, and Cenozoic eras.
     const erasToShow = ['Paleozoic Era', 'Mesozoic Era', 'Cenozoic Era'];
     const allAllowedPeriods = erasToShow.flatMap(eraName => {
       const era = timeHierarchy[eraName];
       if (!era) return [];
-      // era is now an object of periods, like { Cretaceous: [...], Jurassic: [...] }
       return Object.values(era).flat();
     });
 
     const speciesInMajorEras = allSpecies.filter(species => {
-      // Handle species that span multiple periods, e.g., "Late Jurassic-Early Cretaceous"
       const speciesPeriods = species.time_period.split(/-| to /).map(p => p.trim());
       return speciesPeriods.some(p => allAllowedPeriods.includes(p));
     });
 
     let filteredSpecies = speciesInMajorEras;
     if (filter) {
-      // Apply the user's filter on top of the pre-filtered data
       filteredSpecies = speciesInMajorEras.filter(species => {
-        // Handle species that might span multiple periods, e.g., "Late Jurassic-Early Cretaceous"
         const speciesPeriods = species.time_period.split(/-| to /).map(p => p.trim());
-
         switch (filter.type) {
           case 'era': {
             const eraData = timeHierarchy[filter.value];
@@ -93,8 +105,6 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
           case 'time_period': {
             const filterValue = filter.value;
             let periodsToMatch = [filterValue];
-
-            // Check if the filter is a major period (e.g., "Cretaceous") and expand it to its sub-periods
             for (const eraName in timeHierarchy) {
               const era = timeHierarchy[eraName];
               if (era[filterValue]) {
@@ -114,22 +124,24 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
       });
     }
 
-    let markerData = filteredSpecies
-      .map((species) => {
-        const coords = getCoordinates(species);
+    const locationMarkers = locationsData.map(loc => ({ ...loc, dataType: 'location' }));
+    const allData = [...filteredSpecies, ...locationMarkers];
+
+    let markerData = allData
+      .map((item) => {
+        const coords = getCoordinates(item);
         if (coords) {
-          // Assign a random icon to each species since there is no specific mapping.
-          const iconUrl = `/dinosvg/${species.image}`;
-          return { ...coords, ...species, iconUrl };
+          const iconUrl = item.dataType === 'location' 
+            ? '/dinosvg/Digsite.svg' 
+            : `/dinosvg/${item.image}`;
+          return { ...coords, ...item, iconUrl };
         }
         return null;
       })
       .filter(Boolean);
 
-    // --- Jittering logic to prevent overlapping points ---
     const pointsByLocation = new Map();
     markerData.forEach(marker => {
-      // Group points by location, using fixed precision for floating point keys
       const key = `${marker.lat.toFixed(4)},${marker.lng.toFixed(4)}`;
       if (!pointsByLocation.has(key)) {
         pointsByLocation.set(key, []);
@@ -138,7 +150,7 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     });
 
     const jitteredMarkers = [];
-    const JITTER_RADIUS_DEGREES = 2.5; // Increased radius for better visual separation
+    const JITTER_RADIUS_DEGREES = 2.5;
 
     pointsByLocation.forEach(group => {
       if (group.length > 1) {
@@ -148,7 +160,6 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
 
         group.forEach((marker, i) => {
           const angle = (2 * Math.PI * i) / n;
-          // Adjust longitude radius based on latitude to prevent distortion near poles
           const lngRadius = JITTER_RADIUS_DEGREES / Math.cos(centerLat * (Math.PI / 180));
           const newLat = centerLat + JITTER_RADIUS_DEGREES * Math.sin(angle);
           const newLng = centerLng + lngRadius * Math.cos(angle);
@@ -157,7 +168,7 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
             ...marker,
             lat: newLat,
             lng: newLng,
-            originalLat: centerLat, // Store original location for centering the view
+            originalLat: centerLat,
             originalLng: centerLng,
           });
         });
@@ -169,17 +180,12 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     setMarkers(jitteredMarkers);
   }, [filter]);
 
-  // When the filter changes and new markers are generated, clear our element map
   useEffect(() => {
     markerElements.current.clear();
   }, [markers]);
 
-  // Imperatively update the 'selected' class on markers when selectedPoint changes
   useEffect(() => {
-    // Clear class from all markers
     markerElements.current.forEach(el => el.classList.remove('selected'));
-
-    // Add class to the currently selected one
     if (selectedPoint && markerElements.current.has(selectedPoint)) {
       const el = markerElements.current.get(selectedPoint);
       el.classList.add('selected');
@@ -187,17 +193,15 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
   }, [selectedPoint]);
 
   const handleGlobeClick = useCallback(({ lat, lng }) => {
-    // Pause rotation on any click on the globe surface
     const controls = globeEl.current?.controls();
     if (controls) {
       controls.autoRotate = false;
       clearTimeout(rotationTimeout.current);
     }
 
-    // Find the closest marker to the clicked point
     let closestMarker = null;
     let minDistance = Infinity;
-    const clickThreshold = 50; // kilometers, adjust as needed
+    const clickThreshold = 50;
 
     markers.forEach(marker => {
       const distance = haversineDistance(lat, lng, marker.lat, marker.lng);
@@ -210,18 +214,15 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     if (closestMarker) {
       console.log('Closest marker clicked:', closestMarker.name);
       onPointClick(closestMarker);
-      // globeEl.current.pointOfView({ lat: closestMarker.originalLat || closestMarker.lat, lng: closestMarker.originalLng || closestMarker.lng, altitude: 1.5 }, 1000);
     } else {
-      // If no marker was clicked, clear selected point
       onBackgroundClick();
     }
   }, [markers, onPointClick, onBackgroundClick]);
 
   const handleGlobeHover = useCallback(({ lat, lng }) => {
-    // Find the closest marker to the hovered point
     let hoveredMarker = null;
     let minDistance = Infinity;
-    const hoverThreshold = 50; // kilometers, adjust as needed
+    const hoverThreshold = 50;
 
     markers.forEach(marker => {
       const distance = haversineDistance(lat, lng, marker.lat, marker.lng);
@@ -231,35 +232,28 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
       }
     });
 
-    // Pause rotation on hover over any marker
     const controls = globeEl.current?.controls();
     if (controls) {
       if (hoveredMarker) {
         controls.autoRotate = false;
       } else if (isRotationEnabled && !isOverlayOpen) {
-        // Resume rotation only if no marker is hovered and rotation is enabled and overlay is closed
         controls.autoRotate = true;
       }
     }
 
-    // You can add visual feedback for hover here if needed, e.g., set a hoveredPoint state
-    // For now, just logging
     if (hoveredMarker) {
-      // console.log('Hovered over marker:', hoveredMarker.name);
     }
   }, [markers, isRotationEnabled, isOverlayOpen]);
 
     const htmlElement = useCallback(d => {
     const el = document.createElement('div');
-    el.className = 'marker-container'; // Add a class for styling
+    el.className = 'marker-container';
 
-    // Icon
     const icon = document.createElement('img');
-    icon.src = process.env.PUBLIC_URL + d.iconUrl; // Use PUBLIC_URL for icon path
+    icon.src = process.env.PUBLIC_URL + d.iconUrl;
     icon.className = 'marker-icon';
     el.appendChild(icon);
 
-    // Species Name
     const name = document.createElement('div');
     name.className = 'marker-name';
     name.textContent = d.name;
@@ -272,8 +266,7 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     <div className="globe-container">
       <Globe
         ref={globeEl}
-        globeImageUrl={globeTexture}
-        bumpImageUrl={bumpMapTexture}
+        globeMaterial={globeMaterial}
         htmlTransitionDuration={0}
         globeOffset={[0, 0]}
         htmlElementsData={markers}

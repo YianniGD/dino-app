@@ -35,14 +35,19 @@ const locationCoordinates = {
   "USA": { lat: 38.00, lng: -97.00 },
 };
 
-export const getCoordinates = (species) => {
-    // Prioritize specific coordinates if they exist on the species object.
-    if (species.coordinates && typeof species.coordinates.lat === 'number' && typeof species.coordinates.lng === 'number') {
-        return species.coordinates;
+export const getCoordinates = (item) => {
+    // Handle items with direct lat/lng (from Locations.json)
+    if (typeof item.lat === 'number' && typeof item.lng === 'number') {
+        return { lat: item.lat, lng: item.lng };
+    }
+
+    // Handle items with a 'coordinates' object (from fauna.json)
+    if (item.coordinates && typeof item.coordinates.lat === 'number' && typeof item.coordinates.lng === 'number') {
+        return item.coordinates;
     }
 
     // Fallback to legacy location string lookup.
-    const location = species.location;
+    const location = item.location;
     if (!location) return null;
 
     // Handle cases with multiple locations
