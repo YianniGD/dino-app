@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import Globe from 'react-globe.gl';
 import * as THREE from 'three';
+import lottie from 'lottie-web';
 import { getCoordinates } from '../../utils/geocoder';
 import data from '../../fauna.json';
 import locationsData from '../../Locations.json';
@@ -21,20 +22,13 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     const textureLoader = new THREE.TextureLoader();
 
     const colorTextureUrl = process.env.PUBLIC_URL + '/earth-day.jpg';
-    const bumpTextureUrl = process.env.PUBLIC_URL + '/bathymetry_bw_composite_4k.jpg';
 
     // Load color texture
     textureLoader.load(colorTextureUrl, texture => {
       material.map = texture;
       material.needsUpdate = true;
     });
-
-    // Load bump map
-    textureLoader.load(bumpTextureUrl, texture => {
-      material.bumpMap = texture;
-      material.bumpScale = 0.15; // Adjust this value for intensity
-      material.needsUpdate = true;
-    });
+    
 
     setGlobeMaterial(material);
   }, []);
@@ -75,7 +69,7 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     // Process fauna data
     const allSpecies = Object.entries(data).flatMap(([categoryName, subcategories]) =>
       subcategories.flatMap(sc =>
-        sc.species.map(s => ({ ...s, parentCategory: categoryName, dataType: 'fauna' }))
+        sc.species.map(s => ({ ...s, parentCategory: categoryName, dataType: 'fauna', useLottie: sc.subcategory_name === 'Large Carnivores' }))
       )
     );
 
@@ -249,10 +243,22 @@ const World = ({ onPointClick, onBackgroundClick, isOverlayOpen, isRotationEnabl
     const el = document.createElement('div');
     el.className = 'marker-container';
 
-    const icon = document.createElement('img');
-    icon.src = process.env.PUBLIC_URL + d.iconUrl;
-    icon.className = 'marker-icon';
-    el.appendChild(icon);
+    if (d.useLottie) {
+        el.style.width = '50px';
+        el.style.height = '50px';
+        lottie.loadAnimation({
+            container: el,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: process.env.PUBLIC_URL + '/loading.json'
+        });
+    } else {
+        const icon = document.createElement('img');
+        icon.src = process.env.PUBLIC_URL + d.iconUrl;
+        icon.className = 'marker-icon';
+        el.appendChild(icon);
+    }
 
     const name = document.createElement('div');
     name.className = 'marker-name';
