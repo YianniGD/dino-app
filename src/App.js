@@ -7,6 +7,7 @@ import timelineData from './timeline.json';
 import faunaData from './fauna.json';
 import './App.css';
 import TimelineOverlay from './components/NewTimeline/TimelineOverlay';
+import XRay from './components/XRay/XRay';
 
 function App() {
   const [selectedPoint, setSelectedPoint] = useState(null); // Manages overlay visibility
@@ -15,6 +16,10 @@ function App() {
   const [filter, setFilter] = useState(null);
   const [showNewTimeline, setShowNewTimeline] = useState(false);
   const [showHorizontalTimeline, setShowHorizontalTimeline] = useState(false);
+  const [xraySpecimen, setXraySpecimen] = useState(null);
+
+  const openXray = (specimen) => setXraySpecimen(specimen);
+  const closeXray = () => setXraySpecimen(null);
 
   const handlePointClick = useCallback((point) => {
     console.log('Point clicked in App.js:', point);
@@ -73,7 +78,7 @@ function App() {
           isRotationEnabled={isRotationEnabled}
           onToggleRotation={toggleRotation}
         />
-        {selectedPoint && <Overlay data={selectedPoint} onClose={handleOverlayClose} />}
+        {selectedPoint && <Overlay data={selectedPoint} onClose={handleOverlayClose} openXray={openXray} />}
         {showHorizontalTimeline && <HorizontalTimeline
           timelineData={timelineData}
           faunaData={faunaData}
@@ -84,7 +89,8 @@ function App() {
           onFilterSelect={handleFilterSelect}
           onClearFilter={handleClearFilter}
         />}
-        <TimelineOverlay show={showNewTimeline} onClose={toggleNewTimeline} />
+        <TimelineOverlay show={showNewTimeline} onClose={toggleNewTimeline} openXray={openXray} />
+        {xraySpecimen && <XRay isOpen={!!xraySpecimen} onClose={closeXray} specimen={xraySpecimen} />}
       </main>
     </div>
   );

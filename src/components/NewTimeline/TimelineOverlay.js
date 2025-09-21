@@ -3,7 +3,7 @@ import React from 'react';
 import App from './App.jsx';
 import './TimelineOverlay.css';
 
-const TimelineOverlay = ({ show, onClose }) => {
+const TimelineOverlay = ({ show, onClose, openXray }) => {
   if (!show) {
     return null;
   }
@@ -14,7 +14,7 @@ const TimelineOverlay = ({ show, onClose }) => {
         <button className="timeline-overlay-close" onClick={onClose}>
           &times;
         </button>
-        <App />
+        <App openXray={openXray} />
       </div>
     </div>
   );

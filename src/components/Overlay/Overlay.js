@@ -2,9 +2,9 @@ import React, { useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import './Overlay.css';
-import Specimen from '../Specimen/Specimen';
+import AnimalDetailsCard from '../shared/AnimalDetailsCard.jsx';
 
-const Overlay = ({ data, onClose }) => {
+const Overlay = ({ data, onClose, openXray }) => {
   const container = useRef(null);
   const content = useRef(null);
   const [touchStartX, setTouchStartX] = useState(null);
@@ -66,7 +66,7 @@ const Overlay = ({ data, onClose }) => {
       onTouchEnd={handleTouchEnd}
     >
       <div className="overlay-content" ref={content} onClick={(e) => e.stopPropagation()}>
-        {data && <Specimen specimen={data} />}
+        {data && <AnimalDetailsCard animal={data} onClose={handleClose} openXray={() => openXray(data)} isCentered={true} />}
       </div>
     </div>
   );

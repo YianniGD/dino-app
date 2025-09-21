@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { animalData } from './data.js';
 import { CATEGORIES } from './constants.js';
 import Timeline from './components/Timeline.jsx';
-import AnimalDetailsCard from './components/AnimalDetailsCard.jsx';
+import AnimalDetailsCard from '../shared/AnimalDetailsCard.jsx';
 import FilterControls from './components/FilterControls.jsx';
 
 // Data preprocessing to add float values and unique IDs
@@ -21,7 +21,7 @@ const allAnimals = Object.keys(animalData).flatMap(category =>
 
 const allSubcategories = [...new Set(allAnimals.map(animal => animal.subcategory_name))];
 
-function App() {
+function App({ openXray }) {
   const [selectedSubcategories, setSelectedSubcategories] = useState(allSubcategories);
   const [selectedAnimal, setSelectedAnimal] = useState(null);
 
@@ -83,6 +83,7 @@ function App() {
         <AnimalDetailsCard 
           animal={selectedAnimal}
           onClose={handleCloseDetails}
+          openXray={openXray}
         />
       </main>
     </div>
