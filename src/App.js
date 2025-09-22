@@ -8,6 +8,8 @@ import faunaData from './fauna.json';
 import './App.css';
 import TimelineOverlay from './components/NewTimeline/TimelineOverlay';
 import XRay from './components/XRay/XRay';
+import GameModal from './components/DiggingGameModal/GameModal';
+import DiggingGameHost from './components/DiggingGameModal/DiggingGameHost';
 
 function App() {
   const [selectedPoint, setSelectedPoint] = useState(null); // Manages overlay visibility
@@ -17,6 +19,7 @@ function App() {
   const [showNewTimeline, setShowNewTimeline] = useState(false);
   const [showHorizontalTimeline, setShowHorizontalTimeline] = useState(false);
   const [xraySpecimen, setXraySpecimen] = useState(null);
+  const [isDiggingGameModalOpen, setIsDiggingGameModalOpen] = useState(false);
 
   const openXray = (specimen) => setXraySpecimen(specimen);
   const closeXray = () => setXraySpecimen(null);
@@ -34,6 +37,15 @@ function App() {
   const handleOverlayClose = () => {
     setSelectedPoint(null);
   };
+
+  const handleOpenDiggingGame = useCallback(() => {
+    setIsDiggingGameModalOpen(true);
+    setSelectedPoint(null); // Close the overlay when opening the game
+  }, []);
+
+  const handleCloseDiggingGame = useCallback(() => {
+    setIsDiggingGameModalOpen(false);
+  }, []);
 
   const toggleRotation = () => {
     setIsRotationEnabled(!isRotationEnabled);
@@ -78,7 +90,7 @@ function App() {
           isRotationEnabled={isRotationEnabled}
           onToggleRotation={toggleRotation}
         />
-        {selectedPoint && <Overlay data={selectedPoint} onClose={handleOverlayClose} openXray={openXray} />}
+        {selectedPoint && <Overlay data={selectedPoint} onClose={handleOverlayClose} openXray={openXray} onOpenDiggingGame={handleOpenDiggingGame} />}
         {showHorizontalTimeline && <HorizontalTimeline
           timelineData={timelineData}
           faunaData={faunaData}
@@ -91,6 +103,9 @@ function App() {
         />}
         <TimelineOverlay show={showNewTimeline} onClose={toggleNewTimeline} openXray={openXray} />
         {xraySpecimen && <XRay isOpen={!!xraySpecimen} onClose={closeXray} specimen={xraySpecimen} />}
+        <GameModal isOpen={isDiggingGameModalOpen} onClose={handleCloseDiggingGame}>
+          <DiggingGameHost />
+        </GameModal>
       </main>
     </div>
   );

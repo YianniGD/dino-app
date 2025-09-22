@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const AnimalDetailsCard = ({ animal, onClose, openXray, isCentered }) => {
+const AnimalDetailsCard = ({ animal, onClose, openXray, isCentered, onOpenDiggingGame }) => {
 
   useEffect(() => {
     if (animal) {
@@ -63,6 +63,14 @@ const AnimalDetailsCard = ({ animal, onClose, openXray, isCentered }) => {
             <span className="text-white ml-2">{animal.location}</span>
           </div>
         </div>
+        {animal.dataType === 'location' && (
+          <button
+            onClick={onOpenDiggingGame}
+            className="mt-4 bg-green-500/70 text-white px-4 py-2 rounded-full text-sm backdrop-blur-sm hover:bg-green-600/90 transition-colors"
+          >
+            Play Digging Game
+          </button>
+        )}
         {animal.skeleton_image && (
             <button
               onClick={() => openXray(animal)}

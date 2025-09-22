@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import './Overlay.css';
 import AnimalDetailsCard from '../shared/AnimalDetailsCard.jsx';
 
-const Overlay = ({ data, onClose, openXray }) => {
+const Overlay = ({ data, onClose, openXray, onOpenDiggingGame }) => {
   const container = useRef(null);
   const content = useRef(null);
   const [touchStartX, setTouchStartX] = useState(null);
@@ -67,7 +67,7 @@ const Overlay = ({ data, onClose, openXray }) => {
     >
       <div className="overlay-content" ref={content}>
         <div style={{ pointerEvents: 'auto' }} onClick={(e) => e.stopPropagation()}>
-          {data && <AnimalDetailsCard animal={data} onClose={handleClose} openXray={() => openXray(data)} isCentered={true} />}
+          {data && <AnimalDetailsCard animal={data} onClose={handleClose} openXray={() => openXray(data)} isCentered={true} onOpenDiggingGame={onOpenDiggingGame} />}
         </div>
       </div>
     </div>
